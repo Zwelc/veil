@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Navbar from '../components/nav'
 
-
 export default function Home() {
   return (
     <div>
