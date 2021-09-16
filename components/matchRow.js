@@ -7,7 +7,7 @@ function getSkill(int) {
 	if (int == 3) return 'Very High Skill'
 	return 'Unknown Skill';
 }
-function RecentMatch(props) {
+function MatchRow(props) {
 	const match = props.matches;
 	const heroes = props.heroes;
 	const mode = props.mode[match.game_mode];
@@ -17,15 +17,13 @@ function RecentMatch(props) {
 	return (
 		<tr>
 		<td><Image src={heroImg} height={29} width={59}/></td>
-		<td>{hero.localized_name}</td>
-		<td>{match.player_slot <= 127 && match.radiant_win ? "Won Match" : "Lost Match"}</td>
-		<td>{convertHMS(match.duration)}</td>
 		<td>{match.kills}/{match.deaths}/{match.assists}</td>
 		<td>{getSkill(match.skill)}</td>
-		<td>{mode.name.slice(9).split("_").join(" ")}</td>
-		<td>{lobby.name.slice(10).split("_").join(" ")}</td>
+		<td>{lobby.name.slice(10).split("_").join(" ")}{mode.name.slice(9).split("_").join(" ")}</td>
+		<td>{match.player_slot <= 127 && match.radiant_win ? "Won Match" : "Lost Match"}</td>
+		<td>{convertHMS(match.duration)}</td>
 		</tr>
 	)
 }
 
-export default RecentMatch;
+export default MatchRow;

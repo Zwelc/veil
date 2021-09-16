@@ -1,0 +1,23 @@
+.container {
+	background: rgb(138, 60, 103);
+	width: 100%;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+.name {
+	font-size: 1.5rem;
+}
+
+.right {
+	display: flex;
+	justify-self: baseline;
+	align-self: flex-end;
+}
+
+.left {
+	display: flex;
+	align-content: space-between;
+}
