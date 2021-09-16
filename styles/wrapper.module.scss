@@ -1,0 +1,30 @@
+.wrapper {
+	height: 100vh;
+	display: flex;
+	overflow: hidden;
+	width: 100%;
+	border-radius: 20px;
+	font-size: 15px;
+	font-weight: 500;
+	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+.main {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	flex-shrink: 0;
+	padding: 30px;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	padding: 0 30px 30px;
+	flex-grow: 1;
+	overflow: auto;
+}
