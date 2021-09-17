@@ -3,12 +3,12 @@ import styles from '../styles/wrapper.module.scss'
 
 export default function Layout({children}) {
 	return (
+		<div className={styles.app}>
 		<div className={styles.wrapper}>
+		<div className={styles.left}>
 			<Sidebar />
-			<div className={styles.main}>
-			<div className={styles.header}>
-			<main className={styles.container}>{children}</main>
-			</div>
+		</div>
+			<>{children}</>
 			</div>
 		</div>
 	)

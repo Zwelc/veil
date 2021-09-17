@@ -10,7 +10,7 @@ function RecentMatches(props) {
 		<table>
 		<thead>
 		<tr>
-			<th scope="col">Hero</th>
+			<th>Hero</th>
 			<th>KDA</th>
 			<th>Bracket</th>
 			<th>Type</th>

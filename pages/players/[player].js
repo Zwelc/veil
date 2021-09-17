@@ -4,6 +4,7 @@ import UserCounts from '../../components/counts';
 import Header from '../../components/header';
 import Head from 'next/head'
 import styles from '../../styles/Player.module.scss';
+import Profile from '../../components/profile'
 
 function Player({player, recent, heroes, mode, lobby, counts}) {
 	return (
@@ -18,6 +19,9 @@ function Player({player, recent, heroes, mode, lobby, counts}) {
 		{/* <UserCounts counts={counts}/> */}
 		Recent Matches
 		<RecentMatches recent={recent} heroes={heroes} mode={mode} lobby={lobby}/>
+		</div>
+		<div className={styles.side}>
+			<Profile player={player}/>
 		</div>
 		</div>
 	)

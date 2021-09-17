@@ -1,0 +1,16 @@
+.main {
+	display:flex;
+	flex-direction: column;
+	overflow: auto;
+	flex-grow: 1;
+}
+
+.side {
+	border-left: 1px solid #eef2f4;
+	margin-left: auto;
+	padding: 30px 30px 0 30px;
+	display: flex;
+	flex-direction: column;
+	overflow: auto;
+}
+

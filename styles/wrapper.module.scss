@@ -1,12 +1,24 @@
-.wrapper {
-	height: 100vh;
+.app {
 	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	margin: 0 auto;
 	overflow: hidden;
+}
+.wrapper {
 	width: 100%;
-	border-radius: 20px;
-	font-size: 15px;
-	font-weight: 500;
-	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+	display: flex;
+	flex-grow: 1;
+	overflow: hidden;
+}
+
+.left {
+	border-right: 1px solid #eef2f4;
+	overflow-y: auto;
+	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+	position: relative;
 }
 .main {
 	display: flex;
@@ -22,6 +34,7 @@
 }
 
 .container {
+	background-color: #101827;
 	display: flex;
 	flex-direction: column;
 	padding: 0 30px 30px;
