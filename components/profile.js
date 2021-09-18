@@ -2,16 +2,24 @@ import styles from '../styles/Player.module.scss'
 
 function Profile(props) {
 	const player = props.player;
+	const counts = props.counts;
+	const wl = props.wl;
 	return(
 		<div className={styles.container}>
 		<div className={styles.header}>
 			<img src={player.profile.avatarfull} />
 			<div className={styles.name}>{player.profile.personaname}</div>
 		</div>
-		<p>Solo MMR: {player.solo_competitive_rank}</p>
+		<hr />
 		<div className={styles.right}>
 			Rank: {player.rank_tier}
 		</div>
+		<div>Wins: {wl.win}</div>
+		<div>Losses: {wl.lose}</div>
+		<hr />
+		<div>Winrate: {((wl.win) / (wl.win + wl.lose) * 100).toFixed(2)}% </div>
+		<div>Dire: {((counts.is_radiant[0].win) / (counts.is_radiant[0].games) * 100).toFixed(2)}%</div>
+		<div>Radiant: {((counts.is_radiant[1].win) / (counts.is_radiant[1].games) * 100).toFixed(2)}%</div>
 		</div>
 	);
 }
