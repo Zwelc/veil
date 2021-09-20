@@ -1,4 +1,5 @@
 import MatchRow from "./matchRow";
+import styles from './recentMatches.module.scss'
 
 function RecentMatches(props) {
 	const recent = props.recent;
@@ -7,7 +8,7 @@ function RecentMatches(props) {
 	const lobby = props.lobby;
 
 	return (
-		<table>
+		<table className={styles.table}>
 		<thead>
 		<tr>
 			<th scope="col">Hero</th>

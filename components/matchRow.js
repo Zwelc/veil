@@ -20,7 +20,7 @@ function MatchRow(props) {
 		<td>{match.kills}/{match.deaths}/{match.assists}</td>
 		<td>{getSkill(match.skill)}</td>
 		<td>{lobby.name.slice(10).split("_").join(" ")}{mode.name.slice(9).split("_").join(" ")}</td>
-		<td>{match.player_slot <= 127 && match.radiant_win ? "Won Match" : "Lost Match"}</td>
+		<td>{match.player_slot <= 127 && match.radiant_win ? "Won" : "Lost"}</td>
 		<td>{convertHMS(match.duration)}</td>
 		</tr>
 	)

@@ -12,11 +12,11 @@ function Sidebar() {
 				<Link href="/">
 					<a>Home</a>
 				</Link>
-				<Link href="/matches">
-					<a>Matches</a>
-				</Link>
 				<Link href="/players">
 					<a>Players</a>
+				</Link>
+				<Link href="/matches">
+					<a>Matches</a>
 				</Link>
 				<Link href="/heroes">
 					<a>Heroes</a>
