@@ -1,10 +1,10 @@
 
 .table {
-	background-color: #22272e;
+	background-color: var(--card);
 	border-radius: 20px;
 	padding: 10px;
 	width: 728px;
-	color: #94a1b2;
+	color: var(--subheading);
 	tr {
 		border-bottom: 1px solid #eef2f4;
 	}
