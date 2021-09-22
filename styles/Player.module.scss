@@ -19,7 +19,7 @@
 	color: #94a1b2;
 }
 .container {
-	width: 90%;
+	width: 80%;
 	height: 100%;
 	// display: flex;
 	// flex-flow: column wrap;
@@ -49,13 +49,13 @@
 .results {
 	display: grid;
 	grid-gap: 1rem;
-	grid-template-columns: repeat(auto-fill, minmax(min(16rem, 100%), 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(min(12rem, 100%), 1fr));
 }
 .card {
 	grid-area: auto;
 	background-color: var(--subheading);
 	width: 100%;
-	min-height: 6rem;
+	height: 6rem;
 	padding: 10px;
 	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
 	0 4px 6px -2px rgba(0, 0, 0, 0.05);
