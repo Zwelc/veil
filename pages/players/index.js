@@ -42,8 +42,10 @@ function Players() {
                 key={player.account_id}
               >
                 <div className={styles.card}>
-                  <Image src={player.avatarfull} width={80} height={68} />
-                  {player.personaname}
+                  <header>
+                    <Image src={player.avatarfull} width={215} height={210} />
+                  </header>
+                  <div className={styles.card_body}>{player.personaname}</div>
                 </div>
               </Link>
             ))}
