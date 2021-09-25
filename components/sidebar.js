@@ -10,16 +10,24 @@ function Sidebar() {
         <div className={styles.title}>MENU</div>
         <div className={styles.menu}>
           <Link href="/">
-            <a>Home</a>
+            <a>
+              <span className="material-icons md-18">home</span>Home
+            </a>
           </Link>
           <Link href="/players">
-            <a>Players</a>
+            <a>
+              <span className="material-icons md-18">people</span>Players
+            </a>
           </Link>
           <Link href="/matches">
-            <a>Matches</a>
+            <a>
+              <span className="material-icons md-18">view_agenda</span>Matches
+            </a>
           </Link>
           <Link href="https://www.dota2.com/home">
-            <a target="_blank">Dota 2</a>
+            <a target="_blank">
+              <span className="material-icons md-18">open_in_new</span> Dota 2
+            </a>
           </Link>
         </div>
       </div>

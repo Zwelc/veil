@@ -5,11 +5,24 @@
 	padding: 10px;
 	width: 728px;
 	color: var(--subheading);
-	tr {
-		border-bottom: 1px solid #eef2f4;
+	
+	tbody {
+		animation: myAnim 1s ease 0s 1 normal backwards;
 	}
-
 	td {
-	text-align: center;
+		text-align: center;
 	}
+	
+}
+.row  {
+		border: 1px solid #c29136;
+}
+@keyframes myAnim {
+  0% {
+    transform: scaleY(0.4);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
 }

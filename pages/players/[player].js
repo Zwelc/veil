@@ -2,8 +2,51 @@ import RecentMatches from "../../components/recentMatches";
 import Head from "next/head";
 import styles from "../../styles/Player.module.scss";
 import Profile from "../../components/profile";
+import { useEffect, useState } from "react";
 
-function Player({ player, recent, heroes, mode, lobby, counts, wl }) {
+function Player({ playerId, player, heroes, mode, lobby, counts, wl }) {
+  const [matches, setMatches] = useState([]);
+  const [kills, setKills] = useState(0);
+  const [assists, setAssists] = useState(0);
+  const [deaths, setDeaths] = useState(0);
+  const [wins, setWins] = useState(0);
+  const [losses, setLosses] = useState(0);
+  const [winrate, setWinrate] = useState(0);
+  useEffect(() => {
+    getRecentMatches(playerId);
+  }, []);
+
+  function getRecentMatches(id) {
+    fetch(`https://api.opendota.com/api/players/${id}/recentMatches`)
+      .then((res) => res.json())
+      .then((data) => {
+        setMatches(data);
+        getSummary();
+      });
+  }
+
+  function getSummary() {
+    let totalKills = 0;
+    let totalDeaths = 0;
+    let totalAssists = 0;
+    let won = 0;
+    let lost = 0;
+    matches.forEach((match) => {
+      totalKills += match.kills;
+      totalDeaths += match.deaths;
+      totalAssists += match.assists;
+
+      match.player_slot <= 127 && match.radiant_win ? (won += 1) : (lost += 1);
+    });
+    let winrate = ((won / (won + lost)) * 100).toFixed(2);
+    setKills(totalKills);
+    setDeaths(totalDeaths);
+    setAssists(totalAssists);
+    setWins(won);
+    setLosses(lost);
+    setWinrate(winrate);
+  }
+
   return (
     <>
       <Head>
@@ -12,12 +55,29 @@ function Player({ player, recent, heroes, mode, lobby, counts, wl }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.main}>
-        <RecentMatches
-          recent={recent}
-          heroes={heroes}
-          mode={mode}
-          lobby={lobby}
-        />
+        <div className={styles.container}>
+          <h3>Summary per 20 matches</h3>
+          <div className={styles.summary}>
+            <div className={styles.items}>
+              <div className={styles.item}>Winrate: {winrate}% </div>
+              <div className={styles.item}>
+                <span class="material-icons">emoji_events</span>Won: {wins}
+              </div>
+              <div className={styles.item}>Lost: {losses}</div>
+              <div className={styles.item}>Kills: {kills}</div>
+              <div className={styles.item}>Deaths: {deaths}</div>
+              <div className={styles.item}>Top Hero: </div>
+              <div className={styles.item}>Most Played: </div>
+            </div>
+          </div>
+          <h3>Recent Matches </h3>
+          <RecentMatches
+            recent={matches}
+            heroes={heroes}
+            mode={mode}
+            lobby={lobby}
+          />
+        </div>
       </div>
       <div className={styles.side}>
         <Profile player={player} counts={counts} wl={wl} />
@@ -32,10 +92,6 @@ export async function getServerSideProps(context) {
     `https://api.opendota.com/api/players/${playerId}`
   );
   const player = await playerData.json();
-  const recentData = await fetch(
-    `https://api.opendota.com/api/players/${playerId}/recentMatches`
-  );
-  const recent = await recentData.json();
   const heroesData = await fetch(
     `https://api.opendota.com/api/constants/heroes`
   );
@@ -59,8 +115,8 @@ export async function getServerSideProps(context) {
 
   return {
     props: {
+      playerId,
       player,
-      recent,
       heroes,
       mode,
       lobby,

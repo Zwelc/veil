@@ -16,7 +16,10 @@ export default function Home({ matches }) {
           <div className={styles.grid}>
             {matches.map((match) => (
               <div className={styles.card} key={match.match_id}>
-                <div className={styles.headline}>{match.match_id}</div>
+                <div className={styles.headline}>
+                  {match.match_id}
+                  <span className="material-icons md-18">unfold_more</span>
+                </div>
                 <div className={styles.average}>MMR: {match.avg_mmr}</div>
                 <div className={styles.time}>Game Time: {match.duration}</div>
                 <div className={styles.score}>

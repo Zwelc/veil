@@ -15,16 +15,6 @@ function Players() {
       .then((results) => setPlayers(results));
   }
 
-  function Results() {
-    return players.map((player) => {
-      <Link href={player.account_id} key={player.account_id}>
-        <div className={styles.card}>
-          <Image src={player.avatarfull} width={80} height={68} />
-          {player.personaname}
-        </div>
-      </Link>;
-    });
-  }
   return (
     <div className={styles.main}>
       <div className={styles.container}>
@@ -46,6 +36,7 @@ function Players() {
                     <Image src={player.avatarfull} width={215} height={210} />
                   </header>
                   <div className={styles.card_body}>{player.personaname}</div>
+                  <div>Last Seen: {player.last_match_time} </div>
                 </div>
               </Link>
             ))}
