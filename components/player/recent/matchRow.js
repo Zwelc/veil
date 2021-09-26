@@ -1,4 +1,4 @@
-import { convertHMS } from "../util/time";
+import { convertHMS } from "../../../util/time";
 import Image from "next/image";
 import styles from "./recentMatches.module.scss";
 
