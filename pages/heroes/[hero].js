@@ -67,7 +67,10 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const data = heroes[params.hero];
   const loreName = data.name.replace(/npc_dota_hero_/, "");
-  const desc = lore[loreName].split(/\n/g);
+  let desc = lore[loreName].split(/\n/g);
+
+  if (loreName == "dawnbreaker") desc = [];
+
   const hero = { ...data, description: desc };
   return {
     props: {
