@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import Main from "../components/main";
+import Main from "../components/layout/main";
 import styles from "../styles/Home.module.scss";
 
 export default function Home({ matches }) {

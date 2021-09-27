@@ -14,6 +14,11 @@ function Sidebar() {
               <span className="material-icons md-18">home</span>Home
             </a>
           </Link>
+          <Link href="/heroes">
+            <a>
+              <span className="material-icons md-18">view_agenda</span>Heroes
+            </a>
+          </Link>
           <Link href="/players">
             <a>
               <span className="material-icons md-18">people</span>Players

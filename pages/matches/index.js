@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Main from "../../components/main";
+import Main from "../../components/layout/main";
 import styles from "../../styles/Matches.module.scss";
 
 function Matches() {
