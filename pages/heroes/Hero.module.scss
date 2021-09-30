@@ -1,0 +1,27 @@
+.lore {
+	background-color: var(--card);
+	width: 700px;
+	padding: 10px;
+	line-height: 1.5rem;
+}
+
+.container {
+	width: 90%;
+	height: 100%;
+	padding: 10px;
+}
+
+.title {
+	font-size: 3rem;
+}
+
+.roles {
+	width: 50%;
+	ul {
+		display: flex;
+		justify-content: space-between;
+	}
+	li {
+		list-style: none;
+	}
+}

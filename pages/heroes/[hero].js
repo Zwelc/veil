@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 
 import Main from "../../components/layout/main";
-
+import Aside from "../../components/aside";
 import heroes from "dotaconstants/build/heroes";
 import lore from "dotaconstants/build/hero_lore";
 import styles from "./Hero.module.scss";
@@ -16,11 +16,6 @@ export default function Hero({ hero }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Main>
-        <Image
-          src={`https://steamcdn-a.akamaihd.net/${hero.img}`}
-          width={128}
-          height={80}
-        />
         <div className={styles.title}>{hero?.localized_name}</div>
         <div className={styles.roles}>
           <ul>
@@ -34,6 +29,13 @@ export default function Hero({ hero }) {
             <p key={index}>{desc}</p>
           ))}
         </div>
+      </Main>
+      <Aside>
+        <Image
+          src={`https://steamcdn-a.akamaihd.net/${hero.img}`}
+          width={128}
+          height={80}
+        />
         <div className={styles.stats}>
           <div>Base Health: {hero?.base_health}</div>
           <div>Base Health Regen: {hero?.base_health_regen}</div>
@@ -48,7 +50,7 @@ export default function Hero({ hero }) {
           <div>Projectile Speed: {hero?.projectile_speed}</div>
           <div>Movement Speed: {hero?.move_speed}</div>
         </div>
-      </Main>
+      </Aside>
     </>
   );
 }

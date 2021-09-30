@@ -17,7 +17,7 @@ export default function Heroes({ heroes, info }) {
                   width={128}
                   height={80}
                 />
-                {hero.localized_name}
+                {/* {hero.localized_name} */}
               </div>
             </Link>
           );
