@@ -16,7 +16,15 @@ export default function Hero({ hero }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Main>
-        <div className={styles.title}>{hero?.localized_name}</div>
+        <div className={styles.title}>
+          {" "}
+          <Image
+            src={`https://steamcdn-a.akamaihd.net/${hero.icon}`}
+            width={45}
+            height={60}
+          />
+          {hero?.localized_name}
+        </div>
         <div className={styles.roles}>
           <ul>
             {hero?.roles.map((role, index) => (
@@ -33,8 +41,8 @@ export default function Hero({ hero }) {
       <Aside>
         <Image
           src={`https://steamcdn-a.akamaihd.net/${hero.img}`}
-          width={128}
-          height={80}
+          width={144}
+          height={144}
         />
         <div className={styles.stats}>
           <div>Base Health: {hero?.base_health}</div>

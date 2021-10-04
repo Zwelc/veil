@@ -1,6 +1,6 @@
 .lore {
 	background-color: var(--card);
-	width: 700px;
+	width: 60rem;
 	padding: 10px;
 	line-height: 1.5rem;
 }
@@ -12,7 +12,13 @@
 }
 
 .title {
-	font-size: 3rem;
+	font-size: 2.5rem;
+	
+	img {
+		width: 2rem;
+		height: 2rem;
+		padding: 5px;
+	}
 }
 
 .roles {
@@ -24,4 +30,9 @@
 	li {
 		list-style: none;
 	}
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(11, 1fr);
 }
