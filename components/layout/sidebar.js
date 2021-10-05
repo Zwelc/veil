@@ -10,29 +10,29 @@ function Sidebar() {
         <div className={styles.title}>MENU</div>
         <div className={styles.menu}>
           <Link href="/">
-            <a>
-              <span className="material-icons md-18">home</span>Home
-            </a>
+            <a>Home</a>
           </Link>
           <Link href="/heroes">
-            <a>
-              <span className="material-icons md-18">view_agenda</span>Heroes
-            </a>
+            <a>Heroes</a>
           </Link>
           <Link href="/players">
-            <a>
-              <span className="material-icons md-18">people</span>Players
-            </a>
+            <a>Players</a>
           </Link>
           <Link href="/matches">
-            <a>
-              <span className="material-icons md-18">view_agenda</span>Matches
-            </a>
+            <a>Matches</a>
           </Link>
+        </div>
+      </div>
+      <div className={styles.wrapper}>
+        <div className={styles.title}>
+          LEARN MORE <span className="material-icons md-12">open_in_new</span>
+        </div>
+        <div className={styles.menu}>
           <Link href="https://www.dota2.com/home">
-            <a target="_blank">
-              <span className="material-icons md-18">open_in_new</span> Dota 2
-            </a>
+            <a target="_blank">Dota 2</a>
+          </Link>
+          <Link href="https://docs.opendota.com/#section/Introduction">
+            <a target="_blank">OpenDota API</a>
           </Link>
         </div>
       </div>
