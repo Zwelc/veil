@@ -20,15 +20,19 @@ function MatchRow(props) {
       <td>
         <Image src={heroImg} height={29} width={59} />
       </td>
+      <td>{match.player_slot <= 127 && match.radiant_win ? "Won" : "Lost"}</td>
       <td>
         {match.kills}/{match.deaths}/{match.assists}
       </td>
-      <td>{getSkill(match.skill)}</td>
       <td>
-        {lobby.name.slice(10).split("_").join(" ")}
-        {mode.name.slice(9).split("_").join(" ")}
+        {lobby.name
+          .slice(10)
+          .split("_")
+          .join(" ")
+          .match(/ranked/)
+          ? "Ranked"
+          : "Unranked"}
       </td>
-      <td>{match.player_slot <= 127 && match.radiant_win ? "Won" : "Lost"}</td>
       <td>{convertHMS(match.duration)}</td>
     </tr>
   );

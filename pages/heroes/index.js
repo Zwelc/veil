@@ -15,9 +15,10 @@ export default function Heroes({ heroes, info }) {
               <Link key={hero.id} href={`/heroes/${hero.id}`}>
                 <div>
                   <Image
-                    src={`https://steamcdn-a.akamaihd.net/${heroInfo.img}`}
+                    src={`https://cdn.cloudflare.steamstatic.com/${heroInfo.img}`}
                     width={128}
                     height={80}
+                    alt={hero.localized_name}
                   />
                   {/* {hero.localized_name} */}
                 </div>

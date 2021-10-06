@@ -2,8 +2,10 @@ import Head from "next/head";
 import Link from "next/link";
 import Main from "../components/layout/main";
 import styles from "../styles/Home.module.scss";
+import Image from "next/image";
+import heroes from "dotaconstants/build/heroes.json";
 
-export default function Home({ matches }) {
+export default function Home({ matches, heroes }) {
   return (
     <>
       <Head>
@@ -17,13 +19,40 @@ export default function Home({ matches }) {
           {matches.map((match) => (
             <div className={styles.card} key={match.match_id}>
               <div className={styles.headline}>
-                {match.match_id}
-                <span className="material-icons md-18">unfold_more</span>
+                <span className={styles.title}>{match.match_id}</span>
+                <span className="material-icons md-24">unfold_more</span>
               </div>
               <div className={styles.average}>MMR: {match.avg_mmr}</div>
-              <div className={styles.time}>Game Time: {match.duration}</div>
+              <div className={styles.time}>
+                {match.radiant_win ? "Radiant Won" : "Dire Won"}
+              </div>
+              <hr />
               <div className={styles.score}>
-                Score: {match.radiant_score} : {match.dire_score}{" "}
+                {match.radiant_team.split(",").map((hero) => {
+                  const playerHero = heroes[hero];
+                  return (
+                    <Image
+                      key={playerHero.id}
+                      src={`https://steamcdn-a.akamaihd.net/${playerHero.icon}`}
+                      width={14}
+                      height={16}
+                      alt={playerHero.localized_name}
+                    />
+                  );
+                })}{" "}
+                VS{" "}
+                {match.dire_team.split(",").map((hero) => {
+                  const playerHero = heroes[hero];
+                  return (
+                    <Image
+                      key={playerHero.id}
+                      src={`https://steamcdn-a.akamaihd.net/${playerHero.icon}`}
+                      width={16}
+                      height={16}
+                      alt={playerHero.localized_name}
+                    />
+                  );
+                })}
               </div>
             </div>
           ))}
@@ -38,5 +67,6 @@ export async function getServerSideProps() {
     "https://api.opendota.com/api/publicMatches"
   );
   const matches = await publicMatches.json();
-  return { props: { matches } };
+  console.log(matches[0].radiant_team);
+  return { props: { matches, heroes } };
 }

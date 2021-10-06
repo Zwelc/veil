@@ -6,6 +6,7 @@ import Aside from "../../components/aside";
 import heroes from "dotaconstants/build/heroes";
 import lore from "dotaconstants/build/hero_lore";
 import styles from "./Hero.module.scss";
+import { getAttributeIcon } from "../../util/hero";
 
 export default function Hero({ hero }) {
   return (
@@ -17,16 +18,16 @@ export default function Hero({ hero }) {
       </Head>
       <Main>
         <div className={styles.title}>
-          {" "}
           <Image
-            src={`https://steamcdn-a.akamaihd.net/${hero.icon}`}
+            src={getAttributeIcon(hero.primary_attr)}
             width={45}
             height={60}
-          />
+          />{" "}
           {hero?.localized_name}
         </div>
         <div className={styles.roles}>
           <ul>
+            <li>{hero.attack_type}</li>
             {hero?.roles.map((role, index) => (
               <li key={index}>{role}</li>
             ))}
