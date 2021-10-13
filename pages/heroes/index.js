@@ -2,31 +2,31 @@ import Main from "../../components/layout/main";
 import Image from "next/image";
 import Link from "next/link";
 import heroes from "dotaconstants/build/heroes.json";
-import styles from "./Hero.module.scss";
+import { ImageList, ImageListItem } from "@mui/material";
 
 export default function Heroes({ heroes, info }) {
   return (
     <>
-      <Main>
-        <div className={styles.grid}>
-          {heroes?.map((hero) => {
-            const heroInfo = info[hero.id];
-            return (
-              <Link key={hero.id} href={`/heroes/${hero.id}`}>
-                <div>
-                  <Image
-                    src={`https://cdn.cloudflare.steamstatic.com/${heroInfo.img}`}
-                    width={128}
-                    height={80}
-                    alt={hero.localized_name}
-                  />
-                  {/* {hero.localized_name} */}
-                </div>
-              </Link>
-            );
-          })}
-        </div>
-      </Main>
+      {/* <Main> */}
+			<ImageList cols={5} rowHeight={144}>
+				{heroes?.map((hero) => {
+					const heroInfo = info[hero.id];
+					return (
+						<Link key={hero.id} href={`/heroes/${hero.id}`}>
+						<a>
+						<ImageListItem>
+							<Image
+								src={`https://cdn.cloudflare.steamstatic.com${heroInfo.img}`}
+								width={256}
+								height={144}
+								alt={hero.localized_name}
+							/>
+							</ImageListItem>
+							</a>
+					</Link>
+				)})}
+			</ImageList>
+      {/* </Main> */}
     </>
   );
 }

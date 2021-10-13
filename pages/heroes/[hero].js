@@ -1,23 +1,20 @@
 import Head from "next/head";
 import Image from "next/image";
-
-import Main from "../../components/layout/main";
-import Aside from "../../components/aside";
 import heroes from "dotaconstants/build/heroes";
 import lore from "dotaconstants/build/hero_lore";
-import styles from "./Hero.module.scss";
+
 import { getAttributeIcon } from "../../util/hero";
+import { Typography } from "@mui/material";
 
 export default function Hero({ hero }) {
   return (
     <>
       <Head>
-        <title>{hero.localized_name}</title>
+        <title>{hero.localized_name} overview</title>
         <meta name="description" content="Dota 2 overview" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Main>
-        <div className={styles.title}>
+        <div>
           <Image
             src={getAttributeIcon(hero.primary_attr)}
             width={45}
@@ -25,7 +22,7 @@ export default function Hero({ hero }) {
           />{" "}
           {hero?.localized_name}
         </div>
-        <div className={styles.roles}>
+        <div>
           <ul>
             <li>{hero.attack_type}</li>
             {hero?.roles.map((role, index) => (
@@ -33,19 +30,17 @@ export default function Hero({ hero }) {
             ))}
           </ul>
         </div>
-        <div className={styles.lore}>
+        <div>
           {hero?.description.map((desc, index) => (
-            <p key={index}>{desc}</p>
+						<Typography component="p" key={index}>{desc}</Typography>
           ))}
         </div>
-      </Main>
-      <Aside>
         <Image
           src={`https://steamcdn-a.akamaihd.net/${hero.img}`}
           width={144}
           height={144}
         />
-        <div className={styles.stats}>
+        <div>
           <div>Base Health: {hero?.base_health}</div>
           <div>Base Health Regen: {hero?.base_health_regen}</div>
           <div>Base Mana: {hero?.base_mana}</div>
@@ -59,7 +54,6 @@ export default function Hero({ hero }) {
           <div>Projectile Speed: {hero?.projectile_speed}</div>
           <div>Movement Speed: {hero?.move_speed}</div>
         </div>
-      </Aside>
     </>
   );
 }

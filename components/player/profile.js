@@ -1,5 +1,8 @@
 import styles from "../../styles/Player.module.scss";
-
+import { Avatar, Typography } from "@mui/material";
+import { Card } from "@mui/material";
+import { Paper } from "@mui/material";
+import { Box } from "@mui/system";
 const ranks = [
   "Herald",
   "Guardian",
@@ -23,6 +26,15 @@ function Profile(props) {
   const wl = props.wl;
   return (
     <div className={styles.container}>
+		{/* <Paper elevation={2} sx={{display: 'flex'}}>
+		<Box sx={{display: 'flex', flexDirection: 'row'}}>
+			<Avatar 
+				src={player.profile.avatarfull} alt={player.profile.personaname} />
+			<Typography variant="h6" component="h6">
+			{player.profile.personaname}
+			</Typography>
+			</Box>
+		</Paper> */}
       <div className={styles.header}>
         <img src={player.profile.avatarfull} />
         <div className={styles.name}>{player.profile.personaname}</div>

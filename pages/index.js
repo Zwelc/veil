@@ -13,7 +13,8 @@ export default function Home({ matches, heroes }) {
         <meta name="description" content="Dota 2 overview" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Main>
+      {/* <Main> */}
+			<div>
         <h3>Public Matches</h3>
         <div className={styles.grid}>
           {matches.map((match) => (
@@ -57,7 +58,8 @@ export default function Home({ matches, heroes }) {
             </div>
           ))}
         </div>
-      </Main>
+				</div>
+      {/* </Main> */}
     </>
   );
 }
