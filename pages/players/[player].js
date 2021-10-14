@@ -1,56 +1,11 @@
 import RecentMatches from "../../components/player/recent/recentMatches";
 import Head from "next/head";
-import styles from "../../styles/Player.module.scss";
 import Profile from "../../components/player/profile";
-import Item from "../../components/summary/item";
-import { useEffect, useState } from "react";
-import Summary from "../../components/summary";
-import Main from "../../components/layout/main";
-import Aside from "../../components/aside";
 import { Box } from "@mui/system";
-function Player({ playerId, player, heroes, mode, lobby, counts, wl }) {
-  const [matches, setMatches] = useState([]);
-  const [kills, setKills] = useState(0);
-  const [assists, setAssists] = useState(0);
-  const [deaths, setDeaths] = useState(0);
-  const [wins, setWins] = useState(0);
-  const [losses, setLosses] = useState(0);
-  const [winrate, setWinrate] = useState(0);
-  useEffect(() => {
-    getRecentMatches(playerId);
-  }, []);
+import { Typography } from "@mui/material";
+import Heroes from "../../components/player/heroes";
 
-  function getRecentMatches(id) {
-    fetch(`https://api.opendota.com/api/players/${id}/recentMatches`)
-      .then((res) => res.json())
-      .then((data) => {
-        setMatches(data);
-        getSummary();
-      });
-  }
-
-  function getSummary() {
-    let totalKills = 0;
-    let totalDeaths = 0;
-    let totalAssists = 0;
-    let won = 0;
-    let lost = 0;
-    matches.forEach((match) => {
-      totalKills += match.kills;
-      totalDeaths += match.deaths;
-      totalAssists += match.assists;
-
-      match.player_slot <= 127 && match.radiant_win ? (won += 1) : (lost += 1);
-    });
-    let winrate = ((won / (won + lost)) * 100).toFixed(2);
-    setKills(totalKills);
-    setDeaths(totalDeaths);
-    setAssists(totalAssists);
-    setWins(won);
-    setLosses(lost);
-    setWinrate(winrate);
-  }
-
+function Player({ player, heroes, mode, lobby, counts, wl }) {
   return (
     <>
       <Head>
@@ -59,20 +14,23 @@ function Player({ playerId, player, heroes, mode, lobby, counts, wl }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 			<Box sx={{display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)' }}>
-        <RecentMatches
-          recent={matches}
-          heroes={heroes}
-          mode={mode}
-          lobby={lobby}
-        />
-        {/* <Summary style={styles.summary} items={styles.items}>
-          <Item style={styles.item} desc={`Winrate: ${winrate}%`} />
-          <Item style={styles.item} desc={`Won: ${wins}`} />
-          <Item style={styles.item} desc={`Lost: ${losses}`} />
-          <Item style={styles.item} desc={`Kills: ${kills}`} />
-          <Item style={styles.item} desc={`Deaths: ${deaths}`} />
-        </Summary> */}
-        <Profile player={player} counts={counts} wl={wl} />
+			<Box>
+				<Heroes id={player.profile.account_id} heroData={heroes}/>
+			</Box>
+				<Box>
+        	<Profile player={player} counts={counts} wl={wl} />	
+				</Box>
+				<Box>
+				<Typography variant="h6" component="div">
+				Recent Matches
+				</Typography>
+					<RecentMatches
+						id={player.profile.account_id}
+						heroes={heroes}
+						mode={mode}
+						lobby={lobby}
+					/>
+				</Box>
 			</Box>
     </>
   );
@@ -107,7 +65,6 @@ export async function getServerSideProps(context) {
 
   return {
     props: {
-      playerId,
       player,
       heroes,
       mode,

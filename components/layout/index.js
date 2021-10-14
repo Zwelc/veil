@@ -28,10 +28,11 @@ export default function Layout({ window, children }) {
 
 	const drawer = (
 		<div>
+			<Toolbar>
 			<Typography variant="h6" component="text">
 				Reactive Stats
 			</Typography>
-			<Toolbar />
+			</Toolbar>
 			<Divider />
 			<List>
 				{['Home', 'Heroes', 'Players', 'Matches'].map((text, index) => (
