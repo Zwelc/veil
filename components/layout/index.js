@@ -50,16 +50,16 @@ export default function Layout({ window, children }) {
 					<ListItem button>
 						<ListItemText primary={'Learn More'} />
 					</ListItem>
-					<ListItem button >
 					<External href="https://www.dota2.com/home" color="inherit" underline="none">
+					<ListItem button >
 					<ListItemText primary={'Dota 2'} />
-					</External>
 					</ListItem>
-						<ListItem button >
-					<External href="https://docs.opendota.com/" color="inherit" underline="none">
-						<ListItemText primary={'OpenDota API'} />
 					</External>
+					<External href="https://docs.opendota.com/" color="inherit" underline="none">
+						<ListItem button >
+						<ListItemText primary={'OpenDota API'} />
 						</ListItem>
+					</External>
 				</List>
 		</div>
 	)
