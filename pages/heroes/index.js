@@ -1,32 +1,26 @@
-import Main from "../../components/layout/main";
 import Image from "next/image";
 import Link from "next/link";
 import heroes from "dotaconstants/build/heroes.json";
-import styles from "./Hero.module.scss";
-
+import { Box } from "@mui/system";
 export default function Heroes({ heroes, info }) {
   return (
     <>
-      <Main>
-        <div className={styles.grid}>
-          {heroes?.map((hero) => {
-            const heroInfo = info[hero.id];
-            return (
-              <Link key={hero.id} href={`/heroes/${hero.id}`}>
-                <div>
-                  <Image
-                    src={`https://cdn.cloudflare.steamstatic.com/${heroInfo.img}`}
-                    width={128}
-                    height={80}
-                    alt={hero.localized_name}
-                  />
-                  {/* {hero.localized_name} */}
-                </div>
-              </Link>
-            );
-          })}
-        </div>
-      </Main>
+      <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', mt: 3, gap: 2 }}>
+			{heroes?.map((hero) => {
+					const heroInfo = info[hero.id];
+					return (
+						<Link key={hero.id} href={`/heroes/${hero.id}`}>
+						<a>
+							<Image
+								src={`https://steamcdn-a.akamaihd.net/${heroInfo.img}`}
+								width={256}
+								height={144}
+								alt={hero.localized_name}
+							/>
+							</a>
+					</Link>
+				)})}
+			</Box>
     </>
   );
 }
