@@ -5,7 +5,7 @@ import { Box } from "@mui/system";
 export default function Heroes({ heroes, info }) {
   return (
     <>
-      <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)' }}>
+      <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', mt: 3, gap: 2 }}>
 			{heroes?.map((hero) => {
 					const heroInfo = info[hero.id];
 					return (

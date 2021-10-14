@@ -12,9 +12,9 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { useState } from "react";
 import Link from 'next/link';
+import { Link as External } from "@mui/material";
 import { InputBase } from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
-import Router from 'next/router';
 import router from "next/router";
 
 const drawerWidth = 200;
@@ -35,21 +35,31 @@ export default function Layout({ window, children }) {
 			</Toolbar>
 			<Divider />
 			<List>
-				{['Home', 'Heroes', 'Players', 'Matches'].map((text, index) => (
-					<Link href={ text == 'Home' ? "/" : `/${text.toLowerCase()}`} key={text}>
-					<ListItem button >
-					<ListItemText primary={text} />
-					</ListItem>
+				{['Home', 'Heroes', 'Players'].map((text, index) => (
+					<Link href={ text == 'Home' ? "/" : `/${text.toLowerCase()}`} key={text} passHref>
+						<External  color="inherit" underline="none">
+							<ListItem button >
+							<ListItemText primary={text} />
+							</ListItem>
+						</External>
 					</Link>
 				))}
 			</List>
 			<Divider />
 				<List>
-					{['Dota 2', 'OpenDota API'].map((text, index) =>  (
-						<ListItem button key={text}>
-							<ListItemText primary={text} />
+					<ListItem button>
+						<ListItemText primary={'Learn More'} />
+					</ListItem>
+					<ListItem button >
+					<External href="https://www.dota2.com/home" color="inherit" underline="none">
+					<ListItemText primary={'Dota 2'} />
+					</External>
+					</ListItem>
+						<ListItem button >
+					<External href="https://docs.opendota.com/" color="inherit" underline="none">
+						<ListItemText primary={'OpenDota API'} />
+					</External>
 						</ListItem>
-					))}
 				</List>
 		</div>
 	)
