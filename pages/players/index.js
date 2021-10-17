@@ -36,7 +36,13 @@ function Players() {
               <Card
                 sx={{ maxWidth: 345 }}
                 onClick={() => {
-                  localStorage.setItem("id", player.account_id);
+                  let players = [localStorage.getItem("id")];
+                  if (players.length > 0) {
+                    players.push(player.account_id);
+                  } else {
+                    players = [player.account_id];
+                  }
+                  localStorage.setItem("id", players);
                   localStorage.setItem("selected", player.account_id);
                 }}
               >

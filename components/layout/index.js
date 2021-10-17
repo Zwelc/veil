@@ -63,7 +63,7 @@ export default function Layout({ children }) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-            Reactive Stats
+            DStats
           </Typography>
           <Divider />
           {Search}

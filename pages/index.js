@@ -22,8 +22,8 @@ export default function Home() {
     return (
       <>
         <Head>
-          <title>Reactive Stats</title>
-          <meta name="description" content="Dota 2 overview" />
+          <title>DStats</title>
+          <meta name="description" content="Quick stats overview for dota 2" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <Container sx={{ mt: 4 }}>
