@@ -36,13 +36,23 @@ function Players() {
               <Card
                 sx={{ maxWidth: 345 }}
                 onClick={() => {
-                  let players = [localStorage.getItem("id")];
-                  if (players.length > 0) {
-                    players.push(player.account_id);
+                  let players = JSON.parse(localStorage.getItem("id"));
+                  if (players) {
+                    if (
+                      !players.players.find(
+                        (record) => record.account_id == player.account_id
+                      )
+                    ) {
+                      players.players.push(player);
+                    }
                   } else {
-                    players = [player.account_id];
+                    players = { players: [] };
+                    players.players.push(player);
                   }
-                  localStorage.setItem("id", players);
+                  localStorage.setItem(
+                    "id",
+                    JSON.stringify({ players: players.players })
+                  );
                   localStorage.setItem("selected", player.account_id);
                 }}
               >

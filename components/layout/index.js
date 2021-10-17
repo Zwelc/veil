@@ -47,7 +47,7 @@ export default function Layout({ children }) {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <CssBaseline />
-      <AppBar position="fixed">
+      <AppBar position="relative">
         <Toolbar>
           <IconButton
             color="inherit"

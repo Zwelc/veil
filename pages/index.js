@@ -1,70 +1,77 @@
 import Head from "next/head";
 import Link from "next/link";
 
-import { Typography, Container } from "@mui/material";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import { CardActionArea } from "@mui/material";
+import { Typography, Container, Divider } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import { Box } from "@mui/system";
 
 export default function Home() {
   const router = useRouter();
-
-  const [account, setAccount] = useState(null);
   const [players, setPlayers] = useState([]);
 
   useEffect(() => {
     if (localStorage) {
       const selected = localStorage.getItem("selected");
-      if (selected) router.push(`/players/${selected}`);
+      // if (selected) router.push(`/players/${selected}`);
+      const storedProfiles = JSON.parse(localStorage.getItem("id"));
+      setPlayers(storedProfiles.players);
     }
-  }, [router]);
+  }, []);
 
-  if (!account)
-    return (
-      <>
-        <Head>
-          <title>DStats</title>
-          <meta name="description" content="Quick stats overview for dota 2" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <Container sx={{ mt: 4 }}>
-          <Typography variant="h6" component="text">
-            Stored Profiles
-          </Typography>
-        </Container>
-      </>
-    );
   return (
     <>
       <Head>
-        <title>Reactive Stats</title>
-        <meta name="description" content="Dota 2 overview" />
+        <title>DStats</title>
+        <meta name="description" content="Quick stats overview for dota 2" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container sx={{ mt: 4 }}>
-        {account}
-        <Typography component="p" mt={2}>
-          Reactive Stats is a small platform built for personal use that
-          provides a quick overview of player stats as well as information of
-          the various heroes found in the Dota 2.
-        </Typography>
-        <Typography variant="body" component="p" mt={2}>
-          This is a passion project inspired by{" "}
-          <a href="https://www.dotabuff.com/" target="_blank" rel="noreferrer">
-            DotaBuff
-          </a>{" "}
-          and{" "}
-          <a href="https://www.opendota.com/" target="_blank" rel="noreferrer">
-            OpenDota
-          </a>
-          , built with React and Next.js
-        </Typography>
-        <Typography variant="body2" component="p" mt={2}>
-          If you are currently not a dota 2 player, but would like to see a
-          player stats overview, my profile can be found{" "}
-          <Link href="/players/170365079">
-            <a>here</a>
-          </Link>
-        </Typography>
+      <Container>
+        <Box>
+          <Typography variant="h6" component="text">
+            Stored Profiles
+            <Divider />
+            <Container
+              sx={{
+                m: 3,
+                display: "grid",
+                gridTemplateColumns: "repeat(4, 1fr)",
+              }}
+            >
+              {players
+                ? players.map((player) => (
+                    <Box sx={{ p: 3 }} key={player.account_id}>
+                      <Link href={`/players/${player.account_id}`} passHref>
+                        <Card sx={{ maxWidth: 345 }}>
+                          <CardActionArea>
+                            <CardMedia
+                              component="img"
+                              height="210"
+                              image={player.avatarfull}
+                              alt={player.personaname}
+                            />
+                            <CardContent>
+                              <Typography
+                                gutterBottom
+                                variant="h5"
+                                component="div"
+                              >
+                                {player.personaname}
+                              </Typography>
+                            </CardContent>
+                          </CardActionArea>
+                        </Card>
+                      </Link>
+                    </Box>
+                  ))
+                : "There are no stored profiles currently. Please use the searchbar to get started"}
+            </Container>
+          </Typography>
+        </Box>
       </Container>
     </>
   );
