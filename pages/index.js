@@ -42,7 +42,7 @@ export default function Home() {
                 gridTemplateColumns: "repeat(4, 1fr)",
               }}
             >
-              {players
+              {players.length > 0
                 ? players.map((player) => (
                     <Box sx={{ p: 3 }} key={player.account_id}>
                       <Link href={`/players/${player.account_id}`} passHref>
