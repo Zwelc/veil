@@ -1,8 +1,6 @@
-import { Typography } from "@mui/material";
-import { Card } from "@mui/material";
+import { Avatar, Typography } from "@mui/material";
 import { Paper } from "@mui/material";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
+import { Box } from "@mui/system";
 
 const ranks = [
   "Herald",
@@ -23,18 +21,31 @@ function getRank(tier) {
 }
 export function ProfileWinrate({ wl }) {
   return (
-    <Paper>
-      <div>Wins: {wl.win}</div>
-      <div>Losses: {wl.lose}</div>
-      <hr />
-      <div>Winrate: {((wl.win / (wl.win + wl.lose)) * 100).toFixed(2)}% </div>
-    </Paper>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        p: 2,
+      }}
+    >
+      <div>{wl.win} Wins</div>
+      <div>{wl.lose} Losses</div>
+      <div>{((wl.win / (wl.win + wl.lose)) * 100).toFixed(2)}% Overall</div>
+    </Box>
   );
 }
 
 export function ProfileCounts({ counts }) {
   return (
-    <Paper>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        p: 2,
+      }}
+    >
       <div>
         Dire:{" "}
         {(
@@ -51,25 +62,27 @@ export function ProfileCounts({ counts }) {
         ).toFixed(2)}
         %
       </div>
-    </Paper>
+    </Box>
   );
 }
-function Profile(props) {
-  const player = props.player;
+function Profile({ player }) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        component="img"
-        height="184"
-        image={player.profile.avatarfull}
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
+      <Avatar
         alt={player.profile.personaname}
+        src={player.profile.avatarfull}
+        sx={{ width: 255, height: 255 }}
       />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          {player.profile.personaname}
-        </Typography>
-      </CardContent>
-    </Card>
+      <Typography component="div" variant="h3">
+        {player.profile.personaname}
+      </Typography>
+    </Box>
   );
 }
 
