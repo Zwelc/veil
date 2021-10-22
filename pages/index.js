@@ -19,7 +19,9 @@ export default function Home() {
       const selected = localStorage.getItem("selected");
       // if (selected) router.push(`/players/${selected}`);
       const storedProfiles = JSON.parse(localStorage.getItem("id"));
-      setPlayers(storedProfiles.players);
+      if (storedProfiles) {
+        setPlayers(storedProfiles.players);
+      }
     }
   }, []);
 
@@ -30,46 +32,49 @@ export default function Home() {
         <meta name="description" content="Quick stats overview for dota 2" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container>
+      <Container sx={{ p: 3 }}>
         <Box>
           <Typography variant="h6" component="text">
             Stored Profiles
             <Divider />
-            <Container
-              sx={{
-                m: 3,
-                display: "grid",
-                gridTemplateColumns: "repeat(4, 1fr)",
-              }}
-            >
-              {players.length > 0
-                ? players.map((player) => (
-                    <Box sx={{ p: 3 }} key={player.account_id}>
-                      <Link href={`/players/${player.account_id}`} passHref>
-                        <Card sx={{ maxWidth: 345 }}>
-                          <CardActionArea>
-                            <CardMedia
-                              component="img"
-                              height="210"
-                              image={player.avatarfull}
-                              alt={player.personaname}
-                            />
-                            <CardContent>
-                              <Typography
-                                gutterBottom
-                                variant="h5"
-                                component="div"
-                              >
-                                {player.personaname}
-                              </Typography>
-                            </CardContent>
-                          </CardActionArea>
-                        </Card>
-                      </Link>
-                    </Box>
-                  ))
-                : "There are no stored profiles currently. Please use the searchbar to get started"}
-            </Container>
+            {players.length > 0 ? (
+              <Container
+                sx={{
+                  m: 3,
+                  display: "grid",
+                  gridTemplateColumns: "repeat(4, 1fr)",
+                }}
+              >
+                players.map((player) => (
+                <Box sx={{ p: 3 }} key={player.account_id}>
+                  <Link href={`/players/${player.account_id}`} passHref>
+                    <Card sx={{ maxWidth: 345 }}>
+                      <CardActionArea>
+                        <CardMedia
+                          component="img"
+                          height="210"
+                          image={player.avatarfull}
+                          alt={player.personaname}
+                        />
+                        <CardContent>
+                          <Typography gutterBottom variant="h5" component="div">
+                            {player.personaname}
+                          </Typography>
+                        </CardContent>
+                      </CardActionArea>
+                    </Card>
+                  </Link>
+                </Box>
+                ))
+              </Container>
+            ) : (
+              <Container>
+                <Typography variant="body">
+                  There are no stored profiles currently. Please use the
+                  searchbar to get started
+                </Typography>
+              </Container>
+            )}
           </Typography>
         </Box>
       </Container>
