@@ -1,0 +1,5577 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Player/Card Default 1`] = `
+<div
+  className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-15w33er-MuiPaper-root-MuiCard-root"
+>
+  <button
+    className="MuiButtonBase-root MuiCardActionArea-root css-13vqpky-MuiButtonBase-root-MuiCardActionArea-root"
+    disabled={false}
+    onBlur={[Function]}
+    onContextMenu={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex={0}
+    type="button"
+  >
+    <img
+      alt="tenko"
+      className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+      height="210"
+      src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/17/17865e64ce18b4b71e4e8680cb33d1db5c4f838f_full.jpg"
+    />
+    <div
+      className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+    >
+      <div
+        className="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-af0gdw-MuiTypography-root"
+      >
+        tenko
+      </div>
+    </div>
+    <span
+      className="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
+    />
+  </button>
+</div>
+`;
+
+exports[`Storyshots Player/Hero Default 1`] = `
+<tr
+  className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+  role={null}
+>
+  <th
+    aria-sort={null}
+    className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    scope="row"
+  >
+    <img
+      alt="Earth Spirit"
+      height={29}
+      src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/earth_spirit_full.png?"
+      width={59}
+    />
+  </th>
+  <td
+    aria-sort={null}
+    className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+  >
+    299
+  </td>
+  <td
+    aria-sort={null}
+    className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+  >
+    161
+  </td>
+  <td
+    aria-sort={null}
+    className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+  >
+    53.85%
+  </td>
+</tr>
+`;
+
+exports[`Storyshots Player/HeroList Default 1`] = `
+<div>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Earth Spirit"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/earth_spirit_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      299
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      161
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      53.85%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Pudge"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/pudge_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      236
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      130
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      55.08%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Invoker"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/invoker_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      231
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      114
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      49.35%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Rubick"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/rubick_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      231
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      105
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      45.45%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Silencer"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/silencer_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      158
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      83
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      52.53%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Shadow Fiend"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/nevermore_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      148
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      84
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      56.76%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Void Spirit"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/void_spirit_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      145
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      87
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      60.00%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Kunkka"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/kunkka_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      138
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      66
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      47.83%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Anti-Mage"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/antimage_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      134
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      72
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      53.73%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Storm Spirit"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/storm_spirit_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      129
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      75
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      58.14%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Mirana"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/mirana_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      123
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      67
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      54.47%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Monkey King"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/monkey_king_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      109
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      54
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      49.54%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Sniper"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/sniper_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      99
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      59
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      59.60%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Dark Willow"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/dark_willow_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      96
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      48
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      50.00%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Grimstroke"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/grimstroke_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      95
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      46
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      48.42%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Lone Druid"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/lone_druid_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      92
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      51
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      55.43%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Windranger"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/windrunner_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      90
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      52
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      57.78%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Crystal Maiden"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/crystal_maiden_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      89
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      56
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      62.92%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Pangolier"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/pangolier_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      87
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      45
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      51.72%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Phantom Assassin"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/phantom_assassin_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      86
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      46
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      53.49%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Legion Commander"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/legion_commander_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      76
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      40
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      52.63%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Phantom Lancer"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/phantom_lancer_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      74
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      48
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      64.86%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Drow Ranger"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/drow_ranger_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      68
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      35
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      51.47%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Mars"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/mars_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      67
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      36
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      53.73%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Wraith King"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/skeleton_king_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      66
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      40
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      60.61%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Alchemist"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/alchemist_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      63
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      35
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      55.56%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Spectre"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/spectre_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      59
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      33
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      55.93%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Axe"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/axe_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      57
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      36
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      63.16%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Dawnbreaker"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/dawnbreaker_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      56
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      35
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      62.50%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Bristleback"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/bristleback_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      55
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      27
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      49.09%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Razor"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/razor_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      51
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      32
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      62.75%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Viper"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/viper_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      50
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      28
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      56.00%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Bloodseeker"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/bloodseeker_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      49
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      28
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      57.14%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Ember Spirit"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/ember_spirit_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      45
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      24
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      53.33%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Hoodwink"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/hoodwink_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      45
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      20
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      44.44%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Doom"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/doom_bringer_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      43
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      26
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      60.47%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Lina"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/lina_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      42
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      21
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      50.00%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Jakiro"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/jakiro_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      42
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      19
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      45.24%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Terrorblade"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/terrorblade_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      42
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      24
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      57.14%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Troll Warlord"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/troll_warlord_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      40
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      22
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      55.00%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Morphling"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/morphling_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      39
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      16
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      41.03%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Nature's Prophet"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/furion_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      39
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      20
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      51.28%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Queen of Pain"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/queenofpain_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      38
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      13
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      34.21%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Treant Protector"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/treant_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      38
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      23
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      60.53%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Dragon Knight"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/dragon_knight_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      37
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      22
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      59.46%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Lion"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/lion_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      35
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      17
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      48.57%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Naga Siren"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/naga_siren_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      35
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      15
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      42.86%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Meepo"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/meepo_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      34
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      18
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      52.94%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Venomancer"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/venomancer_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      33
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      14
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      42.42%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Riki"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/riki_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      32
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      21
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      65.63%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Spirit Breaker"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/spirit_breaker_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      31
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      18
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      58.06%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Juggernaut"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/juggernaut_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      29
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      17
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      58.62%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Faceless Void"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/faceless_void_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      29
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      16
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      55.17%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Outworld Devourer"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/obsidian_destroyer_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      29
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      17
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      58.62%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Tusk"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/tusk_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      29
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      11
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      37.93%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Necrophos"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/necrolyte_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      28
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      14
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      50.00%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Slark"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/slark_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      27
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      11
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      40.74%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Undying"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/undying_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      26
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      16
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      61.54%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Dazzle"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/dazzle_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      25
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      12
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      48.00%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Lifestealer"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/life_stealer_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      25
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      12
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      48.00%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Sand King"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/sand_king_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      24
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      17
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      70.83%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Luna"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/luna_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      24
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      15
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      62.50%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Oracle"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/oracle_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      24
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      14
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      58.33%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Witch Doctor"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/witch_doctor_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      23
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      15
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      65.22%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Ancient Apparition"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/ancient_apparition_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      22
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      16
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      72.73%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Puck"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/puck_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      21
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      12
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      57.14%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Enchantress"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/enchantress_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      21
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      9
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      42.86%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Huskar"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/huskar_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      21
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      10
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      47.62%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Winter Wyvern"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/winter_wyvern_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      21
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      13
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      61.90%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Templar Assassin"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/templar_assassin_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      20
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      12
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      60.00%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Dark Seer"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/dark_seer_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      20
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      8
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      40.00%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Bounty Hunter"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/bounty_hunter_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      19
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      13
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      68.42%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Ogre Magi"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/ogre_magi_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      19
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      9
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      47.37%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Elder Titan"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/elder_titan_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      19
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      9
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      47.37%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Night Stalker"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/night_stalker_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      18
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      9
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      50.00%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Sven"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/sven_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      17
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      11
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      64.71%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Vengeful Spirit"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/vengefulspirit_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      17
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      10
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      58.82%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Tinker"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/tinker_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      17
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      7
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      41.18%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Visage"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/visage_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      17
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      10
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      58.82%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Tiny"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/tiny_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      16
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      8
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      50.00%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Lich"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/lich_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      16
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      9
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      56.25%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Chen"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/chen_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      16
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      10
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      62.50%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Beastmaster"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/beastmaster_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      15
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      9
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      60.00%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Ursa"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/ursa_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      15
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      6
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      40.00%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Lycan"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/lycan_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      15
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      9
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      60.00%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Brewmaster"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/brewmaster_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      15
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      8
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      53.33%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Techies"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/techies_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      15
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      6
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      40.00%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Arc Warden"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/arc_warden_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      15
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      9
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      60.00%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Clinkz"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/clinkz_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      14
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      6
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      42.86%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Gyrocopter"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/gyrocopter_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      14
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      5
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      35.71%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Disruptor"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/disruptor_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      13
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      6
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      46.15%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Medusa"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/medusa_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      13
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      7
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      53.85%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Timbersaw"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/shredder_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      13
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      5
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      38.46%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Shadow Shaman"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/shadow_shaman_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      12
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      8
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      66.67%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Slardar"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/slardar_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      12
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      5
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      41.67%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Enigma"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/enigma_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      12
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      5
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      41.67%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Centaur Warrunner"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/centaur_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      12
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      6
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      50.00%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Abaddon"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/abaddon_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      12
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      5
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      41.67%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Snapfire"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/snapfire_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      12
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      5
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      41.67%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Zeus"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/zuus_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      11
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      6
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      54.55%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Pugna"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/pugna_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      11
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      5
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      45.45%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Earthshaker"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/earthshaker_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      10
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      3
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      30.00%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Nyx Assassin"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/nyx_assassin_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      10
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      8
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      80.00%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Keeper of the Light"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/keeper_of_the_light_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      10
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      2
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      20.00%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Tidehunter"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/tidehunter_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      9
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      3
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      33.33%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Leshrac"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/leshrac_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      9
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      4
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      44.44%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Weaver"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/weaver_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      9
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      6
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      66.67%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Warlock"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/warlock_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      8
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      2
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      25.00%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Chaos Knight"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/chaos_knight_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      8
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      3
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      37.50%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Clockwerk"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/rattletrap_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      7
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      4
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      57.14%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Omniknight"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/omniknight_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      7
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      5
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      71.43%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Broodmother"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/broodmother_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      7
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      2
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      28.57%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Batrider"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/batrider_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      7
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      3
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      42.86%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Io"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/wisp_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      6
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      4
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      66.67%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Underlord"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/abyssal_underlord_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      6
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      3
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      50.00%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Death Prophet"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/death_prophet_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      5
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      1
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      20.00%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Shadow Demon"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/shadow_demon_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      5
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      1
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      20.00%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Magnus"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/magnataur_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      5
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      3
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      60.00%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Phoenix"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/phoenix_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      5
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      1
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      20.00%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Skywrath Mage"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/skywrath_mage_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      4
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      1
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      25.00%
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-1wubn3q-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="Bane"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/bane_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      1
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      0
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      0.00%
+    </td>
+  </tr>
+</div>
+`;
+
+exports[`Storyshots Player/List Default 1`] = `
+<div
+  className="MuiContainer-root MuiContainer-maxWidthLg css-tn641s-MuiContainer-root"
+>
+  <div
+    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-15w33er-MuiPaper-root-MuiCard-root"
+  >
+    <button
+      className="MuiButtonBase-root MuiCardActionArea-root css-13vqpky-MuiButtonBase-root-MuiCardActionArea-root"
+      disabled={false}
+      onBlur={[Function]}
+      onContextMenu={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      <img
+        alt="tenko"
+        className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+        height="210"
+        src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/17/17865e64ce18b4b71e4e8680cb33d1db5c4f838f_full.jpg"
+      />
+      <div
+        className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+      >
+        <div
+          className="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-af0gdw-MuiTypography-root"
+        >
+          tenko
+        </div>
+      </div>
+      <span
+        className="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
+      />
+    </button>
+  </div>
+  <div
+    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-15w33er-MuiPaper-root-MuiCard-root"
+  >
+    <button
+      className="MuiButtonBase-root MuiCardActionArea-root css-13vqpky-MuiButtonBase-root-MuiCardActionArea-root"
+      disabled={false}
+      onBlur={[Function]}
+      onContextMenu={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      <img
+        alt="tenko"
+        className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+        height="210"
+        src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/05/0542519e4e18038887042f2102ff189d27aa314b_full.jpg"
+      />
+      <div
+        className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+      >
+        <div
+          className="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-af0gdw-MuiTypography-root"
+        >
+          tenko
+        </div>
+      </div>
+      <span
+        className="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
+      />
+    </button>
+  </div>
+  <div
+    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-15w33er-MuiPaper-root-MuiCard-root"
+  >
+    <button
+      className="MuiButtonBase-root MuiCardActionArea-root css-13vqpky-MuiButtonBase-root-MuiCardActionArea-root"
+      disabled={false}
+      onBlur={[Function]}
+      onContextMenu={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      <img
+        alt="tenko"
+        className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+        height="210"
+        src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/d9/d9411753b07053fd7b4a252aac77738227949528_full.jpg"
+      />
+      <div
+        className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+      >
+        <div
+          className="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-af0gdw-MuiTypography-root"
+        >
+          tenko
+        </div>
+      </div>
+      <span
+        className="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
+      />
+    </button>
+  </div>
+  <div
+    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-15w33er-MuiPaper-root-MuiCard-root"
+  >
+    <button
+      className="MuiButtonBase-root MuiCardActionArea-root css-13vqpky-MuiButtonBase-root-MuiCardActionArea-root"
+      disabled={false}
+      onBlur={[Function]}
+      onContextMenu={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      <img
+        alt="tenko"
+        className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+        height="210"
+        src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg"
+      />
+      <div
+        className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+      >
+        <div
+          className="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-af0gdw-MuiTypography-root"
+        >
+          tenko
+        </div>
+      </div>
+      <span
+        className="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
+      />
+    </button>
+  </div>
+  <div
+    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-15w33er-MuiPaper-root-MuiCard-root"
+  >
+    <button
+      className="MuiButtonBase-root MuiCardActionArea-root css-13vqpky-MuiButtonBase-root-MuiCardActionArea-root"
+      disabled={false}
+      onBlur={[Function]}
+      onContextMenu={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      <img
+        alt="tenko"
+        className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+        height="210"
+        src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/eb/eb928d904403113ecc578f2c61766a1e47485a43_full.jpg"
+      />
+      <div
+        className="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+      >
+        <div
+          className="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-af0gdw-MuiTypography-root"
+        >
+          tenko
+        </div>
+      </div>
+      <span
+        className="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Player/Match Default 1`] = `
+<tr
+  className="MuiTableRow-root css-14digpk-MuiTableRow-root"
+  role={null}
+>
+  <th
+    aria-sort={null}
+    className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    scope="row"
+  >
+    <img
+      alt="npc_dota_hero_earth_spirit"
+      height={29}
+      src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/earth_spirit_full.png?"
+      width={59}
+    />
+  </th>
+  <td
+    aria-sort={null}
+    className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+  >
+    Lost
+  </td>
+  <td
+    aria-sort={null}
+    className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+  >
+    4
+    /
+    12
+    /
+    26
+  </td>
+  <td
+    aria-sort={null}
+    className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+  >
+    Unranked
+  </td>
+  <td
+    aria-sort={null}
+    className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+  >
+    00:45:22
+  </td>
+</tr>
+`;
+
+exports[`Storyshots Player/MatchList Default 1`] = `
+<div>
+  <tr
+    className="MuiTableRow-root css-14digpk-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="npc_dota_hero_earth_spirit"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/earth_spirit_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Lost
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      4
+      /
+      12
+      /
+      26
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Unranked
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      00:45:22
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-14digpk-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="npc_dota_hero_dark_willow"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/dark_willow_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Lost
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      3
+      /
+      10
+      /
+      9
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Unranked
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      00:31:53
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-14digpk-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="npc_dota_hero_faceless_void"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/faceless_void_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Lost
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      1
+      /
+      11
+      /
+      9
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Unranked
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      00:28:20
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-14digpk-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="npc_dota_hero_kunkka"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/kunkka_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Lost
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      7
+      /
+      10
+      /
+      5
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Unranked
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      00:35:37
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-14digpk-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="npc_dota_hero_silencer"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/silencer_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Won
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      15
+      /
+      10
+      /
+      20
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Unranked
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      00:38:34
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-14digpk-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="npc_dota_hero_monkey_king"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/monkey_king_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Lost
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      10
+      /
+      6
+      /
+      14
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Unranked
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      00:40:53
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-14digpk-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="npc_dota_hero_earth_spirit"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/earth_spirit_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Lost
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      9
+      /
+      7
+      /
+      16
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Unranked
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      00:50:23
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-14digpk-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="npc_dota_hero_earth_spirit"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/earth_spirit_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Lost
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      14
+      /
+      8
+      /
+      25
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Unranked
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      00:39:21
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-14digpk-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="npc_dota_hero_gyrocopter"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/gyrocopter_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Lost
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      5
+      /
+      15
+      /
+      8
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Unranked
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      00:35:21
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-14digpk-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="npc_dota_hero_pudge"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/pudge_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Won
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      10
+      /
+      17
+      /
+      24
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Unranked
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      00:52:37
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-14digpk-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="npc_dota_hero_gyrocopter"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/gyrocopter_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Lost
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      1
+      /
+      2
+      /
+      3
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Unranked
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      00:13:41
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-14digpk-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="npc_dota_hero_queenofpain"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/queenofpain_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Lost
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      13
+      /
+      8
+      /
+      32
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Unranked
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      01:03:17
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-14digpk-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="npc_dota_hero_dark_seer"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/dark_seer_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Lost
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      7
+      /
+      14
+      /
+      21
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Unranked
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      00:33:30
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-14digpk-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="npc_dota_hero_rubick"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/rubick_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Lost
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      7
+      /
+      4
+      /
+      13
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Unranked
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      00:42:31
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-14digpk-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="npc_dota_hero_mars"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/mars_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Lost
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      16
+      /
+      8
+      /
+      19
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Unranked
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      00:43:17
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-14digpk-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="npc_dota_hero_lion"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/lion_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Lost
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      12
+      /
+      15
+      /
+      15
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Unranked
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      00:54:23
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-14digpk-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="npc_dota_hero_juggernaut"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/juggernaut_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Lost
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      14
+      /
+      7
+      /
+      12
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Unranked
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      00:44:28
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-14digpk-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="npc_dota_hero_mirana"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/mirana_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Lost
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      6
+      /
+      9
+      /
+      20
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Unranked
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      00:44:11
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-14digpk-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="npc_dota_hero_sniper"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/sniper_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Lost
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      15
+      /
+      6
+      /
+      7
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Unranked
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      00:39:56
+    </td>
+  </tr>
+  <tr
+    className="MuiTableRow-root css-14digpk-MuiTableRow-root"
+    role={null}
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+      scope="row"
+    >
+      <img
+        alt="npc_dota_hero_skeleton_king"
+        height={29}
+        src="https://steamcdn-a.akamaihd.net//apps/dota2/images/heroes/skeleton_king_full.png?"
+        width={59}
+      />
+    </th>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Lost
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      6
+      /
+      15
+      /
+      34
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      Unranked
+    </td>
+    <td
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-sizeMedium css-1gz53r3-MuiTableCell-root"
+    >
+      01:19:01
+    </td>
+  </tr>
+</div>
+`;
+
+exports[`Storyshots Search Default 1`] = `
+<form
+  className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-hlhdu-MuiPaper-root"
+>
+  <div
+    className="MuiInputBase-root MuiInputBase-colorPrimary css-zalmx-MuiInputBase-root"
+    onClick={[Function]}
+  >
+    <input
+      aria-label="search players"
+      className="MuiInputBase-input css-156xqnd-MuiInputBase-input"
+      onAnimationStart={[Function]}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder="Search players"
+      type="text"
+    />
+  </div>
+  <button
+    aria-label="search"
+    className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-19z2ken-MuiButtonBase-root-MuiIconButton-root"
+    disabled={false}
+    onBlur={[Function]}
+    onContextMenu={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex={0}
+    type="submit"
+  >
+    <svg
+      aria-hidden={true}
+      className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+      data-testid="SearchIcon"
+      focusable="false"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+      />
+    </svg>
+  </button>
+</form>
+`;
+
+exports[`Storyshots Task Archived 1`] = `
+<div
+  className="list-item"
+>
+  <input
+    readOnly={true}
+    type="text"
+    value="Test Task"
+  />
+</div>
+`;
+
+exports[`Storyshots Task Default 1`] = `
+<div
+  className="list-item"
+>
+  <input
+    readOnly={true}
+    type="text"
+    value="Test Task"
+  />
+</div>
+`;
+
+exports[`Storyshots Task Pinned 1`] = `
+<div
+  className="list-item"
+>
+  <input
+    readOnly={true}
+    type="text"
+    value="Test Task"
+  />
+</div>
+`;
