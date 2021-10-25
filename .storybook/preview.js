@@ -18,6 +18,7 @@ const withThemeProvider = (Story, context) => {
 
 export const decorators = [withThemeProvider];
 export const parameters = {
+  layout: "centered",
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
     matchers: {

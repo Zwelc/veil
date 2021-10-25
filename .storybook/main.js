@@ -9,7 +9,7 @@ module.exports = {
     "@storybook/preset-create-react-app",
     "storybook-addon-material-ui",
   ],
-	webpackFinal: async (config) => {
+  webpackFinal: async (config) => {
     return {
       ...config,
       resolve: {
@@ -21,4 +21,5 @@ module.exports = {
         },
       },
     };
+  },
 };
