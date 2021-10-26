@@ -1,7 +1,7 @@
 import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
 
-function Hero({ hero, heroData }, onArchiveTask, onPinTask) {
+function Hero({ hero, heroData }) {
   const selectedHero = heroData[hero.hero_id];
   const heroImg = `https://steamcdn-a.akamaihd.net/${selectedHero.img}`;
   const winrate = ((hero.win / hero.games) * 100).toFixed(2) + "%";
@@ -18,6 +18,7 @@ function Hero({ hero, heroData }, onArchiveTask, onPinTask) {
           alt={selectedHero.localized_name}
         />
       </TableCell>
+      <TableCell>{selectedHero.localized_name}</TableCell>
       <TableCell>{hero.games}</TableCell>
       <TableCell>{hero.win}</TableCell>
       <TableCell>{winrate}</TableCell>
