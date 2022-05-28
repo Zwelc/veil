@@ -45,27 +45,31 @@ export default function Home() {
                   gridTemplateColumns: "repeat(4, 1fr)",
                 }}
               >
-                players.map((player) => (
-                <Box sx={{ p: 3 }} key={player.account_id}>
-                  <Link href={`/players/${player.account_id}`} passHref>
-                    <Card sx={{ maxWidth: 345 }}>
-                      <CardActionArea>
-                        <CardMedia
-                          component="img"
-                          height="210"
-                          image={player.avatarfull}
-                          alt={player.personaname}
-                        />
-                        <CardContent>
-                          <Typography gutterBottom variant="h5" component="div">
-                            {player.personaname}
-                          </Typography>
-                        </CardContent>
-                      </CardActionArea>
-                    </Card>
-                  </Link>
-                </Box>
-                ))
+                {players.map((player) => (
+                  <Box sx={{ p: 3 }} key={player.account_id}>
+                    <Link href={`/players/${player.account_id}`} passHref>
+                      <Card sx={{ maxWidth: 345 }}>
+                        <CardActionArea>
+                          <CardMedia
+                            component="img"
+                            height="210"
+                            image={player.avatarfull}
+                            alt={player.personaname}
+                          />
+                          <CardContent>
+                            <Typography
+                              gutterBottom
+                              variant="h5"
+                              component="div"
+                            >
+                              {player.personaname}
+                            </Typography>
+                          </CardContent>
+                        </CardActionArea>
+                      </Card>
+                    </Link>
+                  </Box>
+                ))}
               </Container>
             ) : (
               <Container>

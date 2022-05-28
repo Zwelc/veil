@@ -15,7 +15,6 @@
 		"@mui/material": "^5.0.4",
 		"dotaconstants": "^7.5.0",
 		"next": "11.1.2",
-		"next-pwa": "^5.4.0",
 		"react": "17.0.2",
 		"react-dom": "17.0.2",
 		"recharts": "^2.1.5",
