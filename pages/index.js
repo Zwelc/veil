@@ -35,7 +35,7 @@ export default function Home() {
       <Container sx={{ p: 3 }}>
         <Box>
           <Typography variant="h6" component="text">
-            Stored Profiles
+            Tracked Players
             <Divider />
             {players.length > 0 ? (
               <Container
