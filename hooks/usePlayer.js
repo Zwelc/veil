@@ -11,6 +11,16 @@ export function useRecentMatches(id) {
   };
 }
 
+export default function usePlayer(id) {
+  const { data, error } = useSWR(`/${id}`, PlayerHTTP);
+
+  return {
+    player: data,
+    isLoading: !error && !data,
+    isError: error,
+  };
+}
+
 export function useCounts(id) {
   const { data, error } = useSWR(`/${id}/counts`, PlayerHTTP);
 

@@ -1,7 +1,8 @@
 import { Avatar, Typography } from "@mui/material";
 import { Paper } from "@mui/material";
 import { Box } from "@mui/system";
-
+import usePlayer from "../../hooks/usePlayer";
+import Spinner from "../spinner";
 const ranks = [
   "Herald",
   "Guardian",
@@ -19,7 +20,11 @@ function getRank(tier) {
 
   return rank + " " + text.slice(1);
 }
-function Profile({ player }) {
+function Profile({ id }) {
+  const { player, isLoading } = usePlayer(id);
+
+  if (isLoading) return <Spinner />;
+
   return (
     <Box
       sx={{

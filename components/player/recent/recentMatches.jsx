@@ -19,6 +19,7 @@ function RecentMatches({ id }) {
   const { matches, isLoading } = useRecentMatches(id);
   const { heroes, isLoading: heroesLoaded } = useHeroes();
   const { data: lobby, isLoading: lobbyLoaded } = useLobbies();
+
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
 
@@ -61,7 +62,7 @@ function RecentMatches({ id }) {
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
                 <TableCell component="th" scope="row">
-                  <Image src={heroImg} height={29} width={59} />
+                  <Image src={heroImg} height={29} width={59} alt={hero} />
                 </TableCell>
                 <TableCell>
                   {match.player_slot <= 127 && match.radiant_win

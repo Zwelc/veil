@@ -7,7 +7,7 @@ import Heroes from "../../components/player/heroes";
 import ProfileWinrate from "../../components/player/winrate";
 import ProfileCounts from "../../components/player/counts";
 
-export default function Player({ id, player, heroes, mode, lobby }) {
+export default function Player({ id, player }) {
   return (
     <>
       <Head>
@@ -25,23 +25,18 @@ export default function Player({ id, player, heroes, mode, lobby }) {
       >
         <Box sx={{ gridTemplateRows: "repeat(2, 1fr)" }}>
           <Box>
-            <Heroes id={player.profile.account_id} heroData={heroes} />
+            <Heroes id={id} />
           </Box>
           <Box>
             <Typography variant="h6" component="div">
               Recent Matches
             </Typography>
-            <RecentMatches
-              id={player.profile.account_id}
-              heroes={heroes}
-              mode={mode}
-              lobby={lobby}
-            />
+            <RecentMatches id={id} />
           </Box>
         </Box>
         <Box sx={{ gridTemplateRows: "repeat(2, 1fr)" }}>
           <Box>
-            <Profile player={player} />
+            <Profile id={id} />
           </Box>
           <Box>
             <ProfileWinrate id={id} />
@@ -61,25 +56,11 @@ export async function getServerSideProps(context) {
     `https://api.opendota.com/api/players/${playerId}`
   );
   const player = await playerData.json();
-  const heroesData = await fetch(
-    `https://api.opendota.com/api/constants/heroes`
-  );
-  const heroes = await heroesData.json();
-  const modeData = await fetch(
-    `https://api.opendota.com/api/constants/game_mode`
-  );
-  const mode = await modeData.json();
-  const lobbyData = await fetch(
-    `https://api.opendota.com/api/constants/lobby_type`
-  );
-  const lobby = await lobbyData.json();
+
   return {
     props: {
       id: playerId,
       player,
-      heroes,
-      mode,
-      lobby,
     },
   };
 }
