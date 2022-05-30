@@ -1,14 +1,17 @@
 import Link from "next/link";
+import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import { CardActionArea } from "@mui/material";
+import { Button, CardActionArea } from "@mui/material";
 import { useRouter } from "next/router";
 import useSWR from "swr";
 import { Box } from "@mui/system";
 import Spinner from "../../components/spinner";
 import { Container } from "@mui/material";
+import PlayerCard from "../../components/player/card";
+
 const baseUrl = "https://api.opendota.com/api/search?q=";
 const fetcher = (query) => fetch(baseUrl + query).then((res) => res.json());
 
@@ -32,45 +35,7 @@ function Players() {
       >
         {data.map((player) => (
           <Box sx={{ p: 3 }} key={player.account_id}>
-            <Link href={`/players/${player.account_id}`} passHref>
-              <Card
-                sx={{ maxWidth: 345 }}
-                onClick={() => {
-                  let players = JSON.parse(localStorage.getItem("id"));
-                  if (players) {
-                    if (
-                      !players.players.find(
-                        (record) => record.account_id == player.account_id
-                      )
-                    ) {
-                      players.players.push(player);
-                    }
-                  } else {
-                    players = { players: [] };
-                    players.players.push(player);
-                  }
-                  localStorage.setItem(
-                    "id",
-                    JSON.stringify({ players: players.players })
-                  );
-                  localStorage.setItem("selected", player.account_id);
-                }}
-              >
-                <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    height="210"
-                    image={player.avatarfull}
-                    alt={player.personaname}
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      {player.personaname}
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
-            </Link>
+            <PlayerCard player={player} path="/players" />
           </Box>
         ))}
       </Container>

@@ -10,6 +10,7 @@ import { useState } from "react";
 import { InputBase } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import router from "next/router";
+import Link from "next/link";
 
 export default function Layout({ children }) {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -48,7 +49,7 @@ export default function Layout({ children }) {
     <Box sx={{ flexGrow: 1 }}>
       <CssBaseline />
       <AppBar position="relative">
-        <Toolbar>
+        <Toolbar sx={{ justifyContent: "space-between" }}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -60,8 +61,14 @@ export default function Layout({ children }) {
           </IconButton>
           <Typography
             variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+            component="h1"
+            sx={{
+              cursor: "pointer",
+              color: "inherit",
+              flexGrow: 1,
+              display: { xs: "none", sm: "block" },
+            }}
+            onClick={() => router.push("/")}
           >
             Veil
           </Typography>
