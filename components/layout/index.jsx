@@ -7,10 +7,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
-import { InputBase } from "@mui/material";
-import SearchIcon from "@mui/icons-material/Search";
 import router from "next/router";
-import Link from "next/link";
+import Search from "../search";
 
 export default function Layout({ children }) {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -18,33 +16,6 @@ export default function Layout({ children }) {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-  const Search = (
-    <>
-      <InputBase
-        id="search"
-        sx={{ ml: 1 }}
-        placeholder="Search players"
-        inputProps={{ "aria-label": "search players" }}
-        autoComplete="off"
-        onKeyUp={(e) => {
-          if (e.code === "Enter")
-            router.push(
-              `/players?q=${document.querySelector("#search").value}`
-            );
-        }}
-      />
-      <IconButton
-        type="submit"
-        sx={{ p: "10px" }}
-        aria-label="search"
-        onClick={() => {
-          router.push(`/players?q=${document.querySelector("#search").value}`);
-        }}
-      >
-        <SearchIcon />
-      </IconButton>
-    </>
-  );
   return (
     <Box sx={{ flexGrow: 1 }}>
       <CssBaseline />
@@ -73,7 +44,7 @@ export default function Layout({ children }) {
             Veil
           </Typography>
           <Divider />
-          {Search}
+          <Search />
         </Toolbar>
       </AppBar>
       <Box component="main">{children}</Box>

@@ -4,16 +4,20 @@ import Link from "next/link";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import { CardActionArea } from "@mui/material";
+import { Button, CardActionArea, TextField } from "@mui/material";
 import { Typography, Container, Divider } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { Box } from "@mui/system";
 import PlayerCard from "../components/player/card";
+import IconButton from "@mui/material/IconButton";
+import SearchIcon from "@mui/icons-material/Search";
+import Search from "../components/search";
 
 export default function Home() {
   const router = useRouter();
   const [players, setPlayers] = useState([]);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     if (localStorage) {
@@ -23,15 +27,26 @@ export default function Home() {
       }
     }
   }, []);
-
   return (
     <>
       <Head>
-        <title>DStats</title>
+        <title>Veil</title>
         <meta name="description" content="Quick stats overview for dota 2" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Container sx={{ p: 3 }}>
+        <Box
+          sx={{
+            display: "flex",
+            width: "100%",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Box sx={{ display: "flex" }}>
+            <Search />
+          </Box>
+        </Box>
         <Box>
           <Typography variant="h6" component="text">
             Tracked Players
@@ -53,7 +68,7 @@ export default function Home() {
             ) : (
               <Container>
                 <Typography variant="body">
-                  There are no stored profiles currently. Please use the
+                  There are no tracked profiles currently. Please use the
                   searchbar to get started
                 </Typography>
               </Container>

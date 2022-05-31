@@ -4,8 +4,10 @@ import theme from "../lib/theme";
 import { ThemeProvider } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
 import PropTypes from "prop-types";
-
+import { SearchContext } from "../context/searchContext";
+import { useState } from "react";
 function MyApp({ Component, pageProps }) {
+  const [search, setSearch] = useState("");
   return (
     <>
       <Head>
@@ -13,9 +15,11 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <SearchContext.Provider value={{ search, setSearch }}>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </SearchContext.Provider>
       </ThemeProvider>
     </>
   );
