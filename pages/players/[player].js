@@ -1,8 +1,6 @@
 import RecentMatches from "../../components/player/recent/recentMatches";
 import Head from "next/head";
 import Profile from "../../components/player/profile";
-import { Box } from "@mui/system";
-import { Container, Typography } from "@mui/material";
 import Heroes from "../../components/player/heroes";
 import ProfileWinrate from "../../components/player/winrate";
 import ProfileCounts from "../../components/player/counts";

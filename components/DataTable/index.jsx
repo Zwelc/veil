@@ -45,7 +45,7 @@ function DataTable({ columns, rows }) {
           {emptyRows > 0 && (
             <tr
               className="bg-white border-b "
-              style={{ height: 53 * emptyRows }}
+              style={{ height: 59 * emptyRows }}
             >
               <td className="px-6 py-3" colSpan={columns.length}></td>
             </tr>
