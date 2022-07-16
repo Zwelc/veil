@@ -1,7 +1,8 @@
 {
 	"name": "veil",
-	"version": "0.5.0",
+	"version": "1.0.0",
 	"private": true,
+	"author": "Thurston de Kock",
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
@@ -9,19 +10,23 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
-		"@emotion/react": "^11.9.0",
-		"@emotion/styled": "^11.8.1",
+		"@emotion/react": "^11.9.3",
+		"@emotion/styled": "^11.9.3",
 		"@mui/icons-material": "^5.0.4",
-		"@mui/material": "^5.8.1",
-		"dotaconstants": "^7.10.0",
-		"next": "^12.1.6",
-		"react": "17.0.2",
-		"react-dom": "17.0.2",
-		"recharts": "^2.1.5",
-		"swr": "^1.0.1"
+		"@mui/material": "^5.9.0",
+		"dotaconstants": "^7.11.0",
+		"next": "^12.2.2",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-icons": "^4.4.0",
+		"recharts": "^2.1.12",
+		"swr": "^1.3.0"
 	},
 	"devDependencies": {
+		"autoprefixer": "^10.4.7",
 		"eslint": "7.32.0",
-		"eslint-config-next": "11.1.2"
+		"eslint-config-next": "11.1.2",
+		"postcss": "^8.4.14",
+		"tailwindcss": "^3.1.6"
 	}
 }

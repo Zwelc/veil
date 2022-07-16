@@ -8,6 +8,7 @@ import ProfileWinrate from "../../components/player/winrate";
 import ProfileCounts from "../../components/player/counts";
 
 export default function Player({ id, player }) {
+  console.log(player);
   return (
     <>
       <Head>
@@ -17,37 +18,21 @@ export default function Player({ id, player }) {
           content={`Veil - ${player.profile.personaname} overview`}
         />
       </Head>
-      <Container
-        sx={{
-          display: "grid",
-          gridTemplateColumns: "repeat(2, 1fr)",
-          mt: 4,
-          gap: 2,
-        }}
-      >
-        <Box sx={{ gridTemplateRows: "repeat(2, 1fr)" }}>
-          <Box>
-            <Heroes id={id} />
-          </Box>
-          <Box>
-            <Typography variant="h6" component="div">
-              Recent Matches
-            </Typography>
+      <div className="mx-2 p-2">
+        <div className="grid grid-cols-4 gap-2">
+          <Profile id={id} />
+          <ProfileWinrate id={id} />
+          <ProfileCounts id={id} />
+        </div>
+        <div className="grid grid-cols-2 gap-2 my-6">
+          <div>
             <RecentMatches id={id} />
-          </Box>
-        </Box>
-        <Box sx={{ gridTemplateRows: "repeat(2, 1fr)" }}>
-          <Box>
-            <Profile id={id} />
-          </Box>
-          <Box>
-            <ProfileWinrate id={id} />
-          </Box>
-          <Box>
-            <ProfileCounts id={id} />
-          </Box>
-        </Box>
-      </Container>
+          </div>
+          <div>
+            <Heroes id={id} />
+          </div>
+        </div>
+      </div>
     </>
   );
 }

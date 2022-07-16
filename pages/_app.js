@@ -6,6 +6,7 @@ import { CssBaseline } from "@mui/material";
 import PropTypes from "prop-types";
 import { SearchContext } from "../context/searchContext";
 import { useState } from "react";
+import "../styles/globals.css";
 function MyApp({ Component, pageProps }) {
   const [search, setSearch] = useState("");
   return (
@@ -15,7 +16,7 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <ThemeProvider theme={theme}>
-        <CssBaseline />
+        {/* <CssBaseline /> */}
         <SearchContext.Provider value={{ search, setSearch }}>
           <Layout>
             <Component {...pageProps} />

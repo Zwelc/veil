@@ -1,5 +1,5 @@
 import useSWR from "swr";
-import { PlayerHTTP, ConstantHTTP } from "../lib/fetcher";
+import { PlayerHTTP, ConstantHTTP, fetcher } from "../lib/fetcher";
 
 export function useRecentMatches(id) {
   const { data, error } = useSWR(`/${id}/recentMatches`, PlayerHTTP);
@@ -12,7 +12,7 @@ export function useRecentMatches(id) {
 }
 
 export default function usePlayer(id) {
-  const { data, error } = useSWR(`/${id}`, PlayerHTTP);
+  const { data, error } = useSWR(`/api/${id}`, fetcher);
 
   return {
     player: data,
@@ -22,7 +22,7 @@ export default function usePlayer(id) {
 }
 
 export function useCounts(id) {
-  const { data, error } = useSWR(`/${id}/counts`, PlayerHTTP);
+  const { data, error } = useSWR(`/api/${id}/counts`, fetcher);
 
   return {
     data: data,
