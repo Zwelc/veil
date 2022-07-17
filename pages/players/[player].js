@@ -4,9 +4,9 @@ import Profile from "../../components/player/profile";
 import Heroes from "../../components/player/heroes";
 import ProfileWinrate from "../../components/player/winrate";
 import ProfileCounts from "../../components/player/counts";
+import { SimpleLineChart } from "../../components/Charts/Line";
 
 export default function Player({ id, player }) {
-  console.log(player);
   return (
     <>
       <Head>
@@ -28,6 +28,9 @@ export default function Player({ id, player }) {
           </div>
           <div>
             <Heroes id={id} />
+          </div>
+          <div className="h-96 bg-gray-50 col-span-2">
+            <SimpleLineChart id={id} />
           </div>
         </div>
       </div>

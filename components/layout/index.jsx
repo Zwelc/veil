@@ -2,10 +2,11 @@ import Appbar from "../Appbar";
 
 export default function Layout({ children }) {
   return (
-    <div className="bg-gradient-to-b from-neutral-900 to-violet-800 h-screen">
+    <>
       <Appbar />
-
-      <main className="container mx-auto pt-20 h-full">{children}</main>
-    </div>
+      <div className="h-screen bg-gradient-to-bl from-slate-800 to-slate-200 flex flex-col justify-center items-center w-full relative overflow-y-auto">
+        <main className="container mx-auto pt-20 h-full">{children}</main>
+      </div>
+    </>
   );
 }

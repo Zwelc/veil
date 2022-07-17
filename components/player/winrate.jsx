@@ -1,6 +1,3 @@
-import { Avatar, Typography } from "@mui/material";
-import { Paper } from "@mui/material";
-import { Box } from "@mui/system";
 import { usePlayerWinrate } from "../../hooks/usePlayer";
 import Spinner from "../spinner";
 

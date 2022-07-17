@@ -1,8 +1,6 @@
 import Head from "next/head";
 import Layout from "../components/layout";
-import theme from "../lib/theme";
-import { ThemeProvider } from "@mui/material/styles";
-import { CssBaseline } from "@mui/material";
+
 import PropTypes from "prop-types";
 import { SearchContext } from "../context/searchContext";
 import { useState } from "react";
@@ -15,14 +13,12 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <ThemeProvider theme={theme}>
-        {/* <CssBaseline /> */}
-        <SearchContext.Provider value={{ search, setSearch }}>
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        </SearchContext.Provider>
-      </ThemeProvider>
+
+      <SearchContext.Provider value={{ search, setSearch }}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </SearchContext.Provider>
     </>
   );
 }
