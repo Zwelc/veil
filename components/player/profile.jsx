@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import usePlayer from "../../hooks/usePlayer";
 
-import { getRank } from "../../lib/ranks";
 function Profile({ id }) {
   const { player, isLoading } = usePlayer(id);
 
@@ -18,16 +17,15 @@ function Profile({ id }) {
   }
 
   return (
-    <div className="flex items-center space-x-4">
+    <div className="">
       <img
-        className="w-24 h-24 rounded-full relative"
+        className="w-48 h-48 rounded-full "
         src={player.profile.avatarfull}
         alt={player.profile.personaname}
         layout="fill"
       />
-      <div className=" space-y-1 font-medium text-2xl text-white">
-        <div>{player.profile.personaname}</div>
-        <div>{getRank(player.rank_tier)}</div>
+      <div className="text-2xl font-medium text-white text-center">
+        {player.profile.personaname}
       </div>
     </div>
   );

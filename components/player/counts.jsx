@@ -9,41 +9,27 @@ export default function ProfileCounts({ id }) {
   }
 
   return (
-    <div className="block p-6 max-w-sm bg-neutral-700 rounded-lg border border-gray-200 shadow-md shadow-violet-400">
-      <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-300">
-        Dire:{" "}
-        {(
-          (counts.is_radiant[0].win / counts.is_radiant[0].games) *
-          100
-        ).toFixed(2)}
-        %
-      </h5>
-      <p className="font-normal text-gray-300">Winrate Overall</p>
-    </div>
-    // <Box
-    //   sx={{
-    //     display: "flex",
-    //     flexDirection: "column",
-    //     alignItems: "center",
-    //     p: 2,
-    //   }}
-    // >
-    //   <div>
-    //     Dire:{" "}
-    //     {(
-    //       (counts.is_radiant[0].win / counts.is_radiant[0].games) *
-    //       100
-    //     ).toFixed(2)}
-    //     %
-    //   </div>
-    //   <div>
-    //     Radiant:{" "}
-    //     {(
-    //       (counts.is_radiant[1].win / counts.is_radiant[1].games) *
-    //       100
-    //     ).toFixed(2)}
-    //     %
-    //   </div>
-    // </Box>
+    <>
+      <div className="block p-6 max-w-sm">
+        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-300">
+          {(
+            (counts.is_radiant[0].win / counts.is_radiant[0].games) *
+            100
+          ).toFixed(2)}
+          %
+        </h5>
+        <span className="font-normal text-gray-300">Dire winrate</span>
+      </div>
+      <div className="block p-6 max-w-sm">
+        <p className="mb-2 text-2xl font-bold tracking-tight text-gray-300">
+          {(
+            (counts.is_radiant[1].win / counts.is_radiant[1].games) *
+            100
+          ).toFixed(2)}
+          %
+        </p>
+        <span className="font-normal text-gray-300">Radiant </span>
+      </div>
+    </>
   );
 }

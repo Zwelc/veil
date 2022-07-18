@@ -27,7 +27,11 @@ function Heroes({ id }) {
   ];
   const rows = heroes.map((hero) => createHeroRow(hero));
 
-  return <DataTable columns={columns} rows={rows} />;
+  return (
+    <div className="mb-3">
+      <DataTable columns={columns} rows={rows} />
+    </div>
+  );
 }
 
 export default Heroes;

@@ -1,18 +1,29 @@
-import { useRouter } from "next/router";
 import useSWR from "swr";
 import Spinner from "../../components/spinner";
 import PlayerCard from "../../components/player/card";
+import { useContext } from "react";
+import { SearchContext } from "../../context/searchContext";
 
 const baseUrl = "https://api.opendota.com/api/search?q=";
 const fetcher = (query) => fetch(baseUrl + query).then((res) => res.json());
 
 function Players() {
-  const router = useRouter();
-  const { q } = router.query;
-  const { data, error } = useSWR(q, fetcher);
+  const { search, setSearch } = useContext(SearchContext);
 
-  if (error) return <div>failed to load</div>;
-  if (!data) return <Spinner />;
+  const { data, error } = useSWR(search, fetcher);
+
+  if (error)
+    return (
+      <div className="h-full flex items-center justify-center">
+        failed to load
+      </div>
+    );
+  if (!data)
+    return (
+      <div className="h-full flex items-center justify-center">
+        <Spinner />
+      </div>
+    );
   if (data)
     return (
       <div className="grid grid-cols-4 gap-2">

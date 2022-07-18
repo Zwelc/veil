@@ -36,7 +36,7 @@ export default function PlayerCard({ player, path, action }) {
     action(rest);
   };
   return (
-    <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+    <div className="max-w-sm bg-gray-200 rounded-lg border border-gray-200 shadow-md shadow-violet-900">
       <div className="flex flex-col items-center pb-10 pt-4">
         <img
           className="mb-3 w-24 h-24 rounded-full shadow-lg"
@@ -52,21 +52,21 @@ export default function PlayerCard({ player, path, action }) {
         <div className="flex mt-4 space-x-3 lg:mt-6">
           <button
             onClick={handleView}
-            className="inline-flex items-center py-2 px-4 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            className="inline-flex items-center py-2 px-4 text-sm font-medium text-center text-white bg-fuchsia-700 rounded-lg hover:bg-fuchsia-800 focus:ring-4 focus:outline-none focus:ring-fuchsia-300 "
           >
             View
           </button>
           {path === "/players" ? (
             <button
               onClick={handleSave}
-              className="inline-flex items-center py-2 px-4 text-sm font-medium text-center text-gray-900 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700"
+              className="inline-flex items-center py-2 px-4 text-sm font-medium text-center text-gray-900 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200"
             >
               Save
             </button>
           ) : (
             <button
               onClick={handleRemove}
-              className="inline-flex items-center py-2 px-4 text-sm font-medium text-center text-gray-900 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700"
+              className="inline-flex items-center py-2 px-4 text-sm font-medium text-center text-gray-900 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200"
             >
               Remove
             </button>
@@ -74,32 +74,5 @@ export default function PlayerCard({ player, path, action }) {
         </div>
       </div>
     </div>
-    // <Card sx={{ maxWidth: 345 }}>
-    //   <CardMedia
-    //     component="img"
-    //     height="210"
-    //     image={player.avatarfull}
-    //     alt={player.personaname}
-    //   />
-    //   <CardContent>
-    //     <Typography gutterBottom variant="h5" component="div">
-    //       {player.personaname}
-    //     </Typography>
-    //   </CardContent>
-    //   <CardActions>
-    //     <Button size="small" onClick={handleView} color="inherit">
-    //       View
-    //     </Button>
-    //     {path === "/players" ? (
-    //       <Button size="small" onClick={handleSave} color="inherit">
-    //         Save
-    //       </Button>
-    //     ) : (
-    //       <Button size="small" onClick={handleRemove} color="inherit">
-    //         Remove
-    //       </Button>
-    //     )}
-    //   </CardActions>
-    // </Card>
   );
 }
