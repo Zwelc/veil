@@ -24,10 +24,12 @@ function Players() {
         </div>
       </div>
     );
-  if (!data) {
+  if (data.length == 0) {
     return (
       <div className="h-full flex items-center justify-center">
-        Try searching for a player...
+        <div className="text-xl text-gray-50">
+          Try searching for a different player
+        </div>
       </div>
     );
   }
