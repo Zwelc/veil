@@ -18,8 +18,8 @@ function Appbar() {
       </Link>
       <ul className="flex items-center space-x-8 ">
         {menus.map((menu) => (
-          <Link href={menu.path} passHref>
-            <div className=" group  cursor-pointer">
+          <Link href={menu.path} passHref key={menu.title}>
+            <li className=" group  cursor-pointer">
               <span
                 className={`text font-medium text-gray-50 ${
                   router.pathname == menu.path ? "text-fuchsia-300" : ""
@@ -28,7 +28,7 @@ function Appbar() {
                 {menu.title}
               </span>
               <div className="h-0.5 bg-fuchsia-400 scale-x-0 group-hover:scale-100 transition-transform origin-left rounded-full duration-300 ease-out"></div>
-            </div>
+            </li>
           </Link>
         ))}
 

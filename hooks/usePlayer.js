@@ -1,5 +1,5 @@
 import useSWR from "swr";
-import { PlayerHTTP, ConstantHTTP, fetcher } from "../lib/fetcher";
+import { PlayerHTTP, ConstantHTTP, fetcher, SearchHTTP } from "../lib/fetcher";
 
 export function useRecentMatches(id) {
   const { data, error } = useSWR(`/api/player/${id}/recent`, PlayerHTTP);
@@ -94,6 +94,20 @@ export function useLobbies() {
 
   return {
     data,
+    isLoading: !error && !data,
+    isError: error,
+  };
+}
+
+export function useSearch(query) {
+  const { data, error } = useSWR(query, SearchHTTP, {
+    revalidateIfStale: false,
+    revalidateOnFocus: false,
+    revalidateOnReconnect: false,
+  });
+
+  return {
+    data: data,
     isLoading: !error && !data,
     isError: error,
   };

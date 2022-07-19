@@ -28,7 +28,7 @@ export default function Home() {
     );
   }
   return (
-    <div className="max-w-lg ">
+    <div className="flex flex-col justify-center items-center h-full">
       <div className="font-medium text-gray-50 text-4xl tracking-tighter leading-tight">
         You have no players tracked at the moment.
       </div>
