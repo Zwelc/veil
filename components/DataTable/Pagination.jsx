@@ -28,8 +28,8 @@ export default function TablePagination({
   };
 
   return (
-    <div className="flex justify-between rounded-md shadow-sm px-6 py-3">
-      <div className="px-6 py-3">
+    <div className="flex justify-between rounded-md shadow-sm px-6 py-3 items-center">
+      <div className="px-6 ">
         {count > 0 && (
           <span className="text-sm text-gray-500 ">
             {page * rowsPerPage + 1} - {page * rowsPerPage + rowsPerPage} of{" "}
@@ -37,7 +37,7 @@ export default function TablePagination({
           </span>
         )}
       </div>
-      <div>
+      <div className="px-6">
         <button
           type="button"
           disabled={page === 0}

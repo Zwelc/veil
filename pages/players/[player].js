@@ -24,8 +24,8 @@ export default function Player({ id, player }) {
         </section>
         <section className="flex flex-col w-full h-full space-y-8 items-center ">
           <Profile id={id} />
-          <Rank id={id} />
           <ProfileWinrate id={id} />
+          <Rank id={id} />
           {/* <ProfileCounts id={id} /> */}
         </section>
       </div>

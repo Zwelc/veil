@@ -9,9 +9,17 @@ export default function ProfileWinrate({ id }) {
   }
 
   return (
-    <div className="block p-6 max-w-sm  ">
+    <div className="block p-6 max-w-sm">
       <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-300">
-        {((data.win / (data.win + data.lose)) * 100).toFixed(2)}% 
+        {data.win}
+      </h5>
+      <span className="font-normal text-gray-300">Wins</span>
+      <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-300">
+        {data.lose}
+      </h5>
+      <span className="font-normal text-gray-300">Losses</span>
+      <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-300">
+        {((data.win / (data.win + data.lose)) * 100).toFixed(2)}%
       </h5>
       <span className="font-normal text-gray-300">Winrate Overall</span>
     </div>
