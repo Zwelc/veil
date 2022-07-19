@@ -1,53 +1,12 @@
-import { AppBar } from "@mui/material";
-import Box from "@mui/material/Box";
-import CssBaseline from "@mui/material/CssBaseline";
-import Divider from "@mui/material/Divider";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import { useState } from "react";
-import router from "next/router";
-import Search from "../search";
+import Appbar from "../Appbar";
 
 export default function Layout({ children }) {
-  const [mobileOpen, setMobileOpen] = useState(false);
-
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <CssBaseline />
-      <AppBar position="relative">
-        <Toolbar sx={{ justifyContent: "space-between" }}>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography
-            variant="h6"
-            component="h1"
-            sx={{
-              cursor: "pointer",
-              color: "inherit",
-              flexGrow: 1,
-              display: { xs: "none", sm: "block" },
-            }}
-            onClick={() => router.push("/")}
-          >
-            Veil
-          </Typography>
-          <Divider />
-          <Search />
-        </Toolbar>
-      </AppBar>
-      <Box component="main">{children}</Box>
-    </Box>
+    <>
+      <Appbar />
+      <div className="h-screen px-24 py-28 bg-gradient-to-bl from-fuchsia-900 to-slate-400 flex flex-col justify-center items-center w-full relative overflow-y-auto scroll-smooth">
+        <main className="w-full h-full">{children}</main>
+      </div>
+    </>
   );
 }

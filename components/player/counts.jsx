@@ -1,6 +1,3 @@
-import { Avatar, Typography } from "@mui/material";
-import { Paper } from "@mui/material";
-import { Box } from "@mui/system";
 import { useCounts } from "../../hooks/usePlayer";
 import Spinner from "../spinner";
 
@@ -12,30 +9,27 @@ export default function ProfileCounts({ id }) {
   }
 
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        p: 2,
-      }}
-    >
-      <div>
-        Dire:{" "}
-        {(
-          (counts.is_radiant[0].win / counts.is_radiant[0].games) *
-          100
-        ).toFixed(2)}
-        %
+    <>
+      <div className="block p-6 max-w-sm">
+        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-300">
+          {(
+            (counts.is_radiant[0].win / counts.is_radiant[0].games) *
+            100
+          ).toFixed(2)}
+          %
+        </h5>
+        <span className="font-normal text-gray-300">Dire winrate</span>
       </div>
-      <div>
-        Radiant:{" "}
-        {(
-          (counts.is_radiant[1].win / counts.is_radiant[1].games) *
-          100
-        ).toFixed(2)}
-        %
+      <div className="block p-6 max-w-sm">
+        <p className="mb-2 text-2xl font-bold tracking-tight text-gray-300">
+          {(
+            (counts.is_radiant[1].win / counts.is_radiant[1].games) *
+            100
+          ).toFixed(2)}
+          %
+        </p>
+        <span className="font-normal text-gray-300">Radiant </span>
       </div>
-    </Box>
+    </>
   );
 }

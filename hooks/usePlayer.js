@@ -1,8 +1,8 @@
 import useSWR from "swr";
-import { PlayerHTTP, ConstantHTTP } from "../lib/fetcher";
+import { PlayerHTTP, ConstantHTTP, fetcher, SearchHTTP } from "../lib/fetcher";
 
 export function useRecentMatches(id) {
-  const { data, error } = useSWR(`/${id}/recentMatches`, PlayerHTTP);
+  const { data, error } = useSWR(`/api/player/${id}/recent`, PlayerHTTP);
 
   return {
     matches: data,
@@ -12,7 +12,7 @@ export function useRecentMatches(id) {
 }
 
 export default function usePlayer(id) {
-  const { data, error } = useSWR(`/${id}`, PlayerHTTP);
+  const { data, error } = useSWR(`/api/player/${id}`, fetcher);
 
   return {
     player: data,
@@ -22,7 +22,7 @@ export default function usePlayer(id) {
 }
 
 export function useCounts(id) {
-  const { data, error } = useSWR(`/${id}/counts`, PlayerHTTP);
+  const { data, error } = useSWR(`/api/player/${id}/counts`, fetcher);
 
   return {
     data: data,
@@ -94,6 +94,20 @@ export function useLobbies() {
 
   return {
     data,
+    isLoading: !error && !data,
+    isError: error,
+  };
+}
+
+export function useSearch(query) {
+  const { data, error } = useSWR(query, SearchHTTP, {
+    revalidateIfStale: false,
+    revalidateOnFocus: false,
+    revalidateOnReconnect: false,
+  });
+
+  return {
+    data: data,
     isLoading: !error && !data,
     isError: error,
   };

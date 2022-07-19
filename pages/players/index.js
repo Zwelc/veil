@@ -1,45 +1,45 @@
-import Link from "next/link";
-import Typography from "@mui/material/Typography";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import { Button, CardActionArea } from "@mui/material";
-import { useRouter } from "next/router";
-import useSWR from "swr";
-import { Box } from "@mui/system";
 import Spinner from "../../components/spinner";
-import { Container } from "@mui/material";
 import PlayerCard from "../../components/player/card";
-
-const baseUrl = "https://api.opendota.com/api/search?q=";
-const fetcher = (query) => fetch(baseUrl + query).then((res) => res.json());
+import { useContext } from "react";
+import { SearchContext } from "../../context/searchContext";
+import { useSearch } from "../../hooks/usePlayer";
 
 function Players() {
-  const router = useRouter();
-  const { q } = router.query;
-  const { data, error } = useSWR(q, fetcher);
+  const { search, setSearch } = useContext(SearchContext);
 
-  if (error) return <div>failed to load</div>;
-  if (!data) return <Spinner />;
-  if (data)
+  const { data, isLoading, isError } = useSearch(search);
+
+  if (isError)
     return (
-      <Container
-        sx={{
-          display: "grid",
-          gridTemplateColumns: "repeat(4, 1fr)",
-          mt: 4,
-          gap: 2,
-          p: 5,
-        }}
-      >
-        {data.map((player) => (
-          <Box sx={{ p: 3 }} key={player.account_id}>
-            <PlayerCard player={player} path="/players" />
-          </Box>
-        ))}
-      </Container>
+      <div className="h-full flex items-center justify-center">
+        failed to load
+      </div>
     );
+  if (isLoading)
+    return (
+      <div className="h-full flex flex-col items-center justify-center">
+        <Spinner />
+        <div className="text-xl text-gray-50">
+          Try searching for a different player if this persists
+        </div>
+      </div>
+    );
+  if (data.length == 0) {
+    return (
+      <div className="h-full flex items-center justify-center">
+        <div className="text-xl text-gray-50">
+          Try searching for a different player
+        </div>
+      </div>
+    );
+  }
+  return (
+    <div className="grid grid-cols-4 gap-2">
+      {data.map((player) => (
+        <PlayerCard player={player} path="/players" key={player.account_id} />
+      ))}
+    </div>
+  );
 }
 
 export default Players;

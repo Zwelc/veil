@@ -1,11 +1,11 @@
 import RecentMatches from "../../components/player/recent/recentMatches";
 import Head from "next/head";
 import Profile from "../../components/player/profile";
-import { Box } from "@mui/system";
-import { Container, Typography } from "@mui/material";
 import Heroes from "../../components/player/heroes";
 import ProfileWinrate from "../../components/player/winrate";
 import ProfileCounts from "../../components/player/counts";
+import { SimpleLineChart } from "../../components/Charts/Line";
+import Rank from "../../components/player/Rank";
 
 export default function Player({ id, player }) {
   return (
@@ -17,37 +17,18 @@ export default function Player({ id, player }) {
           content={`Veil - ${player.profile.personaname} overview`}
         />
       </Head>
-      <Container
-        sx={{
-          display: "grid",
-          gridTemplateColumns: "repeat(2, 1fr)",
-          mt: 4,
-          gap: 2,
-        }}
-      >
-        <Box sx={{ gridTemplateRows: "repeat(2, 1fr)" }}>
-          <Box>
-            <Heroes id={id} />
-          </Box>
-          <Box>
-            <Typography variant="h6" component="div">
-              Recent Matches
-            </Typography>
-            <RecentMatches id={id} />
-          </Box>
-        </Box>
-        <Box sx={{ gridTemplateRows: "repeat(2, 1fr)" }}>
-          <Box>
-            <Profile id={id} />
-          </Box>
-          <Box>
-            <ProfileWinrate id={id} />
-          </Box>
-          <Box>
-            <ProfileCounts id={id} />
-          </Box>
-        </Box>
-      </Container>
+      <div className="mx-2 grid grid-cols-2 gap-2 h-full w-full">
+        <section className="flex flex-col my-3">
+          <Heroes id={id} />
+          <RecentMatches id={id} />
+        </section>
+        <section className="flex flex-col w-full h-full space-y-8 items-center ">
+          <Profile id={id} />
+          <ProfileWinrate id={id} />
+          <Rank id={id} />
+          {/* <ProfileCounts id={id} /> */}
+        </section>
+      </div>
     </>
   );
 }

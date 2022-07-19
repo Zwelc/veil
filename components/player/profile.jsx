@@ -1,47 +1,33 @@
-import { Avatar, Typography } from "@mui/material";
-import { Paper } from "@mui/material";
-import { Box } from "@mui/system";
+/* eslint-disable @next/next/no-img-element */
 import usePlayer from "../../hooks/usePlayer";
-import Spinner from "../spinner";
-const ranks = [
-  "Herald",
-  "Guardian",
-  "Crusader",
-  "Archon",
-  "Legend",
-  "Ancient",
-  "Divine",
-  "Immortal",
-];
-function getRank(tier) {
-  const text = tier.toString();
-  const index = text.slice(0, 1);
-  const rank = ranks[index - 1];
 
-  return rank + " " + text.slice(1);
-}
 function Profile({ id }) {
   const { player, isLoading } = usePlayer(id);
 
-  if (isLoading) return <Spinner />;
+  if (isLoading) {
+    return (
+      <div className="flex items-center space-x-4">
+        <div className="w-24 h-24 rounded-full relative bg-gray-500 animate-pulse"></div>
+        <div className=" space-y-1 font-medium text-2xl text-white">
+          <div className="h-6 w-full bg-gray-500 animate-pulse"></div>
+          <div className="h-6 w-full bg-gray-500 animate-pulse"></div>
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-      }}
-    >
-      <Avatar
-        alt={player.profile.personaname}
+    <div className="">
+      <img
+        className="w-48 h-48 rounded-full "
         src={player.profile.avatarfull}
-        sx={{ width: 255, height: 255 }}
+        alt={player.profile.personaname}
+        layout="fill"
       />
-      <Typography component="div" variant="h3">
+      <div className="text-2xl font-medium text-white text-center">
         {player.profile.personaname}
-      </Typography>
-    </Box>
+      </div>
+    </div>
   );
 }
 
