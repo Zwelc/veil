@@ -11,8 +11,8 @@ export async function GET(
   const data = await res.json();
 
   const matchList = data
-    .filter((record) => record.version !== null)
-    .map((match) => {
+    .filter((record: any) => record.version !== null)
+    .map((match: any) => {
       const lobbyType = lobby_type[match.lobby_type];
       const selectedHero = heroes[match.hero_id];
 

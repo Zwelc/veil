@@ -31,7 +31,7 @@ export default async function Page({ params }: { params: { id: string } }) {
         </div>
         <ul className="divide-y divide-gray-200 ">
           {heroes.length > 0
-            ? heroes.slice(0, 11).map((hero) => (
+            ? heroes.slice(0, 11).map((hero: any) => (
                 <li key={hero.id} className="py-3 sm:py-4">
                   <div className="flex items-center space-x-4">
                     <div className="flex-shrink-0">
@@ -58,8 +58,10 @@ export default async function Page({ params }: { params: { id: string } }) {
       </div>
 
       {totals
-        ?.filter((entry) => entry.field == "kills" || entry.field == "deaths")
-        .map((entry) => (
+        ?.filter(
+          (entry: any) => entry.field == "kills" || entry.field == "deaths"
+        )
+        .map((entry: any) => (
           <div
             key={entry.field}
             className="tile flex flex-col items-center justify-center"
@@ -78,7 +80,7 @@ export default async function Page({ params }: { params: { id: string } }) {
         </div>
         <ul className="divide-y divide-gray-200 ">
           {recent.length > 0
-            ? recent.slice(0, 5).map((match) => (
+            ? recent.slice(0, 5).map((match: any) => (
                 <li key={match.match_id} className="py-3 sm:py-4">
                   <div className="flex items-center space-x-4">
                     <div className="flex-shrink-0">

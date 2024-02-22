@@ -10,7 +10,7 @@ export async function GET(
   );
   const data = await res.json();
 
-  const recentList = data.map((hero) => {
+  const recentList = data.map((hero: any) => {
     const lobbyType = lobby_type[hero.lobby_type];
     const selectedHero = heroes[hero.hero_id];
     const heroImg = `https://cdn.cloudflare.steamstatic.com${selectedHero.img}`;
