@@ -19,7 +19,7 @@ export const ProPlayers = () => {
           skeleton.map((item, index) => (
             <div key={index} className="tile animate-pulse "></div>
           ))}
-        {data?.slice(0, 16).map((player) => (
+        {data?.slice(16, 32).map((player) => (
           <PlayerCard player={player} key={player.account_id} />
         ))}
       </div>
