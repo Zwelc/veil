@@ -61,3 +61,35 @@ export function usePlayerMatches(id: string) {
     isError: error,
   };
 }
+
+export function useCounts(id: string) {
+  const { data, error } = useSWR<any, any>(`/${id}/counts`, PlayerHTTP);
+
+  return {
+    data: data,
+    isLoading: !error && !data,
+    isError: error,
+  };
+}
+export function useTotals(id: string) {
+  const { data, error } = useSWR<any[], any>(`/${id}/totals`, PlayerHTTP);
+
+  return {
+    data: data,
+    isLoading: !error && !data,
+    isError: error,
+  };
+}
+export function usePlayerWinrate(id: string) {
+  const { data, error } = useSWR(`/${id}/wl`, PlayerHTTP, {
+    revalidateIfStale: false,
+    revalidateOnFocus: false,
+    revalidateOnReconnect: false,
+  });
+
+  return {
+    data: data,
+    isLoading: !error && !data,
+    isError: error,
+  };
+}
