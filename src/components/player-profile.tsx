@@ -44,7 +44,11 @@ export default function PlayerProfile({ id }: { id: string }) {
                 {player.profile.personaname}
               </div>
 
-              <p>{countries[player.profile.loccountrycode].name.common}</p>
+              <p>
+                {player.profile.loccountrycode
+                  ? countries[player.profile.loccountrycode].name.common
+                  : "Undisclosed"}
+              </p>
             </>
           )}
         </div>

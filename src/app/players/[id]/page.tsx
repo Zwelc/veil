@@ -22,23 +22,30 @@ export default async function Page({ params }: { params: { id: string } }) {
 
       <HeroList id={params.id} />
 
-      {totals
-        ?.filter(
-          (entry: any) => entry.field == "kills" || entry.field == "deaths"
-        )
-        .map((entry: any) => (
-          <div
-            key={entry.field}
-            className="tile flex flex-col items-center justify-center"
-          >
-            <dt className="mb-2 text-3xl font-extrabold">
-              {entry.field === "duration"
-                ? convertHMS(entry.sum)
-                : (entry.sum / entry.n).toFixed(2)}
-            </dt>
-            <dd className="">Average {entry.field}</dd>
-          </div>
-        ))}
+      {totals ? (
+        totals
+          ?.filter(
+            (entry: any) => entry.field == "kills" || entry.field == "deaths"
+          )
+          .map((entry: any) => (
+            <div
+              key={entry.field}
+              className="tile flex flex-col items-center justify-center"
+            >
+              <dt className="mb-2 text-3xl font-extrabold">
+                {entry.field === "duration"
+                  ? convertHMS(entry.sum)
+                  : (entry.sum / entry.n).toFixed(2)}
+              </dt>
+              <dd className="">Average {entry.field}</dd>
+            </div>
+          ))
+      ) : (
+        <>
+          <div className="tile"></div>
+          <div className="tile"></div>
+        </>
+      )}
       <RecentList id={params.id} />
     </>
   );
