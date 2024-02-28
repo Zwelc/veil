@@ -11,11 +11,13 @@ export async function GET(
   const data = await res.json();
 
   const matchList = data
-    .filter((record: any) => record.version !== null)
+    .filter((record: any) => record.version !== null && record.hero_id > 0)
     .map((match: any) => {
       const lobbyType = lobby_type[match.lobby_type];
       const selectedHero = heroes[match.hero_id];
-
+      if (!selectedHero) {
+        console.log(match);
+      }
       const heroImg = `https://cdn.cloudflare.steamstatic.com${selectedHero.img}`;
       return {
         ...match,
