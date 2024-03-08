@@ -13,6 +13,7 @@ export default function PlayerProfile({ id }: { id: string }) {
     { path: `/players/${id}`, title: "Overview" },
     { path: `/players/${id}/matches`, title: "Match History" },
     { path: `/players/${id}/heroes`, title: "Heroes" },
+    { path: `/players/${id}/totals`, title: "Totals" },
   ];
   const { player, isLoading } = usePlayer(id);
 
