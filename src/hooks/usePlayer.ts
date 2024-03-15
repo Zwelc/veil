@@ -52,6 +52,15 @@ export function usePlayerHeroes(id: string) {
   };
 }
 
+export function usePlayerRecentMatches(id: string) {
+  const { data, error } = useSWR<any[], any>(`/${id}/recent`, HTTP);
+
+  return {
+    data: data,
+    isLoading: !error && !data,
+    isError: error,
+  };
+}
 export function usePlayerMatches(id: string) {
   const { data, error } = useSWR<any[], any>(`/${id}/matches`, HTTP);
 

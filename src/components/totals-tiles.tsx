@@ -2,6 +2,7 @@
 
 import { useTotals } from "@/hooks/usePlayer";
 import { convertHMS } from "@/utils/time";
+import { Card } from "./ui/card";
 
 export default function TotalsTiles({ id }: { id: string }) {
   const { data, isLoading } = useTotals(id);
@@ -25,7 +26,7 @@ export default function TotalsTiles({ id }: { id: string }) {
             (entry: any) => entry.field == "kills" || entry.field == "deaths"
           )
           .map((entry: any) => (
-            <div
+            <Card
               key={entry.field}
               className="tile flex flex-col items-center justify-center"
             >
@@ -35,7 +36,7 @@ export default function TotalsTiles({ id }: { id: string }) {
                   : (entry.sum / entry.n).toFixed(2)}
               </dt>
               <dd className="">Average {entry.field}</dd>
-            </div>
+            </Card>
           ))}
     </>
   );

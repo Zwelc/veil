@@ -11,7 +11,7 @@ export async function GET(
   const data = await res.json();
 
   const matchList = data
-    .filter((record: any) => record.version !== null && record.hero_id > 0)
+    .filter((record: any) => record.hero_id > 0)
     .map((match: any) => {
       const lobbyType = lobby_type[match.lobby_type];
       const selectedHero = heroes[match.hero_id];
@@ -23,7 +23,7 @@ export async function GET(
         ...match,
         image: heroImg,
         name: selectedHero.localized_name,
-        result: match.player_slot <= 127 && match.radiant_win ? "Won" : "Lost",
+        result: match.player_slot < 128 && match.radiant_win ? "Won" : "Lost",
         kda: `${match.kills} / ${match.deaths} / ${match.assists}`,
         duration: convertHMS(match.duration),
         lobby: lobbyType.name

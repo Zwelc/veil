@@ -2,6 +2,15 @@
 
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "./ui/card";
+import { Button } from "./ui/button";
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 
 export default function PlayerCard({ player }: { player: any }) {
   const router = useRouter();
@@ -11,36 +20,41 @@ export default function PlayerCard({ player }: { player: any }) {
   };
 
   return (
-    <div className="tile flex items-center p-4 space-x-6 ">
-      <section className="flex items-center p-6 space-x-6 ">
-        <div className=" w-24 h-24 rounded-full">
-          <Image
-            className="w-24 h-24 rounded-full"
-            src={player.avatarfull}
-            alt={player.personaname}
-            width={100}
-            height={100}
-          />
-        </div>
-        <div className="flex flex-col">
-          <div className="font-medium">{player.personaname}</div>
-
-          <p className="text-sm">
-            Last Played:{" "}
-            {player.last_match_time
-              ? new Date(player.last_match_time).toLocaleDateString()
-              : "Undisclosed"}
-          </p>
-          <div className="flex mt-4 space-x-3 lg:mt-6">
-            <button
-              onClick={handleView}
-              className="inline-flex items-center py-2 px-4 text-sm font-medium text-center  bg-primary-700 rounded-lg hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 "
-            >
-              See More
-            </button>
-          </div>
-        </div>
-      </section>
-    </div>
+    <Card className="w-full h-full">
+      <CardHeader className="flex flex-row items-center space-x-4 space-y-0 pb-2">
+        <Avatar>
+          <AvatarImage src={player.avatarfull} />
+          <AvatarFallback>{player.personaname}</AvatarFallback>
+        </Avatar>
+        <CardTitle>{player.personaname}</CardTitle>
+      </CardHeader>
+      <CardContent className="flex flex-row items-center justify-between space-y-0 pb-2">
+        <p className="text-sm text-muted-foreground">
+          Last Seen:{" "}
+          {player.last_match_time
+            ? new Date(player.last_match_time).toLocaleDateString("en-ZA", {
+                // weekday: "long",
+                year: "numeric",
+                month: "long",
+                // day: "numeric",
+              })
+            : "Undisclosed"}
+        </p>
+        <Button onClick={handleView}>See More</Button>
+      </CardContent>
+      {/* <CardFooter className="flex flex-row items-center justify-end space-y-0 pb-2">
+        <p className="text-sm text-muted-foreground">
+          {player.last_match_time
+            ? new Date(player.last_match_time).toLocaleDateString("en-ZA", {
+                // weekday: "long",
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })
+            : "Undisclosed"}
+        </p>
+        <Button onClick={handleView}>See More</Button>
+      </CardFooter> */}
+    </Card>
   );
 }

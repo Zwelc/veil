@@ -1,6 +1,7 @@
 "use client";
 
 import { usePlayerWinrate } from "@/hooks/usePlayer";
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 
 export default function WinrateTiles({ id }: { id: string }) {
   const { data, isLoading } = usePlayerWinrate(id);
@@ -20,16 +21,16 @@ export default function WinrateTiles({ id }: { id: string }) {
         ))}
       {data && (
         <>
-          <div className="tile flex flex-col items-center justify-center">
+          <Card className="tile flex flex-col items-center justify-center">
             <dt className="mb-2 text-3xl font-extrabold">
               {data.win + data.lose}
             </dt>
             <dd className="">Total Matches</dd>
-          </div>
-          <div className="tile flex flex-col items-center justify-center">
+          </Card>
+          <Card className="tile flex flex-col items-center justify-center">
             <dt className="mb-2 text-3xl font-extrabold">{data.win}</dt>
             <dd className="">Total Wins</dd>
-          </div>
+          </Card>
         </>
       )}
     </>

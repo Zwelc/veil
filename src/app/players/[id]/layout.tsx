@@ -1,6 +1,4 @@
 import PlayerProfile from "@/components/player-profile";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 export default function PlayerLayout({
   children,
@@ -10,7 +8,7 @@ export default function PlayerLayout({
   params: { id: string };
 }>) {
   return (
-    <div className="h-full w-full mx-auto container grid grid-cols-4 grid-rows-4 py-4 gap-4">
+    <div className="py-2 h-full w-full grid grid-cols-4 grid-rows-4 px-6 gap-2">
       <PlayerProfile id={params.id} />
       {children}
     </div>

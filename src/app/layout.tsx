@@ -3,10 +3,16 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Appbar from "@/components/appbar";
+import Appbar from "@/components/layout/appbar";
 import { useState } from "react";
-
+import { Inter as FontSans } from "next/font/google";
 import { SearchContext } from "@/context/searchContext";
+import { cn } from "@/lib/utils";
+
+const fontSans = FontSans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
 
 export default function RootLayout({
   children,
@@ -25,10 +31,15 @@ export default function RootLayout({
           sizes="32x32"
         />
       </head>
-      <body>
+      <body
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          fontSans.className
+        )}
+      >
         <SearchContext.Provider value={{ search, setSearch }}>
-          <Appbar />
-          <main className="h-content w-full overflow-y-auto scroll-smooth">
+          <main className="relative flex min-h-screen flex-col bg-background">
+            <Appbar />
             {children}
           </main>
         </SearchContext.Provider>
