@@ -1,7 +1,5 @@
 "use client";
 
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Appbar from "@/components/layout/appbar";
 import { useState } from "react";

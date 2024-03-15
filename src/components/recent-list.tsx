@@ -1,6 +1,6 @@
 "use client";
 
-import { usePlayerMatches, usePlayerRecentMatches } from "@/hooks/usePlayer";
+import { usePlayerRecentMatches } from "@/hooks/usePlayer";
 import ListItem from "./list-item";
 import { Card } from "./ui/card";
 

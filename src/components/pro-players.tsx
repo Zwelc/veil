@@ -1,7 +1,6 @@
 "use client";
 
 import PlayerCard from "@/components/player-card";
-import Spinner from "@/components/spinner";
 import { useProPlayers } from "@/hooks/usePlayer";
 
 export const ProPlayers = () => {

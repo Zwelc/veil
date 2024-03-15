@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { countries } from "dotaconstants";
 import { usePathname } from "next/navigation";
 import Link from "next/link";

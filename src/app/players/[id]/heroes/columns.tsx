@@ -1,12 +1,9 @@
 "use client";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
 import { ColumnDef } from "@tanstack/react-table";
-import { LuArrowUpDown, LuMoreHorizontal } from "react-icons/lu";
 import { DataTableColumnHeader } from "@/components/data-table/column-header";
-// This type is used to define the shape of our data.
-// You can use a Zod schema here if you want.
+
 export type Hero = {
   id: number;
   games: number;

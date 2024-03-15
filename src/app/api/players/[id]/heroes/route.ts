@@ -1,17 +1,16 @@
-import { heroes, lobby_type } from "dotaconstants";
+import { API, IMAGE_CDN } from "@/constants";
+import { heroes } from "dotaconstants";
 
 export async function GET(
   request: Request,
   { params }: { params: { id: string } }
 ) {
-  const res = await fetch(
-    `https://api.opendota.com/api/players/${params.id}/heroes`
-  );
+  const res = await fetch(`${API}/players/${params.id}/heroes`);
   const data = await res.json();
 
   const heroList = data.map((hero: any) => {
     const selectedHero = heroes[hero.hero_id];
-    const heroImg = `https://cdn.cloudflare.steamstatic.com${selectedHero.img}`;
+    const heroImg = `${IMAGE_CDN}${selectedHero.img}`;
     return {
       id: hero.hero_id,
       image: heroImg,

@@ -1,3 +1,4 @@
+import { API, IMAGE_CDN } from "@/constants";
 import { isRadiant } from "@/utils/playerslot";
 import { convertHMS } from "@/utils/time";
 import { heroes, lobby_type } from "dotaconstants";
@@ -6,9 +7,7 @@ export async function GET(
   request: Request,
   { params }: { params: { id: string } }
 ) {
-  const res = await fetch(
-    `https://api.opendota.com/api/players/${params.id}/recentMatches`
-  );
+  const res = await fetch(`${API}/players/${params.id}/recentMatches`);
   const data = await res.json();
 
   const recentList = data
@@ -16,7 +15,7 @@ export async function GET(
     .map((match: any) => {
       const lobbyType = lobby_type[match.lobby_type];
       const selectedHero = heroes[match.hero_id];
-      const heroImg = `https://cdn.cloudflare.steamstatic.com${selectedHero.img}`;
+      const heroImg = `${IMAGE_CDN}${selectedHero.img}`;
       return {
         ...match,
         image: heroImg,
