@@ -1,7 +1,7 @@
 "use client";
 
 import PlayerCard from "@/components/player-card";
-import { useProPlayers } from "@/hooks/usePlayer";
+import { useProPlayers } from "@/hooks/useProPlayer";
 
 export const ProPlayers = () => {
   const { data, isLoading } = useProPlayers();

@@ -2,7 +2,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useTotals } from "@/hooks/usePlayer";
-import { convertHMS } from "@/utils/time";
+import { convertHMS } from "@/lib/time";
 
 export default function Page({ params }: { params: { id: string } }) {
   const { data, isLoading } = useTotals(params.id);

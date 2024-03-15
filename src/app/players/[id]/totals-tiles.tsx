@@ -1,8 +1,8 @@
 "use client";
 
 import { useTotals } from "@/hooks/usePlayer";
-import { convertHMS } from "@/utils/time";
-import { Card } from "./ui/card";
+import { convertHMS } from "@/lib/time";
+import { Card } from "@/components/ui/card";
 
 export default function TotalsTiles({ id }: { id: string }) {
   const { data, isLoading } = useTotals(id);

@@ -1,8 +1,8 @@
-import HeroList from "@/components/hero-list";
+import HeroList from "./hero-list";
 
 import RecentList from "@/components/recent-list";
-import TotalsTiles from "@/components/totals-tiles";
-import WinrateTiles from "@/components/winrate-tiles";
+import TotalsTiles from "./totals-tiles";
+import WinrateTiles from "./winrate-tiles";
 
 export default async function Page({ params }: { params: { id: string } }) {
   return (

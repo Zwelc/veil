@@ -1,7 +1,7 @@
 "use client";
 import { usePlayerHeroes } from "@/hooks/usePlayer";
-import ListItem from "./list-item";
-import { Card } from "./ui/card";
+import ListItem from "@/components/list-item";
+import { Card } from "@/components/ui/card";
 
 export default function HeroList({ id }: { id: string }) {
   const { data, isLoading } = usePlayerHeroes(id);

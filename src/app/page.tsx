@@ -1,11 +1,11 @@
 "use client";
 
 import PlayerCard from "@/components/player-card";
-import { ProPlayers } from "@/components/pro-players";
+import { ProPlayers } from "@/app/pro-players";
 import { SearchContext } from "@/context/searchContext";
-import { useSearch } from "@/hooks/usePlayer";
+import { useSearch } from "@/hooks/useSearch";
 
-import { Key, useContext } from "react";
+import { useContext } from "react";
 
 export default function Home() {
   const { search } = useContext(SearchContext);

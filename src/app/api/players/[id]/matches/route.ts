@@ -1,13 +1,13 @@
-import { API, IMAGE_CDN } from "@/constants";
-import { isRadiant } from "@/utils/playerslot";
-import { convertHMS } from "@/utils/time";
+import { IMAGE_CDN, PLAYER_URL } from "@/lib/constants";
+import { isRadiant } from "@/lib/playerslot";
+import { convertHMS } from "@/lib/time";
 import { heroes, lobby_type } from "dotaconstants";
 
 export async function GET(
   request: Request,
   { params }: { params: { id: string } }
 ) {
-  const res = await fetch(`${API}/players/${params.id}/matches`);
+  const res = await fetch(`${PLAYER_URL}/${params.id}/matches`);
   const data = await res.json();
 
   const matchList = data
@@ -15,9 +15,7 @@ export async function GET(
     .map((match: any) => {
       const lobbyType = lobby_type[match.lobby_type];
       const selectedHero = heroes[match.hero_id];
-      if (!selectedHero) {
-        console.log(match);
-      }
+
       const heroImg = `${IMAGE_CDN}${selectedHero.img}`;
       return {
         ...match,

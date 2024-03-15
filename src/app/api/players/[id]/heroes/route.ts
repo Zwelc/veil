@@ -1,11 +1,11 @@
-import { API, IMAGE_CDN } from "@/constants";
+import { IMAGE_CDN, PLAYER_URL } from "@/lib/constants";
 import { heroes } from "dotaconstants";
 
 export async function GET(
   request: Request,
   { params }: { params: { id: string } }
 ) {
-  const res = await fetch(`${API}/players/${params.id}/heroes`);
+  const res = await fetch(`${PLAYER_URL}/${params.id}/heroes`);
   const data = await res.json();
 
   const heroList = data.map((hero: any) => {

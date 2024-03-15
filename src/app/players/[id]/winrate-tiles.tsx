@@ -1,7 +1,7 @@
 "use client";
 
 import { usePlayerWinrate } from "@/hooks/usePlayer";
-import { Card } from "./ui/card";
+import { Card } from "@/components/ui/card";
 
 export default function WinrateTiles({ id }: { id: string }) {
   const { data, isLoading } = usePlayerWinrate(id);
