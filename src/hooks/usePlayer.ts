@@ -45,7 +45,7 @@ export function usePlayerMatches(id: string) {
 }
 
 export function useCounts(id: string) {
-  const { data, error } = useSWR<any, any>(`/${id}/counts`, PlayerHTTP);
+  const { data, error } = useSWR<any, any>(`/${id}/counts`, HTTP);
 
   return {
     data: data,
@@ -54,7 +54,25 @@ export function useCounts(id: string) {
   };
 }
 export function useTotals(id: string) {
-  const { data, error } = useSWR<any[], any>(`/${id}/totals`, PlayerHTTP);
+  const { data, error } = useSWR<any[], any>(`/${id}/totals`, HTTP);
+
+  return {
+    data: data,
+    isLoading: !error && !data,
+    isError: error,
+  };
+}
+export function usePlayerPatchCounts(id: string) {
+  const { data, error } = useSWR<any[], any>(`/${id}/patch`, HTTP);
+
+  return {
+    data: data,
+    isLoading: !error && !data,
+    isError: error,
+  };
+}
+export function usePlayerSideCounts(id: string) {
+  const { data, error } = useSWR<any[], any>(`/${id}/sides`, HTTP);
 
   return {
     data: data,

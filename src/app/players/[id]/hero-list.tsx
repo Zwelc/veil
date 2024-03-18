@@ -8,7 +8,7 @@ export default function HeroList({ id }: { id: string }) {
   const skeleton = new Array(11).fill(null);
 
   return (
-    <Card className="row-span-4 col-span-1 w-full h-full">
+    <Card className="row-span-6 col-span-2 w-full h-full">
       <div className="block p-4  w-full h-full">
         <div className="flex items-center justify-between mb-4">
           <h5 className="text-xl font-bold leading-none ">

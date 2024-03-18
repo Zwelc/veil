@@ -10,7 +10,7 @@ export default function Page({ params }: { params: { id: string } }) {
   const { data, isLoading } = usePlayerMatches(params.id);
 
   return (
-    <Card className="row-span-4 col-span-3 h-full w-full min-h-[44rem]">
+    <Card className="row-span-6 col-span-6 h-full w-full min-h-[44rem]">
       <CardHeader>
         <CardTitle>Match History</CardTitle>
       </CardHeader>

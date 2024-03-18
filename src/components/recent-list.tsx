@@ -9,7 +9,7 @@ export default function RecentList({ id }: { id: string }) {
   const skeleton = new Array(5).fill(null);
 
   return (
-    <Card className="block col-span-2 row-span-2 w-full h-full">
+    <Card className="col-span-4 row-span-2 w-full h-full">
       <div className="block tile  p-4  w-full h-full">
         <div className="flex items-center justify-between mb-4">
           <h5 className="text-xl font-bold leading-none ">Recent Matches</h5>
@@ -31,7 +31,7 @@ export default function RecentList({ id }: { id: string }) {
             ))}
           {data &&
             data
-              .slice(0, 5)
+              .slice(0, 3)
               .map((match: any) => (
                 <ListItem
                   key={match.match_id}

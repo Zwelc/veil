@@ -19,8 +19,8 @@ export default function PlayerProfile({ id }: { id: string }) {
   const { player, isLoading } = usePlayer(id);
 
   return (
-    <Card className="row-span-4">
-      <div className="tile row-span-4 flex flex-col  space-y-2 mx-2">
+    <Card className="row-span-6 col-span-2">
+      <div className=" flex flex-col  space-y-2 mx-2">
         <CardHeader className="flex items-center  space-x-6 ">
           <div className=" w-24 h-24 rounded-full">
             {isLoading ? (

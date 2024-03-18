@@ -9,7 +9,7 @@ export default function Page({ params }: { params: { id: string } }) {
   const { data, isLoading } = usePlayerHeroes(params.id);
 
   return (
-    <Card className="row-span-4 col-span-3">
+    <Card className="row-span-6 col-span-6">
       <CardHeader>
         <CardTitle>Most Played Heroes</CardTitle>
       </CardHeader>

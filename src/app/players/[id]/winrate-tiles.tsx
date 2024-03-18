@@ -1,7 +1,7 @@
 "use client";
 
 import { usePlayerWinrate } from "@/hooks/usePlayer";
-import { Card } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function WinrateTiles({ id }: { id: string }) {
   const { data, isLoading } = usePlayerWinrate(id);
@@ -21,15 +21,29 @@ export default function WinrateTiles({ id }: { id: string }) {
         ))}
       {data && (
         <>
-          <Card className="tile flex flex-col items-center justify-center">
-            <dt className="mb-2 text-3xl font-extrabold">
-              {data.win + data.lose}
-            </dt>
-            <dd className="">Total Matches</dd>
+          <Card>
+            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+              <CardTitle className="text-sm font-medium">Total Games</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="text-2xl font-bold">{data.win + data.lose}</div>
+              <p className="text-xs text-muted-foreground">
+                {((data.win / (data.win + data.lose)) * 100).toFixed(2)}%
+                Winrate
+              </p>
+            </CardContent>
           </Card>
-          <Card className="tile flex flex-col items-center justify-center">
-            <dt className="mb-2 text-3xl font-extrabold">{data.win}</dt>
-            <dd className="">Total Wins</dd>
+          <Card>
+            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+              <CardTitle className="text-sm font-medium">Total Wins</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="text-2xl font-bold">{data.win}</div>
+              <p className="text-xs text-muted-foreground">
+                {((data.win / (data.win + data.lose)) * 100).toFixed(2)}%
+                Winrate
+              </p>
+            </CardContent>
           </Card>
         </>
       )}
