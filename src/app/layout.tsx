@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Inter as FontSans } from "next/font/google";
 import { SearchContext } from "@/context/searchContext";
 import { cn } from "@/lib/utils";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -35,12 +36,19 @@ export default function RootLayout({
           fontSans.className
         )}
       >
-        <SearchContext.Provider value={{ search, setSearch }}>
-          <main className="relative flex min-h-screen flex-col bg-background">
-            <Appbar />
-            {children}
-          </main>
-        </SearchContext.Provider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <SearchContext.Provider value={{ search, setSearch }}>
+            <main className="relative flex min-h-screen flex-col bg-background">
+              <Appbar />
+              {children}
+            </main>
+          </SearchContext.Provider>
+        </ThemeProvider>
       </body>
     </html>
   );

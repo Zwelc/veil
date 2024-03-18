@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Search from "../search";
+import { ThemeToggle } from "./theme-toggle";
 
 function Appbar() {
   return (
@@ -13,7 +14,10 @@ function Appbar() {
           </span>
         </Link>
 
-        <Search />
+        <div className="flex space-x-4 items-center">
+          <Search />
+          <ThemeToggle />
+        </div>
       </div>
     </nav>
   );
