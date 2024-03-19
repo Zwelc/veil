@@ -12,7 +12,7 @@ export default function Page({ params }: { params: { id: string } }) {
     return word.charAt(0).toUpperCase() + word.slice(1);
   };
   return (
-    <Card className=" p-4 row-span-4 col-span-2 md:col-span-6 w-full h-full">
+    <Card className=" p-4 row-span-4 col-span-2 md:row-span-6 md:col-span-6 w-full h-full">
       <CardTitle className="text-sm font-medium">Totals</CardTitle>
 
       <div className="relative overflow-x-auto md:h-[44rem] grid grid-cols-2 md:grid-cols-4 py-4 gap-4">

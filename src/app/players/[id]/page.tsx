@@ -8,7 +8,7 @@ import PatchOverviewChart from "./patch-overview";
 
 export default async function Page({ params }: { params: { id: string } }) {
   return (
-    <div className="row-span-2 md:row-span-6 col-span-2 md:col-span-6 h-full w-full">
+    <div className="row-span-4 md:row-span-6 col-span-2 md:col-span-6 h-full w-full">
       <div className="w-full h-full grid grid-cols-2 md:grid-cols-6 grid-rows-6 gap-2">
         <WinrateTiles id={params.id} />
         <TotalsTiles id={params.id} />
