@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 import usePlayer from "@/hooks/usePlayer";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export default function PlayerProfile({ id }: { id: string }) {
@@ -19,7 +19,7 @@ export default function PlayerProfile({ id }: { id: string }) {
   const { player, isLoading } = usePlayer(id);
 
   return (
-    <Card className="row-span-6 col-span-2">
+    <Card className="row-span-4 md:row-span-6 col-span-2 md:col-span-2">
       <div className=" flex flex-col  space-y-2 mx-2">
         <CardHeader className="flex items-center  space-x-6 ">
           <div className=" w-24 h-24 rounded-full">
@@ -40,7 +40,10 @@ export default function PlayerProfile({ id }: { id: string }) {
               </>
             ) : (
               <>
-                <div className="text-2xl font-bold">
+                <CardTitle className="md:hidden">
+                  {player.profile.personaname}
+                </CardTitle>
+                <div className="hidden md:block text-2xl font-bold">
                   {player.profile.personaname}
                 </div>
 
@@ -53,8 +56,8 @@ export default function PlayerProfile({ id }: { id: string }) {
             )}
           </div>
         </CardHeader>
-        <CardContent>
-          <ul className="p-6 space-y-4 mx-2">
+        <CardContent className="flex ">
+          <ul className="p-6 space-x-4 mx-2">
             {menus.map((menu) => (
               <Link href={menu.path} passHref key={menu.title}>
                 <li className=" group  cursor-pointer">

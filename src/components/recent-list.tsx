@@ -9,7 +9,7 @@ export default function RecentList({ id }: { id: string }) {
   const skeleton = new Array(5).fill(null);
 
   return (
-    <Card className="col-span-4 row-span-2 w-full h-full">
+    <Card className="col-span-2 md:col-span-4 row-span-2 w-full h-full">
       <div className="block tile  p-4  w-full h-full">
         <div className="flex items-center justify-between mb-4">
           <h5 className="text-xl font-bold leading-none ">Recent Matches</h5>

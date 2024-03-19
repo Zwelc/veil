@@ -23,7 +23,7 @@ export default function Home() {
         {isLoading && "Searching..."}
         {data && "Displaying the first 16 players"}
       </h1>
-      <div className="grid grid-cols-8 gap-4  ">
+      <div className="grid grid-cols-2 md:grid-cols-8 gap-4  ">
         {isLoading &&
           skeleton.map((item, index) => (
             <div key={index} className="tile animate-pulse "></div>

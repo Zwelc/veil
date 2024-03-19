@@ -8,7 +8,7 @@ export default function WinrateTiles({ id }: { id: string }) {
   const skeleton = new Array(2).fill(null);
 
   return (
-    <>
+    <div className="row-span-1 col-span-2">
       {isLoading &&
         skeleton.map((item, index) => (
           <div
@@ -20,7 +20,7 @@ export default function WinrateTiles({ id }: { id: string }) {
           </div>
         ))}
       {data && (
-        <>
+        <div className="w-full h-full grid grid-cols-2 gap-2">
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">Total Games</CardTitle>
@@ -45,8 +45,8 @@ export default function WinrateTiles({ id }: { id: string }) {
               </p>
             </CardContent>
           </Card>
-        </>
+        </div>
       )}
-    </>
+    </div>
   );
 }

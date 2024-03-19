@@ -1,4 +1,6 @@
 import { HTTP, PlayerHTTP } from "@/lib/fetcher";
+import { IPatch, IPlayerSide } from "@/models/counts";
+import { ITotal } from "@/models/totals";
 import useSWR from "swr";
 
 export default function usePlayer(id: string) {
@@ -54,7 +56,7 @@ export function useCounts(id: string) {
   };
 }
 export function useTotals(id: string) {
-  const { data, error } = useSWR<any[], any>(`/${id}/totals`, HTTP);
+  const { data, error } = useSWR<ITotal[], any>(`/${id}/totals`, HTTP);
 
   return {
     data: data,
@@ -63,7 +65,7 @@ export function useTotals(id: string) {
   };
 }
 export function usePlayerPatchCounts(id: string) {
-  const { data, error } = useSWR<any[], any>(`/${id}/patch`, HTTP);
+  const { data, error } = useSWR<IPatch[], any>(`/${id}/patch`, HTTP);
 
   return {
     data: data,
@@ -72,7 +74,7 @@ export function usePlayerPatchCounts(id: string) {
   };
 }
 export function usePlayerSideCounts(id: string) {
-  const { data, error } = useSWR<any[], any>(`/${id}/sides`, HTTP);
+  const { data, error } = useSWR<IPlayerSide[], any>(`/${id}/sides`, HTTP);
 
   return {
     data: data,

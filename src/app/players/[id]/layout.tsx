@@ -8,7 +8,7 @@ export default function PlayerLayout({
   params: { id: string };
 }>) {
   return (
-    <div className="py-2 h-full w-full grid grid-cols-8 grid-rows-6 px-6 gap-2">
+    <div className="py-2 h-full w-full grid grid-cols-2 md:grid-cols-8 grid-rows-4 md:grid-rows-6 px-6 gap-2">
       <PlayerProfile id={params.id} />
       {children}
     </div>
