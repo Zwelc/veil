@@ -7,30 +7,25 @@ export default function StackedBarComponent(props: { data: IPatch[] }) {
   const y = [(d: IPatch) => d.games, (d: IPatch) => d.win];
 
   return (
-    <VisXYContainer
-      data={data}
-      height={"16rem"}
-      // sizing="fill"
-      // className="w-full h-full"
-    >
+    <VisXYContainer data={data} height={"24rem"}>
       <VisStackedBar
         x={x}
         y={y}
         roundedCorners={4}
         barPadding={0.15}
-        color={["#41b883", "#72D0A6"]}
+        color={["hsl(var(--primary))", "hsl(var(--muted))"]}
       />
       <VisAxis
         type="x"
         tickFormat={(tick, i: number) => data[i]?.name}
         numTicks={data.length}
-        color="#888888"
+        color={["hsl(var(--text))"]}
       />
       <VisAxis
         type="y"
         // tickFormat={(tick, i: number) => data[i]?.win}
         numTicks={data.length}
-        color="#888888"
+        color={["hsl(var(--text))"]}
       />
     </VisXYContainer>
   );

@@ -39,10 +39,7 @@ export default function WinrateTiles({ id }: { id: string }) {
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">{data.win}</div>
-              <p className="text-xs text-muted-foreground">
-                {((data.win / (data.win + data.lose)) * 100).toFixed(2)}%
-                Winrate
-              </p>
+              <p className="text-xs text-muted-foreground">Overall</p>
             </CardContent>
           </Card>
         </div>

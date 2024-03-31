@@ -1,5 +1,6 @@
 import { HTTP, PlayerHTTP } from "@/lib/fetcher";
 import { IPatch, IPlayerSide } from "@/models/counts";
+import { IRecentMatchesResponse } from "@/models/recent";
 import { ITotal } from "@/models/totals";
 import useSWR from "swr";
 
@@ -28,7 +29,10 @@ export function usePlayerHeroes(id: string) {
 }
 
 export function usePlayerRecentMatches(id: string) {
-  const { data, error } = useSWR<any[], any>(`/${id}/recent`, HTTP);
+  const { data, error } = useSWR<IRecentMatchesResponse[], any>(
+    `/${id}/recent`,
+    HTTP
+  );
 
   return {
     data: data,

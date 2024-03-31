@@ -14,7 +14,7 @@ function Appbar() {
           </span>
         </Link>
 
-        <div className="flex space-x-4 items-center">
+        <div className="flex space-x-4 items-center max-w-lg">
           <Search />
           <ThemeToggle />
         </div>

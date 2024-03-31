@@ -19,7 +19,7 @@ export default function PlayerProfile({ id }: { id: string }) {
   const { player, isLoading } = usePlayer(id);
 
   return (
-    <Card className="row-span-4 md:row-span-6 col-span-2 md:col-span-2">
+    <Card className="row-span-4 md:row-span-6 col-span-1 md:col-span-1">
       <div className=" flex flex-col  space-y-2 mx-2">
         <CardHeader className="flex items-center  space-x-6 ">
           <div className=" w-24 h-24 rounded-full">
@@ -63,12 +63,12 @@ export default function PlayerProfile({ id }: { id: string }) {
                 <li className=" group  cursor-pointer">
                   <span
                     className={` font-medium  ${
-                      pathname == menu.path ? "text-accent-500" : ""
+                      pathname == menu.path ? "text-primary" : ""
                     }`}
                   >
                     {menu.title}
                   </span>
-                  <div className="h-0.5 bg-accent-400 scale-x-0 group-hover:scale-100 transition-transform origin-left rounded-full duration-300 ease-out"></div>
+                  <div className="h-0.5 bg-primary scale-x-0 group-hover:scale-100 transition-transform origin-left rounded-full duration-300 ease-out"></div>
                 </li>
               </Link>
             ))}
