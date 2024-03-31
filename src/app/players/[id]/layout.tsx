@@ -1,5 +1,4 @@
 import PlayerNav from "./player-nav";
-import PlayerProfile from "./player-profile";
 
 export default function PlayerLayout({
   children,

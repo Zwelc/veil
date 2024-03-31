@@ -20,7 +20,6 @@ export default function PlayerNav({ id }: { id: string }) {
     <div className="w-full space-y-2">
       <div className="space-x-4  flex items-center justify-between ">
         <div className="flex items-center space-x-2">
-          {/* <div className=" w-24 h-24 rounded-full"> */}
           {isLoading ? (
             <div className="animate-pulse w-24 h-24 bg-gray-200 rounded-full mb-2.5"></div>
           ) : (
@@ -29,7 +28,7 @@ export default function PlayerNav({ id }: { id: string }) {
               <AvatarFallback>{player.profile.personaname}</AvatarFallback>
             </Avatar>
           )}
-          {/* </div> */}
+
           <div className="flex flex-col">
             <h2 className="text-3xl font-bold tracking-tight">
               {player && player.profile.personaname}

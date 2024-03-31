@@ -2,6 +2,7 @@
 
 import { usePlayerWinrate } from "@/hooks/usePlayer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import StatTile from "@/components/stat-tile";
 
 export default function WinrateTiles({ id }: { id: string }) {
   const { data, isLoading } = usePlayerWinrate(id);
@@ -21,27 +22,14 @@ export default function WinrateTiles({ id }: { id: string }) {
         ))}
       {data && (
         <div className="w-full h-full grid grid-cols-2 gap-2">
-          <Card>
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">Total Games</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">{data.win + data.lose}</div>
-              <p className="text-xs text-muted-foreground">
-                {((data.win / (data.win + data.lose)) * 100).toFixed(2)}%
-                Winrate
-              </p>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">Total Wins</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">{data.win}</div>
-              <p className="text-xs text-muted-foreground">Overall</p>
-            </CardContent>
-          </Card>
+          <StatTile
+            title="Total Games"
+            stat={data.win + data.lose}
+            subtitle={`${((data.win / (data.win + data.lose)) * 100).toFixed(
+              2
+            )} % Winrate`}
+          />
+          <StatTile title="Total Wins" stat={data.win} subtitle={`Overall`} />
         </div>
       )}
     </div>
