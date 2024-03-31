@@ -1,4 +1,4 @@
-import PlayerProfile from "./player-profile";
+import PlayerNav from "./player-nav";
 
 export default function PlayerLayout({
   children,
@@ -8,9 +8,9 @@ export default function PlayerLayout({
   params: { id: string };
 }>) {
   return (
-    <div className="py-2 h-full w-full grid grid-cols-2 md:grid-cols-8 grid-rows-4 md:grid-rows-6 px-6 gap-2">
-      <PlayerProfile id={params.id} />
-      {children}
+    <div className="w-full h-full flex-1 space-y-4 p-8 pt-6">
+      <PlayerNav id={params.id} />
+      <div className=" h-full w-full">{children}</div>
     </div>
   );
 }

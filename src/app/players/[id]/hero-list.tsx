@@ -1,20 +1,19 @@
 "use client";
 import { usePlayerHeroes } from "@/hooks/usePlayer";
 import ListItem from "@/components/list-item";
-import { Card } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function HeroList({ id }: { id: string }) {
   const { data, isLoading } = usePlayerHeroes(id);
   const skeleton = new Array(11).fill(null);
 
   return (
-    <Card className="row-span-4 col-span-2 md:row-span-6 md:col-span-2 w-full h-full">
-      <div className="block p-4  w-full h-full">
-        <div className="flex items-center justify-between mb-4">
-          <h5 className="text-xl font-bold leading-none ">
-            Most Played Heroes
-          </h5>
-        </div>
+    <Card className="row-span- col-span-2 md:row-span-4 md:col-span-2 w-full h-full">
+      <CardHeader>
+        <CardTitle>Most Played Heroes</CardTitle>
+      </CardHeader>
+
+      <CardContent>
         <ul className="divide-y divide-gray-200 ">
           {isLoading &&
             skeleton.map((item, index) => (
@@ -30,9 +29,10 @@ export default function HeroList({ id }: { id: string }) {
                 </div>
               </li>
             ))}
+
           {data &&
             data
-              .slice(0, 11)
+              .slice(0, 6)
               .map((hero: any) => (
                 <ListItem
                   key={hero.id}
@@ -42,7 +42,7 @@ export default function HeroList({ id }: { id: string }) {
                 />
               ))}
         </ul>
-      </div>
+      </CardContent>
     </Card>
   );
 }

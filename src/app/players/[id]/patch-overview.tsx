@@ -24,7 +24,7 @@ export default function PatchOverviewChart({ id }: { id: string }) {
           </div>
         ))}
       {data && (
-        <Card className="row-span-2 md:row-span-3 col-span-2 md:col-span-4  w-full h-full h-">
+        <Card className="row-span-2 md:row-span-4 col-span-2 md:col-span-4  w-full h-full ">
           <CardHeader>
             <CardTitle>Patch Overview</CardTitle>
           </CardHeader>
