@@ -21,8 +21,9 @@ export default function TotalsTiles({ id }: { id: string }) {
           title="Wins in last 20 games"
           stat={`${recent?.filter((match) => match.result === "Won").length}`}
           subtitle={`${(
-            recent?.filter((match) => match.result === "Won").length /
-            recent.length
+            (recent?.filter((match) => match.result === "Won").length /
+              recent.length) *
+            100
           ).toFixed(2)} % Winrate`}
         />
       )}
