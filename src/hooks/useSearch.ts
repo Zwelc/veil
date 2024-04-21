@@ -2,7 +2,7 @@ import { SearchHTTP } from "@/lib/fetcher";
 import useSWR from "swr";
 
 export function useSearch(query: string) {
-  const { data, error } = useSWR(query, SearchHTTP, {
+  const { data, error } = useSWR<any[], any>(query, SearchHTTP, {
     revalidateIfStale: false,
     revalidateOnFocus: false,
     revalidateOnReconnect: false,
