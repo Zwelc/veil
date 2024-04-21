@@ -10,7 +10,6 @@ import {
 } from "./ui/card";
 import { Button } from "./ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-import Image from "next/image";
 
 export default function PlayerCard({ player }: { player: any }) {
   const router = useRouter();
@@ -31,10 +30,8 @@ export default function PlayerCard({ player }: { player: any }) {
           Last Seen:{" "}
           {player.last_match_time
             ? new Date(player.last_match_time).toLocaleDateString("en-ZA", {
-                // weekday: "long",
                 year: "numeric",
                 month: "long",
-                // day: "numeric",
               })
             : "Undisclosed"}
         </CardDescription>

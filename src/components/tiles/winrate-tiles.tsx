@@ -2,7 +2,7 @@
 
 import { usePlayerWinrate } from "@/hooks/usePlayer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import StatTile from "@/components/stat-tile";
+import StatTile from "@/components/tiles/stat-tile";
 
 export default function WinrateTiles({ id }: { id: string }) {
   const { data, isLoading } = usePlayerWinrate(id);

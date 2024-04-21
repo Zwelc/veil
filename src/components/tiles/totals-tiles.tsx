@@ -8,7 +8,7 @@ import {
 } from "@/hooks/usePlayer";
 import { convertHMS } from "@/lib/time";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import StatTile from "@/components/stat-tile";
+import StatTile from "@/components/tiles/stat-tile";
 
 export default function TotalsTiles({ id }: { id: string }) {
   const { data } = useTotals(id);

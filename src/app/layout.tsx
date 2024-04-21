@@ -6,7 +6,7 @@ import { useState } from "react";
 import { Inter as FontSans } from "next/font/google";
 import { SearchContext } from "@/context/searchContext";
 import { cn } from "@/lib/utils";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/components/layout/theme-provider";
 import { Analytics } from "@vercel/analytics/react";
 
 const fontSans = FontSans({

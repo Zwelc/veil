@@ -2,7 +2,7 @@
 
 import { usePlayerRecentMatches } from "@/hooks/usePlayer";
 import ListItem from "./list-item";
-import { Card } from "./ui/card";
+import { Card } from "../ui/card";
 
 export default function RecentList({ id }: { id: string }) {
   const { data, isLoading } = usePlayerRecentMatches(id);

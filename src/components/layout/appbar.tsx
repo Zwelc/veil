@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Search from "../search";
+import Search from "./search";
 import { ThemeToggle } from "./theme-toggle";
 
 function Appbar() {

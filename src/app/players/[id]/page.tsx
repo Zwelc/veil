@@ -1,11 +1,11 @@
 "use client";
 
-import HeroList from "./hero-list";
+import HeroList from "../../../components/lists/hero-list";
 
-import TotalsTiles from "./totals-tiles";
-import WinrateTiles from "./winrate-tiles";
+import TotalsTiles from "../../../components/tiles/totals-tiles";
+import WinrateTiles from "../../../components/tiles/winrate-tiles";
 
-import PatchOverviewChart from "./patch-overview";
+import PatchOverviewChart from "../../../components/charts/patch-overview";
 import { AnimatePresence, motion } from "framer-motion";
 
 export default function Page({ params }: { params: { id: string } }) {
