@@ -23,20 +23,8 @@ export default function Home() {
       </h1>
       <PlayerGrid
         loading={isLoading && proLoading}
-        data={search === "" ? proData : data}
+        data={(search === "" ? proData : data) || []}
       />
-      {/* <div className="grid grid-cols-2 md:grid-cols-8 gap-4  ">
-        {isLoading && proLoading
-          ? skeleton.map((item, index) => (
-              <div key={index} className="tile animate-pulse "></div>
-            ))
-          : (search === "" ? proData : data)
-              ?.slice(0, 16)
-              .map((player: any) => (
-                <PlayerCard player={player} key={player.account_id} />
-              ))}
-
-      </div> */}
     </div>
   );
 }
