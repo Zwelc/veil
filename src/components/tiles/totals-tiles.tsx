@@ -1,57 +1,49 @@
 "use client";
 
-import {
-  useCounts,
-  usePlayerPatchCounts,
-  usePlayerRecentMatches,
-  useTotals,
-} from "@/hooks/usePlayer";
-import { convertHMS } from "@/lib/time";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import StatTile from "@/components/tiles/stat-tile";
+import { useRecent } from "@/hooks/useRecent";
 
 export default function TotalsTiles({ id }: { id: string }) {
-  const { data } = useTotals(id);
-  const { data: recent } = usePlayerRecentMatches(id);
-
+  const recent = useRecent(id);
   return (
     <div className="w-full h-full grid grid-cols-4 col-span-2 md:col-span-4 gap-2">
       {recent && (
         <StatTile
+          title="Top game mode in last 20 games"
+          stat={`${recent.mostFrequentGameMode.gameMode}`}
+          subtitle={`${recent.mostFrequentGameModeMatches.length} matches played`}
+        />
+      )}
+      {recent && (
+        <StatTile
           title="Wins in last 20 games"
-          stat={`${recent?.filter((match) => match.result === "Won").length}`}
+          stat={`${recent.recentWins}`}
           subtitle={`${(
-            (recent?.filter((match) => match.result === "Won").length /
-              recent.length) *
+            (recent.recentWins / recent.recentMatches.length) *
             100
           ).toFixed(2)} % Winrate`}
         />
       )}
-      {data &&
-        data
-          ?.filter(
-            (entry: any) =>
-              entry.field == "kills" ||
-              entry.field == "deaths" ||
-              entry.field == "level"
-          )
-          .map((entry: any) => (
-            <Card key={entry.field}>
-              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium">
-                  Average {entry.field}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="text-2xl font-bold">
-                  {entry.field === "duration"
-                    ? convertHMS(entry.sum)
-                    : (entry.sum / entry.n).toFixed(2)}
-                </div>
-                <p className="text-xs text-muted-foreground">Overall</p>
-              </CardContent>
-            </Card>
-          ))}
+      {recent && (
+        <StatTile
+          title="Most Frequent Hero in last 20 games"
+          stat={`${recent.mostFrequentHero.name}`}
+          subtitle={`${(
+            (recent.mostFrequentHeroMatches.filter(
+              (match) => match.result == "Won"
+            ).length /
+              recent.mostFrequentHeroMatches.length) *
+            100
+          ).toFixed(2)} % Winrate`}
+        />
+      )}
+      {recent && (
+        <StatTile
+          title={`${recent.mostFrequentHero.name}'s KDA in last 20 games`}
+          stat={`${recent.mostFrequentHeroKDA}`}
+          subtitle={`Across ${recent.mostFrequentHeroMatches.length} matches`}
+        />
+      )}
     </div>
   );
 }

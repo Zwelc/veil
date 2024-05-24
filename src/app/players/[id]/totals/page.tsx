@@ -2,6 +2,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useTotals } from "@/hooks/usePlayer";
+import { Capitalize } from "@/lib/format";
 import { convertHMS } from "@/lib/time";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -9,9 +10,6 @@ export default function Page({ params }: { params: { id: string } }) {
   const { data, isLoading } = useTotals(params.id);
   const skeleton = new Array(12).fill(null);
 
-  const Capitalize = (word: string) => {
-    return word.charAt(0).toUpperCase() + word.slice(1);
-  };
   return (
     <AnimatePresence>
       <motion.div

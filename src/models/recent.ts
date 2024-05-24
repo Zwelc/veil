@@ -29,4 +29,5 @@ export interface IRecentMatchesResponse {
   kda: string;
   duration: string;
   lobby: string;
+  gameMode: string;
 }

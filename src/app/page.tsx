@@ -1,6 +1,5 @@
 "use client";
 
-import PlayerCard from "@/components/player-card";
 import { SearchContext } from "@/context/searchContext";
 import { useSearch } from "@/hooks/useSearch";
 
