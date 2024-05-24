@@ -40,7 +40,13 @@ export function useRecent(id: string) {
       mostFrequentGameModeMatches,
       mostFrequentHero,
       mostFrequentHeroMatches,
-      mostFrequentHeroKDA: `${mostFrequentHeroKills} / ${mostFrequentHeroDeaths} / ${mostFrequentHeroAssists}`,
+      mostFrequentHeroKDA: `${(
+        mostFrequentHeroKills / mostFrequentHeroMatches.length
+      ).toFixed(0)} / ${(
+        mostFrequentHeroDeaths / mostFrequentHeroMatches.length
+      ).toFixed(0)} / ${(
+        mostFrequentHeroAssists / mostFrequentHeroMatches.length
+      ).toFixed(0)}`,
     };
   }
 }
