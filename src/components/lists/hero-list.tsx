@@ -2,15 +2,44 @@
 import { usePlayerHeroes } from "@/hooks/usePlayer";
 import ListItem from "@/components/lists/list-item";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useState } from "react";
+import { Button } from "../ui/button";
 
 export default function HeroList({ id }: { id: string }) {
-  const { data, isLoading } = usePlayerHeroes(id);
+  const [date, setDate] = useState<number>(0);
+  const { data, isLoading } = usePlayerHeroes(id, date);
   const skeleton = new Array(11).fill(null);
 
   return (
     <Card className="row-span- col-span-2 md:row-span-4 md:col-span-2 w-full h-full">
-      <CardHeader>
+      <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
         <CardTitle>Most Played Heroes</CardTitle>
+        <div className="space-x-2">
+          <Button
+            variant={date === 0 ? "outline" : "ghost"}
+            onClick={() => setDate(0)}
+          >
+            All time
+          </Button>
+          <Button
+            variant={date === 90 ? "outline" : "ghost"}
+            onClick={() => setDate(90)}
+          >
+            3m
+          </Button>
+          <Button
+            variant={date === 180 ? "outline" : "ghost"}
+            onClick={() => setDate(180)}
+          >
+            6m
+          </Button>
+          <Button
+            variant={date === 360 ? "outline" : "ghost"}
+            onClick={() => setDate(360)}
+          >
+            1y
+          </Button>
+        </div>
       </CardHeader>
 
       <CardContent>

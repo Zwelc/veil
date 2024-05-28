@@ -14,8 +14,12 @@ export default function usePlayer(id: string) {
   };
 }
 
-export function usePlayerHeroes(id: string) {
-  const { data, error } = useSWR<any[], any>(`/${id}/heroes`, HTTP, {
+export function usePlayerHeroes(id: string, date: number) {
+  let url = `/${id}/heroes?significant=0`;
+  if (date) {
+    url += `&date=${date}`;
+  }
+  const { data, error } = useSWR<any[], any>(url, HTTP, {
     revalidateIfStale: false,
     revalidateOnFocus: false,
     revalidateOnReconnect: false,
