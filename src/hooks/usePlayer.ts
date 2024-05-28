@@ -14,7 +14,7 @@ export default function usePlayer(id: string) {
   };
 }
 
-export function usePlayerHeroes(id: string, date: number) {
+export function usePlayerHeroes(id: string, date?: number) {
   let url = `/${id}/heroes?significant=0`;
   if (date) {
     url += `&date=${date}`;
