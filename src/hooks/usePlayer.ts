@@ -34,7 +34,7 @@ export function usePlayerSideCounts(id: string) {
   return usePlayerSWR<IPlayerSide[], any>(`/${id}/sides`);
 }
 export function usePlayerWinrate(id: string) {
-  return usePlayerSWR(`/${id}/winrate`);
+  return usePlayerSWR<any, any>(`/${id}/winrate`);
 }
 
 export function usePlayerSWR<Type, ErrorType>(url: string) {
