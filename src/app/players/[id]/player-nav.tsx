@@ -7,7 +7,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function PlayerNav({ id }: { id: string }) {
-  const { player, isLoading } = usePlayer(id);
+  const { data: player, isLoading } = usePlayer(id);
   const pathname = usePathname();
   const menus = [
     { path: `/players/${id}`, title: "Overview" },
@@ -24,18 +24,18 @@ export default function PlayerNav({ id }: { id: string }) {
             <div className="animate-pulse w-24 h-24 bg-gray-200 rounded-full mb-2.5"></div>
           ) : (
             <Avatar className="w-20 h-20 ">
-              <AvatarImage src={player.profile.avatarfull} />
-              <AvatarFallback>{player.profile.personaname}</AvatarFallback>
+              <AvatarImage src={player.data.profile.avatarfull} />
+              <AvatarFallback>{player.data.profile.personaname}</AvatarFallback>
             </Avatar>
           )}
 
           <div className="flex flex-col">
             <h2 className="text-3xl font-bold tracking-tight">
-              {player && player.profile.personaname}
+              {player && player.data.profile.personaname}
             </h2>
             <p>
-              {player && player.profile.loccountrycode
-                ? countries[player.profile.loccountrycode].name.common
+              {player && player.data.profile.loccountrycode
+                ? countries[player.data.profile.loccountrycode].name.common
                 : "Undisclosed"}
             </p>
           </div>

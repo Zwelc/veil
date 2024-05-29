@@ -11,3 +11,14 @@ export interface IPlayerSide {
   win: number;
   games: number;
 }
+
+export interface ICountType {
+  name: string;
+  win: number;
+  games: number;
+}
+export interface ICounts {
+  patch: IPatch[];
+  gameMode: ICountType[];
+  lobbyType: ICountType[];
+}
