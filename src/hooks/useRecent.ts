@@ -49,4 +49,45 @@ export function useRecent(id: string) {
       ).toFixed(0)}`,
     };
   }
+
+  return undefined;
+}
+
+export function useRecentStats(id: string) {
+  const recent = useRecent(id);
+  if (recent) {
+    return [
+      {
+        title: "Top game mode in last 20 games",
+        stat: recent.mostFrequentGameMode.gameMode,
+        subtitle: `${recent.mostFrequentGameModeMatches.length} matches played`,
+      },
+      {
+        title: "Wins in last 20 games",
+        stat: `${recent.recentWins}`,
+        subtitle: `${(
+          (recent.recentWins / recent.recentMatches.length) *
+          100
+        ).toFixed(2)} % Winrate`,
+      },
+      {
+        title: "Most Frequent Hero in last 20 games",
+        stat: `${recent.mostFrequentHero.name}`,
+        subtitle: `${(
+          (recent.mostFrequentHeroMatches.filter(
+            (match) => match.result == "Won"
+          ).length /
+            recent.mostFrequentHeroMatches.length) *
+          100
+        ).toFixed(2)} % Winrate`,
+      },
+      {
+        title: `${recent.mostFrequentHero.name}'s KDA in last 20 games`,
+        stat: `${recent.mostFrequentHeroKDA}`,
+        subtitle: `Across ${recent.mostFrequentHeroMatches.length} matches`,
+      },
+    ];
+  } else {
+    return [];
+  }
 }
