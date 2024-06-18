@@ -1,24 +1,16 @@
 "use client";
 
+import Menu from "@/components/layout/menu";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import usePlayer from "@/hooks/usePlayer";
 import { countries } from "dotaconstants";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 export default function PlayerNav({ id }: { id: string }) {
   const { data: player, isLoading } = usePlayer(id);
-  const pathname = usePathname();
-  const menus = [
-    { path: `/players/${id}`, title: "Overview" },
-    { path: `/players/${id}/matches`, title: "Match History" },
-    { path: `/players/${id}/heroes`, title: "Heroes" },
-    { path: `/players/${id}/totals`, title: "Totals" },
-  ];
 
   return (
     <div className="w-full space-y-2">
-      <div className="space-x-4  flex items-center justify-between ">
+      <div className="space-x-4 flex items-center justify-between ">
         <div className="flex items-center space-x-2">
           {isLoading ? (
             <div className="animate-pulse w-24 h-24 bg-gray-200 rounded-full mb-2.5"></div>
@@ -41,24 +33,7 @@ export default function PlayerNav({ id }: { id: string }) {
           </div>
         </div>
       </div>
-      <div>
-        <ul className="flex space-x-4 mx-2">
-          {menus.map((menu) => (
-            <Link href={menu.path} passHref key={menu.title}>
-              <li className=" group  cursor-pointer">
-                <span
-                  className={` font-medium  ${
-                    pathname == menu.path ? "text-primary" : ""
-                  }`}
-                >
-                  {menu.title}
-                </span>
-                <div className="h-0.5 bg-primary scale-x-0 group-hover:scale-100 transition-transform origin-left rounded-full duration-300 ease-out"></div>
-              </li>
-            </Link>
-          ))}
-        </ul>
-      </div>
+      <Menu id={id} />
     </div>
   );
 }

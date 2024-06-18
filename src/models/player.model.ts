@@ -20,3 +20,7 @@ export interface IPlayer {
     is_subscriber: boolean;
   };
 }
+
+export type IPlayerParam = {
+  id: string;
+};

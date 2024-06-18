@@ -8,10 +8,10 @@ import { Button } from "../ui/button";
 export default function HeroList({ id }: { id: string }) {
   const [date, setDate] = useState<number>(0);
   const { data, isLoading } = usePlayerHeroes(id, date);
-  const skeleton = new Array(11).fill(null);
+  const skeleton = new Array(6).fill(null);
 
   return (
-    <Card className="row-span- col-span-2 md:row-span-4 md:col-span-2 w-full h-full">
+    <Card className="row-span-8 col-span-1 md:row-span-5 md:col-span-1 w-full h-full">
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
         <CardTitle>Most Played Heroes</CardTitle>
         <div className="space-x-2">

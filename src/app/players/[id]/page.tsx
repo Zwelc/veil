@@ -2,11 +2,9 @@
 
 import HeroList from "../../../components/lists/hero-list";
 
-import TotalsTiles from "../../../components/tiles/totals-tiles";
-import WinrateTiles from "../../../components/tiles/winrate-tiles";
-
 import PatchOverviewChart from "../../../components/charts/patch-overview";
 import { AnimatePresence, motion } from "framer-motion";
+import CounterTiles from "@/components/tiles/counter-tiles";
 
 export default function Page({ params }: { params: { id: string } }) {
   return (
@@ -18,9 +16,8 @@ export default function Page({ params }: { params: { id: string } }) {
         transition={{ delay: 0.1 }}
         className="w-full h-full"
       >
-        <div className="w-full h-full max-h-[40rem] grid grid-cols-2 md:grid-cols-6 grid-rows-5 gap-2">
-          <WinrateTiles id={params.id} />
-          <TotalsTiles id={params.id} />
+        <div className="w-full h-full max-h-[40rem] gap-2 grid grid-cols-3">
+          <CounterTiles id={params.id} />
           <HeroList id={params.id} />
           <PatchOverviewChart id={params.id} />
         </div>

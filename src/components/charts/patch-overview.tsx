@@ -49,7 +49,7 @@ export default function OverviewChart({ id }: { id: string }) {
           </div>
         ))}
       {data && (
-        <Card className="row-span-2 md:row-span-4 col-span-2 md:col-span-4  w-full h-full ">
+        <Card className="row-span-8 md:row-span-4 col-span-2 md:col-span-5  w-full h-full ">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle>{overview} Overview</CardTitle>
             <div className="space-x-2">

@@ -71,7 +71,7 @@ export function useRecentStats(id: string) {
         ).toFixed(2)} % Winrate`,
       },
       {
-        title: "Most Frequent Hero in last 20 games",
+        title: "Most Played Hero in last 20 games",
         stat: `${recent.mostFrequentHero.name}`,
         subtitle: `${(
           (recent.mostFrequentHeroMatches.filter(
