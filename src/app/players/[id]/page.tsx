@@ -1,9 +1,8 @@
 "use client";
 
-import HeroList from "../../../components/lists/hero-list";
-
-import PatchOverviewChart from "../../../components/charts/patch-overview";
 import { AnimatePresence, motion } from "framer-motion";
+import HeroList from "@/components/lists/hero-list";
+import OverviewChart from "@/components/charts/overview";
 import CounterTiles from "@/components/tiles/counter-tiles";
 
 export default function Page({ params }: { params: { id: string } }) {
@@ -19,7 +18,7 @@ export default function Page({ params }: { params: { id: string } }) {
         <div className="w-full h-full max-h-[40rem] gap-2 grid grid-cols-3">
           <CounterTiles id={params.id} />
           <HeroList id={params.id} />
-          <PatchOverviewChart id={params.id} />
+          <OverviewChart id={params.id} />
         </div>
       </motion.div>
     </AnimatePresence>
