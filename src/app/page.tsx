@@ -14,8 +14,8 @@ export default function Home() {
   const { data: proData, isLoading: proLoading } = useProPlayers();
 
   return (
-    <div className="w-full h-full px-6 py-6">
-      <h1 className="w-full py-2  text-left ">
+    <div className="w-full h-full px-6 py-4">
+      <h1 className="w-full py-1.5  text-left ">
         {isLoading && proLoading
           ? "Searching..."
           : `Displaying the first 16 ${search === "" ? "pro" : ""} players`}
