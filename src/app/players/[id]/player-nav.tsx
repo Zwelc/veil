@@ -9,7 +9,7 @@ export default function PlayerNav({ id }: { id: string }) {
   const { data: player, isLoading } = usePlayer(id);
 
   return (
-    <div className="w-full space-y-2">
+    <div className="w-full space-y-2 flex flex-col">
       <div className="space-x-4 flex items-center justify-between ">
         <div className="flex items-center space-x-2">
           {isLoading ? (
@@ -34,6 +34,7 @@ export default function PlayerNav({ id }: { id: string }) {
         </div>
       </div>
       <Menu id={id} />
+      <hr />
     </div>
   );
 }

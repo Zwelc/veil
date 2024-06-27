@@ -15,7 +15,7 @@ export default function Page({ params }: { params: { id: string } }) {
         transition={{ delay: 0.1 }}
         className="w-full h-full"
       >
-        <div className="w-full h-full max-h-[40rem] gap-2 grid grid-cols-3">
+        <div className="w-full h-full max-h-[40rem] gap-2 grid  grid-cols-2 md:grid-cols-6">
           <CounterTiles id={params.id} />
           <HeroList id={params.id} />
           <OverviewChart id={params.id} />
