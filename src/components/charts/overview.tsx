@@ -3,16 +3,15 @@
 import { usePlayerCounts } from "@/hooks/usePlayer";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import Donut from "@/components/charts/donut";
-import DonutComponent from "@/components/charts/donut";
 import StackedBarComponent from "@/components/charts/stacked-bar";
 import { useEffect, useState } from "react";
-import { ICounts } from "@/models/counts";
 import { Button } from "../ui/button";
 
 export default function OverviewChart({ id }: { id: string }) {
   const { data, isLoading } = usePlayerCounts(id);
-  const [overview, setOverview] = useState("Patch");
+  const [overview, setOverview] = useState<"Patch" | "Game Mode" | "Lobby">(
+    "Patch"
+  );
   const [list, setList] = useState([] as any[]);
   const skeleton = new Array(1).fill(null);
 
