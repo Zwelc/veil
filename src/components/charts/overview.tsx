@@ -7,6 +7,13 @@ import StackedBarComponent from "@/components/charts/stacked-bar";
 import { useEffect, useState } from "react";
 import { Button } from "../ui/button";
 import Block from "../tiles/block";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "../ui/select";
 
 export default function OverviewChart({ id }: { id: string }) {
   const { data, isLoading } = usePlayerCounts(id);
@@ -40,26 +47,18 @@ export default function OverviewChart({ id }: { id: string }) {
     <Block className="row-span-8 md:row-span-4 col-span-2 md:col-span-4  w-full h-full">
       <Card className="w-full h-full">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-          <CardTitle>{overview} Overview</CardTitle>
-          <div className="hidden md:block space-x-2">
-            <Button
-              variant={overview === "Patch" ? "outline" : "ghost"}
-              onClick={() => updateChart("Patch")}
-            >
-              Patch
-            </Button>
-            <Button
-              variant={overview === "Game Mode" ? "outline" : "ghost"}
-              onClick={() => updateChart("Game Mode")}
-            >
-              Game Mode
-            </Button>
-            <Button
-              variant={overview === "Lobby" ? "outline" : "ghost"}
-              onClick={() => updateChart("Lobby")}
-            >
-              Lobby
-            </Button>
+          <CardTitle>Overview</CardTitle>
+          <div className=" space-x-2">
+            <Select value={`${overview}`} onValueChange={(v) => updateChart(v)}>
+              <SelectTrigger className="w-[180px]">
+                <SelectValue placeholder="Select a type" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="Patch">Patch</SelectItem>
+                <SelectItem value="Game Mode">Game Mode</SelectItem>
+                <SelectItem value="Lobby">Lobby</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
         </CardHeader>
         <CardContent className="pl-2">

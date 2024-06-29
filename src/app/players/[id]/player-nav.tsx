@@ -2,6 +2,7 @@
 
 import Menu from "@/components/layout/menu";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Separator } from "@/components/ui/separator";
 import usePlayer from "@/hooks/usePlayer";
 import { countries } from "dotaconstants";
 
@@ -28,13 +29,13 @@ export default function PlayerNav({ id }: { id: string }) {
             <p>
               {player && player.data.profile.loccountrycode
                 ? countries[player.data.profile.loccountrycode].name.common
-                : "Undisclosed"}
+                : "Country Undisclosed"}
             </p>
           </div>
         </div>
       </div>
       <Menu id={id} />
-      <hr />
+      <Separator />
     </div>
   );
 }
