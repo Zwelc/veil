@@ -18,7 +18,7 @@ export default function Home() {
       <h1 className="w-full py-1.5  text-left ">
         {isLoading && proLoading
           ? "Searching..."
-          : `Displaying the first 16 ${search === "" ? "pro" : ""} players`}
+          : `Displaying the first 20 ${search === "" ? "pro" : ""} players`}
       </h1>
       <PlayerGrid
         loading={isLoading && proLoading}

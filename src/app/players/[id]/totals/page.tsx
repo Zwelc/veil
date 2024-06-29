@@ -1,5 +1,6 @@
 "use client";
 
+import SkeletonCard from "@/components/skeleton/card";
 import Block from "@/components/tiles/block";
 import Grid from "@/components/tiles/grid";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -16,16 +17,9 @@ export default function Page({ params }: { params: { id: string } }) {
     <AnimatePresence>
       <Grid className="grid grid-cols-2 md:grid-cols-4 gap-1">
         {isLoading &&
-          skeleton.map((item, index) => (
-            <Block key={index}>
-              <Card className="tile animate-pulse flex flex-col items-center justify-center">
-                <CardContent>
-                  <div className="animate-pulse h-2 bg-gray-200 rounded-full  max-w-[48px] mb-2.5"></div>
-                  <div className="animate-pulse h-2 bg-gray-200 max-w-[16px]"></div>
-                </CardContent>
-              </Card>
-            </Block>
-          ))}
+          skeleton.map((item, index) =>
+            skeleton.map((item, index) => <SkeletonCard key={index} />)
+          )}
         {data &&
           data.slice(0, -9).map((entry: any) => (
             <Block key={entry.field}>
