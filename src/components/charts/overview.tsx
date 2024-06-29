@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import StackedBarComponent from "@/components/charts/stacked-bar";
 import { useEffect, useState } from "react";
 import { Button } from "../ui/button";
+import Block from "../tiles/block";
 
 export default function OverviewChart({ id }: { id: string }) {
   const { data, isLoading } = usePlayerCounts(id);
@@ -36,47 +37,45 @@ export default function OverviewChart({ id }: { id: string }) {
     }
   };
   return (
-    <>
-      {isLoading &&
-        skeleton.map((item, index) => (
-          <div
-            key={index}
-            className="tile animate-pulse flex flex-col items-center justify-center"
-          >
-            <div className="animate-pulse h-2 bg-gray-200 rounded-full  max-w-[48px] mb-2.5"></div>
-            <div className="animate-pulse h-2 bg-gray-200 max-w-[16px]"></div>
+    <Block className="row-span-8 md:row-span-4 col-span-2 md:col-span-4  w-full h-full">
+      <Card className="w-full h-full">
+        <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+          <CardTitle>{overview} Overview</CardTitle>
+          <div className="hidden md:block space-x-2">
+            <Button
+              variant={overview === "Patch" ? "outline" : "ghost"}
+              onClick={() => updateChart("Patch")}
+            >
+              Patch
+            </Button>
+            <Button
+              variant={overview === "Game Mode" ? "outline" : "ghost"}
+              onClick={() => updateChart("Game Mode")}
+            >
+              Game Mode
+            </Button>
+            <Button
+              variant={overview === "Lobby" ? "outline" : "ghost"}
+              onClick={() => updateChart("Lobby")}
+            >
+              Lobby
+            </Button>
           </div>
-        ))}
-      {data && (
-        <Card className="row-span-8 md:row-span-4 col-span-2 md:col-span-4  w-full h-full ">
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle>{overview} Overview</CardTitle>
-            <div className="hidden md:block space-x-2">
-              <Button
-                variant={overview === "Patch" ? "outline" : "ghost"}
-                onClick={() => updateChart("Patch")}
+        </CardHeader>
+        <CardContent className="pl-2">
+          {isLoading &&
+            skeleton.map((item, index) => (
+              <div
+                key={index}
+                className="tile animate-pulse flex flex-col items-center justify-center"
               >
-                Patch
-              </Button>
-              <Button
-                variant={overview === "Game Mode" ? "outline" : "ghost"}
-                onClick={() => updateChart("Game Mode")}
-              >
-                Game Mode
-              </Button>
-              <Button
-                variant={overview === "Lobby" ? "outline" : "ghost"}
-                onClick={() => updateChart("Lobby")}
-              >
-                Lobby
-              </Button>
-            </div>
-          </CardHeader>
-          <CardContent className="pl-2">
-            <StackedBarComponent data={list} />
-          </CardContent>
-        </Card>
-      )}
-    </>
+                <div className="animate-pulse h-2 bg-gray-200 rounded-full  max-w-[48px] mb-2.5"></div>
+                <div className="animate-pulse h-2 bg-gray-200 max-w-[16px]"></div>
+              </div>
+            ))}
+          {data && <StackedBarComponent data={list} />}
+        </CardContent>
+      </Card>
+    </Block>
   );
 }

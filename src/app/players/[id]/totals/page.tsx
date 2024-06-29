@@ -1,5 +1,7 @@
 "use client";
 
+import Block from "@/components/tiles/block";
+import Grid from "@/components/tiles/grid";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useTotals } from "@/hooks/usePlayer";
 import { Capitalize } from "@/lib/format";
@@ -8,33 +10,26 @@ import { AnimatePresence, motion } from "framer-motion";
 
 export default function Page({ params }: { params: { id: string } }) {
   const { data, isLoading } = useTotals(params.id);
-  const skeleton = new Array(12).fill(null);
+  const skeleton = new Array(20).fill(null);
 
   return (
     <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ delay: 0.1 }}
-        className="w-full h-full"
-      >
-        <div className="relative overflow-x-auto h-full grid grid-cols-2 md:grid-cols-4 gap-1">
-          {isLoading &&
-            skeleton.map((item, index) => (
-              <Card
-                key={index}
-                className="tile animate-pulse flex flex-col items-center justify-center"
-              >
+      <Grid className="grid grid-cols-2 md:grid-cols-4 gap-1">
+        {isLoading &&
+          skeleton.map((item, index) => (
+            <Block key={index}>
+              <Card className="tile animate-pulse flex flex-col items-center justify-center">
                 <CardContent>
                   <div className="animate-pulse h-2 bg-gray-200 rounded-full  max-w-[48px] mb-2.5"></div>
                   <div className="animate-pulse h-2 bg-gray-200 max-w-[16px]"></div>
                 </CardContent>
               </Card>
-            ))}
-          {data &&
-            data.slice(0, -9).map((entry: any) => (
-              <Card key={entry.field}>
+            </Block>
+          ))}
+        {data &&
+          data.slice(0, -9).map((entry: any) => (
+            <Block key={entry.field}>
+              <Card className="w-full h-full">
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                   <CardTitle className="text-sm font-medium">
                     Average{" "}
@@ -52,9 +47,9 @@ export default function Page({ params }: { params: { id: string } }) {
                   </p>
                 </CardContent>
               </Card>
-            ))}
-        </div>
-      </motion.div>
+            </Block>
+          ))}
+      </Grid>
     </AnimatePresence>
   );
 }
