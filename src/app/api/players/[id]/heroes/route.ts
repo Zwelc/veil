@@ -2,6 +2,7 @@ import { type NextRequest } from "next/server";
 import { IMAGE_CDN, PLAYER_URL } from "@/lib/constants";
 
 import { heroes } from "dotaconstants";
+import { IHero } from "@/models/hero";
 
 export async function GET(
   request: NextRequest,
@@ -17,7 +18,7 @@ export async function GET(
   const res = await fetch(url);
   const data = await res.json();
 
-  const heroList = data.map((hero: any) => {
+  const heroList: IHero[] = data.map((hero: any) => {
     const selectedHero = heroes[hero.hero_id];
     const heroImg = `${IMAGE_CDN}${selectedHero.img}`;
     return {
@@ -25,7 +26,12 @@ export async function GET(
       image: heroImg,
       name: selectedHero.localized_name,
       games: hero.games,
+      gamesWith: hero.with_games,
+      gamesAgainst: hero.against_games,
       wins: hero.win,
+      winsWith: hero.with_win,
+      winsAgainst: hero.against_win,
+      lastPlayed: hero.last_played,
     };
   });
 

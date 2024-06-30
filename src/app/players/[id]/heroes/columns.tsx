@@ -3,16 +3,9 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { ColumnDef } from "@tanstack/react-table";
 import { DataTableColumnHeader } from "@/components/data-table/column-header";
+import { IHero } from "@/models/hero";
 
-export type Hero = {
-  id: number;
-  games: number;
-  image: string;
-  name: string;
-  wins: number;
-};
-
-export const columns: ColumnDef<Hero>[] = [
+export const columns: ColumnDef<IHero>[] = [
   {
     accessorKey: "name",
     header: ({ column }) => (
@@ -41,6 +34,18 @@ export const columns: ColumnDef<Hero>[] = [
     accessorKey: "wins",
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Wins" />
+    ),
+  },
+  {
+    accessorKey: "winsWith",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Wins with" />
+    ),
+  },
+  {
+    accessorKey: "winsAgainst",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Wins against" />
     ),
   },
 ];

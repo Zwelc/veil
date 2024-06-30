@@ -17,15 +17,15 @@ export default function StackedBarComponent(props: { data: IPatch[] }) {
       />
       <VisAxis
         type="x"
-        tickFormat={(tick, i: number) => data[i]?.name}
         numTicks={data.length}
         color={["hsl(var(--text))"]}
+        gridLine={false}
       />
       <VisAxis
         type="y"
-        // tickFormat={(tick, i: number) => data[i]?.win}
         numTicks={data.length}
         color={["hsl(var(--text))"]}
+        gridLine={false}
       />
     </VisXYContainer>
   );
