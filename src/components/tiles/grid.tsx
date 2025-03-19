@@ -14,7 +14,7 @@ const Grid = ({ className, ...rest }: Props) => {
         staggerChildren: 0.05,
       }}
       className={twMerge(
-        "grid grid-cols-2 md:grid-cols-6 gap-3 w-full h-full",
+        "grid grid-cols-2 md:grid-cols-4 gap-4 w-full h-full",
         className
       )}
       {...rest}

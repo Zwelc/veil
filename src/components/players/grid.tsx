@@ -2,10 +2,11 @@ import { motion } from "framer-motion";
 import PlayerCard from "../player-card";
 import Grid from "../tiles/grid";
 type Props = {
+  limit: number;
   loading: boolean;
   data: any[];
 };
-export default function PlayerGrid({ loading, data = [] }: Props) {
+export default function PlayerGrid({ limit, loading, data = [] }: Props) {
   const skeleton = new Array(24).fill(null);
   return (
     <Grid>
@@ -15,7 +16,7 @@ export default function PlayerGrid({ loading, data = [] }: Props) {
         ))
       ) : data?.length > 0 ? (
         data
-          .slice(0, 18)
+          .slice(0, limit)
           .map((player: any) => (
             <PlayerCard player={player} key={player.account_id} />
           ))

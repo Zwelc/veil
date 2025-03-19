@@ -20,7 +20,7 @@ export default function HeroList({ id }: { id: string }) {
 
   return (
     <Block className="row-span-8 col-span-2 md:row-span-4 md:col-span-2 w-full h-full">
-      <Card className="w-full h-full">
+      <Card className="w-full h-full ">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2 flex-nowrap">
           <CardTitle>Heroes</CardTitle>
           <div className=" space-x-1 md:space-x-2 ">

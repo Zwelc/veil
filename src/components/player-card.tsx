@@ -22,7 +22,7 @@ export default function PlayerCard({ player }: { player: any }) {
 
   return (
     <Block>
-      <Card className="w-full h-full">
+      <Card className="w-full h-full p-4">
         <CardHeader className="w-full flex items-center justify-center">
           <Avatar className="h-32 w-32  flex items-center justify-center">
             <AvatarImage src={player.avatarfull} className="h-32 w-32" />
@@ -30,14 +30,19 @@ export default function PlayerCard({ player }: { player: any }) {
           </Avatar>
           <CardTitle className="text-xl">{player.personaname}</CardTitle>
         </CardHeader>
-        <CardContent className="flex flex-row items-center justify-between space-x-2 space-y-0 pb-2">
-          {player.last_match_time
-            ? new Date(player.last_match_time).toLocaleDateString("en-ZA", {
-                year: "numeric",
-                month: "long",
-              })
-            : "Undisclosed"}
-          <Button onClick={handleView}>See More</Button>
+        <CardContent className="flex flex-col items-center justify-between space-x-2 space-y-4 pb-2">
+          <div className="text-gray-500">
+            Last Seen:{" "}
+            {player.last_match_time
+              ? new Date(player.last_match_time).toLocaleDateString("en-ZA", {
+                  year: "numeric",
+                  month: "long",
+                })
+              : "Undisclosed"}
+          </div>
+          <Button onClick={handleView} className="w-full">
+            See More
+          </Button>
         </CardContent>
       </Card>
     </Block>
