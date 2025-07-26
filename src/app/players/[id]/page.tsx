@@ -1,4 +1,5 @@
-"use client";
+"use client";;
+import { use } from "react";
 
 import { AnimatePresence, motion } from "framer-motion";
 import HeroList from "@/components/lists/hero-list";
@@ -6,7 +7,8 @@ import OverviewChart from "@/components/charts/overview";
 import CounterTiles from "@/components/tiles/counter-tiles";
 import Grid from "@/components/tiles/grid";
 
-export default function Page({ params }: { params: { id: string } }) {
+export default function Page(props: { params: Promise<{ id: string }> }) {
+  const params = use(props.params);
   return (
     <AnimatePresence>
       <Grid className="w-full h-full max-h-[40rem] gap-2 grid  grid-cols-2 md:grid-cols-6">

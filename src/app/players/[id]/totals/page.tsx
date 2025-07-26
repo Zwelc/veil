@@ -1,4 +1,5 @@
-"use client";
+"use client";;
+import { use } from "react";
 
 import SkeletonCard from "@/components/skeleton/card";
 import Block from "@/components/tiles/block";
@@ -9,7 +10,8 @@ import { Capitalize } from "@/lib/format";
 import { convertHMS } from "@/lib/time";
 import { AnimatePresence, motion } from "framer-motion";
 
-export default function Page({ params }: { params: { id: string } }) {
+export default function Page(props: { params: Promise<{ id: string }> }) {
+  const params = use(props.params);
   const { data, isLoading } = useTotals(params.id);
   const skeleton = new Array(20).fill(null);
 

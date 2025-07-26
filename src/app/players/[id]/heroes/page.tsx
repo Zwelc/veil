@@ -1,4 +1,5 @@
-"use client";
+"use client";;
+import { use } from "react";
 
 import { usePlayerHeroes } from "@/hooks/usePlayer";
 import { DataTable } from "@/components/data-table";
@@ -6,7 +7,8 @@ import { columns } from "./columns";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { AnimatePresence, motion } from "framer-motion";
 
-export default function Page({ params }: { params: { id: string } }) {
+export default function Page(props: { params: Promise<{ id: string }> }) {
+  const params = use(props.params);
   const { data, isLoading } = usePlayerHeroes(params.id);
 
   return (

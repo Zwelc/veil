@@ -9,10 +9,8 @@ type GameMode = {
   win: number;
   games: number;
 };
-export async function GET(
-  request: Request,
-  { params }: { params: { id: string } }
-) {
+export async function GET(request: Request, props: { params: Promise<{ id: string }> }) {
+  const params = await props.params;
   const res = await fetch(`${PLAYER_URL}/${params.id}/counts?significant=0`);
   const data = await res.json();
 

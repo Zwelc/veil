@@ -4,10 +4,8 @@ import { IMAGE_CDN, PLAYER_URL } from "@/lib/constants";
 import { heroes } from "dotaconstants";
 import { IHero } from "@/models/hero";
 
-export async function GET(
-  request: NextRequest,
-  { params }: { params: { id: string } }
-) {
+export async function GET(request: NextRequest, props: { params: Promise<{ id: string }> }) {
+  const params = await props.params;
   const searchParams = request.nextUrl.searchParams;
   const query = searchParams.get("date");
 
