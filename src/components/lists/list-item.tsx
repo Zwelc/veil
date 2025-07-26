@@ -12,7 +12,7 @@ export default function ListItem({
   return (
     <li className="py-3 sm:py-4">
       <div className="flex items-center space-x-4">
-        <div className="flex-shrink-0">
+        <div className="shrink-0">
           <Image src={image} height={29} width={59} alt={name} />
         </div>
         <div className="flex-1 min-w-0">

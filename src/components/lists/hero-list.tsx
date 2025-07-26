@@ -44,7 +44,7 @@ export default function HeroList({ id }: { id: string }) {
               skeleton.map((item, index) => (
                 <li key={index} className=" w-full animate-pulse py-3 sm:py-4 ">
                   <div className="flex items-center space-x-4">
-                    <div className="flex-shrink-0">
+                    <div className="shrink-0">
                       <div className="animate-pulse w-6 h-6 bg-gray-200 rounded-full mb-2.5"></div>
                     </div>
                     <div className="flex-1 min-w-0">

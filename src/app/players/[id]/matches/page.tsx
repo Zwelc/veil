@@ -21,7 +21,7 @@ export default function Page(props: { params: Promise<{ id: string }> }) {
         transition={{ delay: 0.1 }}
         className="w-full h-full"
       >
-        <Card className="h-full w-full max-h-[40rem]">
+        <Card className="h-full w-full max-h-160">
           <CardHeader>
             <CardTitle>Match History</CardTitle>
           </CardHeader>
