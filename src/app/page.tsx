@@ -26,7 +26,10 @@ export default function Home() {
       <PlayerGrid
         limit={limit}
         loading={isLoading && proLoading}
-        data={(search === "" ? proData : data) || []}
+        data={
+          (search === "" ? proData?.filter((p) => p.avatar !== null) : data) ||
+          []
+        }
       />
     </div>
   );
