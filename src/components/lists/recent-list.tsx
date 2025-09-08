@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { usePlayerRecentMatches } from "@/hooks/usePlayer";
@@ -16,7 +17,7 @@ export default function RecentList({ id }: { id: string }) {
         </div>
         <ul className="divide-y divide-gray-200 ">
           {isLoading &&
-            skeleton.map((item, index) => (
+            skeleton.map((_item, index) => (
               <li key={index} className=" w-full animate-pulse py-3 sm:py-4 ">
                 <div className="flex items-center space-x-4">
                   <div className="shrink-0">

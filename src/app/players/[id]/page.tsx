@@ -1,7 +1,7 @@
-"use client";;
+"use client";
 import { use } from "react";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import HeroList from "@/components/lists/hero-list";
 import OverviewChart from "@/components/charts/overview";
 import CounterTiles from "@/components/tiles/counter-tiles";

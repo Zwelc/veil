@@ -1,5 +1,6 @@
-import { HTTP, PlayerHTTP } from "@/lib/fetcher";
-import { ICounts, IPatch, IPlayerSide } from "@/models/counts";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { HTTP } from "@/lib/fetcher";
+import { ICounts, IPlayerSide } from "@/models/counts";
 import { IRecentMatchesResponse } from "@/models/recent";
 import { ITotal } from "@/models/totals";
 import useSWR from "swr";

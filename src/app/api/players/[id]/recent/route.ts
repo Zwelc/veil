@@ -1,10 +1,14 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { IMAGE_CDN, PLAYER_URL } from "@/lib/constants";
 import { Capitalize } from "@/lib/format";
 import { isRadiant } from "@/lib/playerslot";
 import { convertHMS } from "@/lib/time";
 import { heroes, lobby_type, game_mode } from "dotaconstants";
 
-export async function GET(request: Request, props: { params: Promise<{ id: string }> }) {
+export async function GET(
+  request: Request,
+  props: { params: Promise<{ id: string }> }
+) {
   const params = await props.params;
   const res = await fetch(`${PLAYER_URL}/${params.id}/recentMatches`);
   const data = await res.json();

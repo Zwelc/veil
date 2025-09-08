@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { useRouter } from "next/navigation";
 import { SearchContext } from "../../context/searchContext";
 import { Input } from "../ui/input";

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import PlayerCard from "../player-card";
 import Grid from "../tiles/grid";
 type Props = {

@@ -1,9 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import { usePlayerHeroes } from "@/hooks/usePlayer";
 import ListItem from "@/components/lists/list-item";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useState } from "react";
-import { Button } from "../ui/button";
 import Block from "../tiles/block";
 import {
   Select,

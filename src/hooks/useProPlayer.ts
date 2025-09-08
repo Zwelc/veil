@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { BaseHTTP } from "@/lib/fetcher";
 import useSWR from "swr";
 

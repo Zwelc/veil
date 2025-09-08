@@ -1,4 +1,4 @@
-"use client";;
+"use client";
 import { use } from "react";
 
 import { usePlayerHeroes } from "@/hooks/usePlayer";
@@ -9,7 +9,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 export default function Page(props: { params: Promise<{ id: string }> }) {
   const params = use(props.params);
-  const { data, isLoading } = usePlayerHeroes(params.id);
+  const { data } = usePlayerHeroes(params.id);
 
   return (
     <AnimatePresence>

@@ -1,4 +1,5 @@
-"use client";;
+/* eslint-disable @typescript-eslint/no-explicit-any */
+"use client";
 import { use } from "react";
 
 import SkeletonCard from "@/components/skeleton/card";
@@ -8,7 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useTotals } from "@/hooks/usePlayer";
 import { Capitalize } from "@/lib/format";
 import { convertHMS } from "@/lib/time";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 
 export default function Page(props: { params: Promise<{ id: string }> }) {
   const params = use(props.params);
@@ -19,9 +20,7 @@ export default function Page(props: { params: Promise<{ id: string }> }) {
     <AnimatePresence>
       <Grid className="grid grid-cols-2 md:grid-cols-4 gap-1">
         {isLoading &&
-          skeleton.map((item, index) =>
-            skeleton.map((item, index) => <SkeletonCard key={index} />)
-          )}
+          skeleton.map((item, index) => <SkeletonCard key={index} />)}
         {data &&
           data.slice(0, -9).map((entry: any) => (
             <Block key={entry.field}>

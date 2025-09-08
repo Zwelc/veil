@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { usePlayerCounts } from "@/hooks/usePlayer";
@@ -5,7 +7,6 @@ import { usePlayerCounts } from "@/hooks/usePlayer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import StackedBarComponent from "@/components/charts/stacked-bar";
 import { useEffect, useState } from "react";
-import { Button } from "../ui/button";
 import Block from "../tiles/block";
 import {
   Select,

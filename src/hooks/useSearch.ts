@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { SearchHTTP } from "@/lib/fetcher";
 import useSWR from "swr";
 

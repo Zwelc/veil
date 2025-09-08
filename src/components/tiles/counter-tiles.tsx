@@ -2,8 +2,6 @@ import { IPlayerParam } from "@/models/player.model";
 import { useRecentStats } from "@/hooks/useRecent";
 import { usePlayerWinrate } from "@/hooks/usePlayer";
 import StatTile from "./stat-tile";
-import { Skeleton } from "../ui/skeleton";
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import SkeletonCard from "../skeleton/card";
 
 export default function CounterTiles({ id }: IPlayerParam) {

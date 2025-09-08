@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /*
 convertHMS function taken from Glorious Guanaco on codegrepper.com
 */

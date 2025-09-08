@@ -1,4 +1,4 @@
-"use client";;
+"use client";
 import { use } from "react";
 
 import { DataTable } from "@/components/data-table";
@@ -10,7 +10,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 export default function Page(props: { params: Promise<{ id: string }> }) {
   const params = use(props.params);
-  const { data, isLoading } = usePlayerMatches(params.id);
+  const { data } = usePlayerMatches(params.id);
 
   return (
     <AnimatePresence>

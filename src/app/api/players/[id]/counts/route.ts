@@ -1,15 +1,12 @@
-import { IMAGE_CDN, PLAYER_URL } from "@/lib/constants";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { PLAYER_URL } from "@/lib/constants";
 import { Capitalize } from "@/lib/format";
-import { isRadiant } from "@/lib/playerslot";
-import { convertHMS } from "@/lib/time";
-import { heroes, lobby_type, patch, game_mode } from "dotaconstants";
+import { lobby_type, patch, game_mode } from "dotaconstants";
 
-type GameMode = {
-  name: string;
-  win: number;
-  games: number;
-};
-export async function GET(request: Request, props: { params: Promise<{ id: string }> }) {
+export async function GET(
+  request: Request,
+  props: { params: Promise<{ id: string }> }
+) {
   const params = await props.params;
   const res = await fetch(`${PLAYER_URL}/${params.id}/counts?significant=0`);
   const data = await res.json();
@@ -42,7 +39,7 @@ export async function GET(request: Request, props: { params: Promise<{ id: strin
   });
 
   const patchList = patch.map((patch: any) => {
-    let patchData = data.patch[patch.id];
+    const patchData = data.patch[patch.id];
 
     return {
       ...patch,
