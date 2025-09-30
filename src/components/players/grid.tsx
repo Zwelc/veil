@@ -4,17 +4,23 @@ import Grid from "../tiles/grid";
 type Props = {
   limit: number;
   loading: boolean;
-  data: any[];
+  data?: any[];
 };
 export default function PlayerGrid({ limit, loading, data = [] }: Props) {
   const skeleton = new Array(24).fill(null);
+
+  if (loading) {
+    return (
+      <Grid>
+        {skeleton.map((item, index) => (
+          <div key={index} className="tile animate-pulse "></div>
+        ))}
+      </Grid>
+    );
+  }
   return (
     <Grid>
-      {loading ? (
-        skeleton.map((item, index) => (
-          <div key={index} className="tile animate-pulse "></div>
-        ))
-      ) : data?.length > 0 ? (
+      {data?.length > 0 ? (
         data
           .slice(0, limit)
           .map((player: any) => (

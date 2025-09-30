@@ -1,16 +1,15 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
-import { useContext } from "react";
 import { useRouter } from "next/navigation";
-import { SearchContext } from "../../context/searchContext";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import { IoIosSearch } from "react-icons/io";
+import { useSearch } from "@/hooks/useSearch";
 
 export default function Search() {
   const router = useRouter();
-  const { search, setSearch } = useContext(SearchContext);
+  const { search, setSearch } = useSearch();
   const handleChange = (e: any) => {
     const { value } = e.target;
 

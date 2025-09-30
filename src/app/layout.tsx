@@ -2,9 +2,8 @@
 
 import "./globals.css";
 import Appbar from "@/components/layout/appbar";
-import { useState } from "react";
 import { Inter as FontSans } from "next/font/google";
-import { SearchContext } from "@/context/searchContext";
+import { SearchProvider } from "@/context/searchContext";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/layout/theme-provider";
 import { Analytics } from "@vercel/analytics/react";
@@ -19,7 +18,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [search, setSearch] = useState("");
   return (
     <html lang="en">
       <head>
@@ -43,13 +41,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <SearchContext.Provider value={{ search, setSearch }}>
+          <SearchProvider>
             <main className="relative flex min-h-screen flex-col bg-background">
               <Appbar />
               {children}
               <Analytics />
             </main>
-          </SearchContext.Provider>
+          </SearchProvider>
         </ThemeProvider>
       </body>
     </html>
