@@ -13,7 +13,7 @@ export default function StackedBarComponent(props: { data: IPatch[] }) {
         y={y}
         roundedCorners={4}
         barPadding={0.15}
-        color={["hsl(var(--primary))", "hsl(var(--muted))"]}
+        color={["var(--color-chart-1)", "var(--color-chart-2)"]}
       />
       <VisAxis
         type="x"

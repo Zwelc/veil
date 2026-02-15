@@ -19,7 +19,7 @@ import {
 export default function OverviewChart({ id }: { id: string }) {
   const { data, isLoading } = usePlayerCounts(id);
   const [overview, setOverview] = useState<"Patch" | "Game Mode" | "Lobby">(
-    "Patch"
+    "Patch",
   );
   const [list, setList] = useState([] as any[]);
   const skeleton = new Array(1).fill(null);

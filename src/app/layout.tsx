@@ -7,6 +7,8 @@ import { SearchProvider } from "@/context/searchContext";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/layout/theme-provider";
 import { Analytics } from "@vercel/analytics/react";
+import { queryClient } from "@/lib/query";
+import { QueryClientProvider } from "@tanstack/react-query";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -32,7 +34,7 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
-          fontSans.className
+          fontSans.className,
         )}
       >
         <ThemeProvider
@@ -41,13 +43,15 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <SearchProvider>
-            <main className="relative flex min-h-screen flex-col bg-background">
-              <Appbar />
-              {children}
-              <Analytics />
-            </main>
-          </SearchProvider>
+          <QueryClientProvider client={queryClient}>
+            <SearchProvider>
+              <main className="relative flex min-h-screen flex-col bg-background">
+                <Appbar />
+                {children}
+                <Analytics />
+              </main>
+            </SearchProvider>
+          </QueryClientProvider>
         </ThemeProvider>
       </body>
     </html>
