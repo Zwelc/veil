@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { HTTP } from "@/lib/fetcher";
+import { PlayerHTTP } from "@/lib/fetcher";
 import { ICounts, IPlayerSide } from "@/models/counts";
 import { IRecentMatchesResponse } from "@/models/recent";
 import { ITotal } from "@/models/totals";
@@ -39,7 +39,7 @@ export function usePlayerWinrate(id: string) {
 }
 
 export function usePlayerSWR<Type, ErrorType>(url: string) {
-  const { data, error } = useSWR<Type, ErrorType>(url, HTTP);
+  const { data, error } = useSWR<Type, ErrorType>(url, PlayerHTTP);
 
   return {
     data: data,

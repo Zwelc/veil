@@ -1,22 +1,17 @@
-export interface IPatch {
-  name: string;
+export interface IPatch extends IBaseCount {
   date: string;
   id: number;
-  win: number;
-  games: number;
 }
 
-export interface IPlayerSide {
+export interface IBaseCount {
   name: string;
   win: number;
   games: number;
 }
 
-export interface ICountType {
-  name: string;
-  win: number;
-  games: number;
-}
+export interface IPlayerSide extends IBaseCount {}
+
+export interface ICountType extends IBaseCount {}
 export interface ICounts {
   patch: IPatch[];
   gameMode: ICountType[];

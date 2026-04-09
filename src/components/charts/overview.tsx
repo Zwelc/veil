@@ -50,7 +50,10 @@ export default function OverviewChart({ id }: { id: string }) {
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle>Overview</CardTitle>
           <div className=" space-x-2">
-            <Select value={`${overview}`} onValueChange={(v) => updateChart(v)}>
+            <Select
+              value={`${overview}`}
+              onValueChange={(v) => updateChart(v!)}
+            >
               <SelectTrigger className="w-[180px]">
                 <SelectValue placeholder="Select a type" />
               </SelectTrigger>

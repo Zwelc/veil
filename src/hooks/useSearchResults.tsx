@@ -12,7 +12,7 @@ function useSearchResults() {
 
   useEffect(() => {
     if (search == "" && proData) {
-      setData(proData?.filter((p) => p.avatar !== null));
+      setData(proData);
     }
     if (search !== "" && playerData) {
       setData(playerData);

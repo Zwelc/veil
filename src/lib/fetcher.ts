@@ -5,11 +5,12 @@ export const fetcher = (query: string) =>
 
 export const BaseHTTP = (query: string) =>
   fetch(BASE_URL + query).then((res) => res.json());
-export const PlayerHTTP = (query: string) =>
-  fetch(PLAYER_URL + query).then((res) => res.json());
 
 export const SearchHTTP = (query: string) =>
   fetch(SEARCH_URL + query).then((res) => res.json());
+
+export const PlayerHTTP = (query: string) =>
+  fetch(API_URL + "/players/" + query).then((res) => res.json());
 
 export const HTTP = (query: string) =>
   fetch(API_URL + query).then((res) => res.json());

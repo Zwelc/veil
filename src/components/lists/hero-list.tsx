@@ -11,28 +11,43 @@ import {
   SelectValue,
   SelectContent,
   SelectItem,
+  SelectGroup,
 } from "@/components/ui/select";
 
 export default function HeroList({ id }: { id: string }) {
-  const [date, setDate] = useState<number>(0);
-  const { data, isLoading } = usePlayerHeroes(id, date);
+  const [date, setDate] = useState<string>("0");
+  const { data, isLoading } = usePlayerHeroes(id, +date);
   const skeleton = new Array(6).fill(null);
 
+  const dateRanges = [
+    { label: "All Time", value: "0" },
+    { label: "3 Months", value: "90" },
+    { label: "6 Months", value: "180" },
+    { label: "1 year", value: "365" },
+  ];
   return (
     <Block className="row-span-8 col-span-2 md:row-span-4 md:col-span-2 w-full h-full">
       <Card className="w-full h-full ">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2 flex-nowrap">
           <CardTitle>Heroes</CardTitle>
           <div className=" space-x-1 md:space-x-2 ">
-            <Select value={`${date}`} onValueChange={(v) => setDate(+v)}>
+            <Select
+              items={dateRanges}
+              value={date}
+              key={date}
+              onValueChange={(v) => setDate(v!)}
+            >
               <SelectTrigger className="w-[180px]">
                 <SelectValue placeholder="Select a type" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="0">All Time</SelectItem>
-                <SelectItem value="90">3 Months</SelectItem>
-                <SelectItem value="180">6 Months</SelectItem>
-                <SelectItem value="360">1 Year</SelectItem>
+                <SelectGroup>
+                  {dateRanges.map((range) => (
+                    <SelectItem key={range.value} value={range.value}>
+                      {range.label}
+                    </SelectItem>
+                  ))}
+                </SelectGroup>
               </SelectContent>
             </Select>
           </div>
