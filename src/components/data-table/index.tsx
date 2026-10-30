@@ -29,16 +29,22 @@ import { AnimatePresence } from "framer-motion";
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
+  filterColumn?: string;
+  filterPlaceholder?: string;
+  pageSize?: number;
 }
 
 export function DataTable<TData, TValue>({
   columns,
   data,
+  filterColumn = "name",
+  filterPlaceholder = "Filter...",
+  pageSize = 10,
 }: DataTableProps<TData, TValue>) {
   const [sorting, setSorting] = useState<SortingState>([]);
   const [pagination, setPagination] = useState<PaginationState>({
     pageIndex: 0,
-    pageSize: 5,
+    pageSize,
   });
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
   const table = useReactTable({
@@ -58,19 +64,22 @@ export function DataTable<TData, TValue>({
     },
   });
   return (
-    <div className="h-full w-full min-h-176">
-      <div className="flex items-center py-4">
+    <div className="flex w-full min-w-0 flex-col">
+      <div className="flex items-center py-3">
         <Input
-          placeholder="Filter heroes..."
-          value={(table.getColumn("name")?.getFilterValue() as string) ?? ""}
-          onChange={(event) =>
-            table.getColumn("name")?.setFilterValue(event.target.value)
+          aria-label={filterPlaceholder}
+          placeholder={filterPlaceholder}
+          value={
+            (table.getColumn(filterColumn)?.getFilterValue() as string) ?? ""
           }
-          className="max-w-sm"
+          onChange={(event) =>
+            table.getColumn(filterColumn)?.setFilterValue(event.target.value)
+          }
+          className="max-w-md bg-background/70"
         />
       </div>
-      <div className="relative overflow-x-auto ">
-        <Table className="w-full text-sm text-left h-full">
+      <div className="relative overflow-x-auto rounded-xl border border-border/50">
+        <Table className="h-full w-full text-left text-sm">
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
               <TableRow key={headerGroup.id}>
@@ -81,7 +90,7 @@ export function DataTable<TData, TValue>({
                         ? null
                         : flexRender(
                             header.column.columnDef.header,
-                            header.getContext()
+                            header.getContext(),
                           )}
                     </TableHead>
                   );
@@ -101,7 +110,7 @@ export function DataTable<TData, TValue>({
                       <TableCell key={cell.id}>
                         {flexRender(
                           cell.column.columnDef.cell,
-                          cell.getContext()
+                          cell.getContext(),
                         )}
                       </TableCell>
                     ))}

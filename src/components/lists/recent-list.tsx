@@ -21,12 +21,12 @@ export default function RecentList({ id }: { id: string }) {
               <li key={index} className=" w-full animate-pulse py-3 sm:py-4 ">
                 <div className="flex items-center space-x-4">
                   <div className="shrink-0">
-                    <div className="animate-pulse w-6 h-6 bg-gray-200 rounded-full mb-2.5"></div>
+                    <div className="mb-2.5 h-6 w-6 animate-pulse rounded-full bg-muted"></div>
                   </div>
                   <div className="flex-1 min-w-0">
-                    <div className="animate-pulse h-2 bg-gray-200 rounded-full  max-w-[48px] mb-2.5"></div>
+                    <div className="mb-2.5 h-2 max-w-[48px] animate-pulse rounded-full bg-muted"></div>
                   </div>
-                  <div className="h-2 bg-gray-200 inline-flex items-center text-base font-semibold "></div>
+                  <div className="inline-flex h-2 items-center bg-muted text-base font-semibold"></div>
                 </div>
               </li>
             ))}

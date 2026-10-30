@@ -1,56 +1,26 @@
 import { usePlayerRecentMatches } from "./usePlayer";
+import type { IRecentMatchesResponse } from "@/models/recent";
 
 export function useRecent(id: string) {
   const { data } = usePlayerRecentMatches(id);
 
-  if (data) {
-    const recentWins = data.filter((match) => match.result === "Won").length;
-    const mostFrequentGameMode = Array.from(new Set(data)).reduce(
-      (prev, curr) =>
-        data.filter((el) => el.gameMode === curr.gameMode).length >
-        data.filter((el) => el.gameMode === prev.gameMode).length
-          ? curr
-          : prev
-    );
-    const mostFrequentHero = Array.from(new Set(data)).reduce((prev, curr) =>
-      data.filter((el) => el.name === curr.name).length >
-      data.filter((el) => el.name === prev.name).length
-        ? curr
-        : prev
-    );
-    let mostFrequentHeroKills = 0;
-    let mostFrequentHeroDeaths = 0;
-    let mostFrequentHeroAssists = 0;
+  if (!data?.length) return undefined;
 
-    const mostFrequentGameModeMatches = data.filter(
-      (match) => match.gameMode === mostFrequentGameMode.gameMode
-    );
-    const mostFrequentHeroMatches = data.filter(
-      (hero) => hero.name === mostFrequentHero.name
-    );
-    mostFrequentHeroMatches.forEach((match) => {
-      mostFrequentHeroKills += match.kills;
-      mostFrequentHeroDeaths += match.deaths;
-      mostFrequentHeroAssists += match.assists;
-    });
-    return {
-      recentWins,
-      recentMatches: data,
-      mostFrequentGameMode,
-      mostFrequentGameModeMatches,
-      mostFrequentHero,
-      mostFrequentHeroMatches,
-      mostFrequentHeroKDA: `${(
-        mostFrequentHeroKills / mostFrequentHeroMatches.length
-      ).toFixed(0)} / ${(
-        mostFrequentHeroDeaths / mostFrequentHeroMatches.length
-      ).toFixed(0)} / ${(
-        mostFrequentHeroAssists / mostFrequentHeroMatches.length
-      ).toFixed(0)}`,
-    };
-  }
+  const recentWins = data.filter((match) => match.result === "Won").length;
+  const average = (getValue: (match: IRecentMatchesResponse) => number) =>
+    data.reduce((sum, match) => sum + getValue(match), 0) / data.length;
 
-  return undefined;
+  return {
+    recentWins,
+    recentMatches: data,
+    form: data.slice(0, 10).map((match) => match.result === "Won"),
+    latestMatches: data.slice(0, 6),
+    averageKda: `${average((match) => match.kills).toFixed(1)} / ${average(
+      (match) => match.deaths,
+    ).toFixed(1)} / ${average((match) => match.assists).toFixed(1)}`,
+    averageGpm: Math.round(average((match) => match.gold_per_min)),
+    averageXpm: Math.round(average((match) => match.xp_per_min)),
+  };
 }
 
 export function useRecentStats(id: string) {
@@ -58,33 +28,27 @@ export function useRecentStats(id: string) {
   if (recent) {
     return [
       {
-        title: "Top game mode in last 20 games",
-        stat: recent.mostFrequentGameMode.gameMode,
-        subtitle: `${recent.mostFrequentGameModeMatches.length} matches played`,
-      },
-      {
-        title: "Wins in last 20 games",
-        stat: `${recent.recentWins}`,
+        title: "Recent form · last 20",
+        stat: `${recent.recentWins} / ${recent.recentMatches.length}`,
         subtitle: `${(
           (recent.recentWins / recent.recentMatches.length) *
           100
-        ).toFixed(2)} % Winrate`,
+        ).toFixed(1)}% win rate`,
       },
       {
-        title: "Most Played Hero in last 20 games",
-        stat: `${recent.mostFrequentHero.name}`,
-        subtitle: `${(
-          (recent.mostFrequentHeroMatches.filter(
-            (match) => match.result == "Won"
-          ).length /
-            recent.mostFrequentHeroMatches.length) *
-          100
-        ).toFixed(2)} % Winrate`,
+        title: "Average K / D / A",
+        stat: recent.averageKda,
+        subtitle: `Across ${recent.recentMatches.length} recent matches`,
       },
       {
-        title: `${recent.mostFrequentHero.name}'s KDA in last 20 games`,
-        stat: `${recent.mostFrequentHeroKDA}`,
-        subtitle: `Across ${recent.mostFrequentHeroMatches.length} matches`,
+        title: "Average gold / min",
+        stat: `${recent.averageGpm}`,
+        subtitle: "Last 20 matches",
+      },
+      {
+        title: "Average XP / min",
+        stat: `${recent.averageXpm}`,
+        subtitle: "Last 20 matches",
       },
     ];
   } else {

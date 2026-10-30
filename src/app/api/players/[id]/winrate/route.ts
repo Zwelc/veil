@@ -1,8 +1,11 @@
-import { PLAYER_URL } from "@/lib/constants";
+import { getPlayerEndpointURL } from "@/lib/opendota";
 
-export async function GET(request: Request, props: { params: Promise<{ id: string }> }) {
+export async function GET(
+  request: Request,
+  props: { params: Promise<{ id: string }> },
+) {
   const params = await props.params;
-  const res = await fetch(`${PLAYER_URL}/${params.id}/wl`);
+  const res = await fetch(getPlayerEndpointURL(params.id, "wl", request));
   const data = await res.json();
 
   return Response.json(data);

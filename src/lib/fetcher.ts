@@ -1,4 +1,4 @@
-import { BASE_URL, API_URL, PLAYER_URL, SEARCH_URL } from "@/lib/constants";
+import { BASE_URL, API_URL, SEARCH_URL } from "@/lib/constants";
 
 export const fetcher = (query: string) =>
   fetch(query).then((res) => res.json());
@@ -9,8 +9,13 @@ export const BaseHTTP = (query: string) =>
 export const SearchHTTP = (query: string) =>
   fetch(SEARCH_URL + query).then((res) => res.json());
 
-export const PlayerHTTP = (query: string) =>
-  fetch(API_URL + "/players/" + query).then((res) => res.json());
+export const PlayerHTTP = async (query: string) => {
+  const response = await fetch(API_URL + "/players/" + query);
+  if (!response.ok) {
+    throw new Error(`Player request failed (${response.status}).`);
+  }
+  return response.json();
+};
 
 export const HTTP = (query: string) =>
   fetch(API_URL + query).then((res) => res.json());

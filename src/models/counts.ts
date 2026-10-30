@@ -9,9 +9,9 @@ export interface IBaseCount {
   games: number;
 }
 
-export interface IPlayerSide extends IBaseCount {}
+export type IPlayerSide = IBaseCount;
 
-export interface ICountType extends IBaseCount {}
+export type ICountType = IBaseCount;
 export interface ICounts {
   patch: IPatch[];
   gameMode: ICountType[];

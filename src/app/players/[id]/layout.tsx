@@ -4,16 +4,16 @@ export default async function PlayerLayout(
   props: Readonly<{
     children: React.ReactNode;
     params: Promise<{ id: string }>;
-  }>
+  }>,
 ) {
   const params = await props.params;
 
   const { children } = props;
 
   return (
-    <div className="w-full h-full flex-1 space-y-4 p-4  container mx-auto">
+    <div className="container mx-auto flex w-full flex-1 flex-col gap-5 px-4 py-5 sm:px-6 lg:gap-6 lg:py-8">
       <PlayerNav id={params.id} />
-      <div className=" h-full w-full">{children}</div>
+      <div className="w-full flex-1">{children}</div>
     </div>
   );
 }

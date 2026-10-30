@@ -1,14 +1,16 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { PLAYER_URL } from "@/lib/constants";
+import { getPlayerEndpointURL } from "@/lib/opendota";
 import { Capitalize } from "@/lib/format";
 import { lobby_type, patch, game_mode } from "dotaconstants";
 
 export async function GET(
   request: Request,
-  props: { params: Promise<{ id: string }> }
+  props: { params: Promise<{ id: string }> },
 ) {
   const params = await props.params;
-  const res = await fetch(`${PLAYER_URL}/${params.id}/counts?significant=0`);
+  const res = await fetch(
+    getPlayerEndpointURL(params.id, "counts", request, { significant: "0" }),
+  );
   const data = await res.json();
 
   const lobbyList = Object.entries(data.lobby_type).map((entry: any[]) => {

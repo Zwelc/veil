@@ -1,27 +1,22 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import { useEffect, useState } from "react";
 import { useProPlayers } from "./useProPlayer";
 import { useSearch, useSearchQuery } from "./useSearch";
 
 function useSearchResults() {
-  const [data, setData] = useState<any[]>([]);
   const { search } = useSearch();
 
-  const { data: playerData, isLoading } = useSearchQuery(search);
-  const { data: proData, isLoading: proLoading } = useProPlayers();
+  const { data: playerData, isLoading, isError } = useSearchQuery(search);
+  const {
+    data: proData,
+    isLoading: proLoading,
+    isError: proError,
+  } = useProPlayers();
 
-  useEffect(() => {
-    if (search == "" && proData) {
-      setData(proData);
-    }
-    if (search !== "" && playerData) {
-      setData(playerData);
-    }
-  }, [playerData, proData, search]);
+  const data = search === "" ? (proData ?? []) : (playerData ?? []);
   return {
     search,
-    data: data,
-    isLoading: isLoading && proLoading,
+    data,
+    isLoading: search === "" ? proLoading : isLoading,
+    isError: search === "" ? Boolean(proError) : Boolean(isError),
   };
 }
 

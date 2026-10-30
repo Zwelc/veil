@@ -7,17 +7,18 @@ import { usePathname } from "next/navigation";
 export default function MenuItem({ menu }: { menu: IMenuItem }) {
   const pathname = usePathname();
   return (
-    <Link href={menu.path} passHref key={menu.title}>
-      <li className=" group  cursor-pointer">
-        <span
-          className={` font-medium  ${
-            pathname == menu.path ? "text-primary" : ""
-          }`}
-        >
-          {menu.title}
-        </span>
-        <div className="h-0.5 bg-primary scale-x-0 group-hover:scale-100 transition-transform origin-left rounded-full duration-300 ease-out"></div>
-      </li>
-    </Link>
+    <li className="shrink-0" key={menu.title}>
+      <Link
+        href={menu.path}
+        aria-current={pathname === menu.path ? "page" : undefined}
+        className={`inline-flex rounded-xl px-4 py-2 text-sm font-medium transition-colors ${
+          pathname === menu.path
+            ? "bg-background text-primary shadow-sm ring-1 ring-border/70"
+            : "text-muted-foreground hover:bg-background/70 hover:text-foreground"
+        }`}
+      >
+        {menu.title}
+      </Link>
+    </li>
   );
 }
