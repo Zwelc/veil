@@ -1,7 +1,7 @@
 "use client";
 
 import { use } from "react";
-import PlayerInsights from "@/components/players/player-insights";
+import PlayerInsights from "@/components/insights";
 
 export default function PlayerInsightsPage({
   params,

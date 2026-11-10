@@ -22,9 +22,14 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Input } from "@/components/ui/input";
+import { Skeleton } from "@/components/ui/skeleton";
 import { useState } from "react";
 import { DataTablePagination } from "./pagination";
-import { AnimatePresence } from "framer-motion";
+import { m } from "framer-motion";
+
+// Rows are keyed by id, so rows that appear on paging/filtering/sorting fade in.
+// (No exit animation: exiting <tr>s would either stack or leave table layout.)
+const MotionTableRow = m.create(TableRow);
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -32,6 +37,8 @@ interface DataTableProps<TData, TValue> {
   filterColumn?: string;
   filterPlaceholder?: string;
   pageSize?: number;
+  /** Show skeleton rows instead of "No results" while data is loading. */
+  loading?: boolean;
 }
 
 export function DataTable<TData, TValue>({
@@ -40,6 +47,7 @@ export function DataTable<TData, TValue>({
   filterColumn = "name",
   filterPlaceholder = "Filter...",
   pageSize = 10,
+  loading = false,
 }: DataTableProps<TData, TValue>) {
   const [sorting, setSorting] = useState<SortingState>([]);
   const [pagination, setPagination] = useState<PaginationState>({
@@ -99,11 +107,21 @@ export function DataTable<TData, TValue>({
             ))}
           </TableHeader>
           <TableBody>
-            <AnimatePresence>
-              {table.getRowModel().rows?.length ? (
+              {loading ? (
+                Array.from({ length: Math.min(pageSize, 5) }, (_, index) => (
+                  <TableRow key={`skeleton-${index}`} aria-hidden="true">
+                    <TableCell colSpan={columns.length}>
+                      <Skeleton className="h-8 w-full" />
+                    </TableCell>
+                  </TableRow>
+                ))
+              ) : table.getRowModel().rows?.length ? (
                 table.getRowModel().rows.map((row) => (
-                  <TableRow
+                  <MotionTableRow
                     key={row.id}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.2 }}
                     data-state={row.getIsSelected() && "selected"}
                   >
                     {row.getVisibleCells().map((cell) => (
@@ -114,7 +132,7 @@ export function DataTable<TData, TValue>({
                         )}
                       </TableCell>
                     ))}
-                  </TableRow>
+                  </MotionTableRow>
                 ))
               ) : (
                 <TableRow>
@@ -126,7 +144,6 @@ export function DataTable<TData, TValue>({
                   </TableCell>
                 </TableRow>
               )}
-            </AnimatePresence>
           </TableBody>
         </Table>
         <DataTablePagination table={table} />

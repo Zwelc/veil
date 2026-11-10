@@ -1,40 +1,40 @@
-import { IPlayerParam } from "@/models/player.model";
 import { useRecent } from "@/hooks/useRecent";
-import { usePlayerWinrate } from "@/hooks/usePlayer";
+import { formatDuration, winRate as toWinRate } from "@/lib/dota";
+import { usePlayerWinLoss } from "@/hooks/usePlayer";
 import StatTile from "./stat-tile";
 import SkeletonCard from "../skeleton/card";
-import { Activity, Coins, Crosshair, Gauge, Trophy } from "lucide-react";
+import {
+  Activity,
+  ArrowRight,
+  Coins,
+  Crosshair,
+  Gauge,
+  Trophy,
+} from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { PageHeader } from "@/components/page-header";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 
-export default function CounterTiles({ id }: IPlayerParam) {
-  const { data, isLoading } = usePlayerWinrate(id);
+export default function CounterTiles({ id }: { id: string }) {
+  const { data, isLoading } = usePlayerWinLoss(id);
   const recent = useRecent(id);
-  const skeleton = new Array(6).fill(null);
   const totalGames = (data?.win ?? 0) + (data?.lose ?? 0);
-  const winRate = totalGames ? ((data?.win ?? 0) / totalGames) * 100 : 0;
+  const winRate = toWinRate(data?.win ?? 0, totalGames);
   const recentMatches = recent?.latestMatches ?? [];
   const form = recent?.form ?? [];
-  const recentWinRate = recent?.recentMatches.length
-    ? (recent.recentWins / recent.recentMatches.length) * 100
-    : 0;
+  const recentWinRate = recent?.winRate ?? 0;
   const recentWinRateDelta = recent ? recentWinRate - winRate : 0;
   const deltaLabel = `${recentWinRateDelta >= 0 ? "+" : ""}${recentWinRateDelta.toFixed(1)} pp vs career`;
 
   return (
     <div className="col-span-1 space-y-4 md:col-span-6">
-      <div className="flex flex-wrap items-end justify-between gap-3">
-        <div>
-          <p className="text-xs font-semibold tracking-[0.18em] text-primary uppercase">
-            Performance snapshot
-          </p>
-          <h2 className="mt-1 text-xl font-bold tracking-tight sm:text-2xl">
-            At a glance
-          </h2>
-        </div>
-        {form.length > 0 && (
+      <PageHeader
+        size="md"
+        eyebrow="Performance snapshot"
+        title="At a glance"
+        aside={
+          form.length > 0 && (
           <div className="flex items-center gap-2 rounded-full border border-border/70 bg-card/60 px-3 py-2">
             <span className="text-xs font-medium text-muted-foreground">
               Last {form.length}
@@ -55,12 +55,13 @@ export default function CounterTiles({ id }: IPlayerParam) {
               {form.filter(Boolean).length}W
             </span>
           </div>
-        )}
-      </div>
+          )
+        }
+      />
 
       <div className="grid w-full grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-6">
         {isLoading ? (
-          skeleton.map((item, index) => <SkeletonCard key={index} />)
+          Array.from({ length: 6 }, (_, index) => <SkeletonCard key={index} />)
         ) : (
           <>
             <StatTile
@@ -77,11 +78,11 @@ export default function CounterTiles({ id }: IPlayerParam) {
               accent="success"
               progress={winRate}
             />
-            {recent?.recentMatches.length ? (
+            {recent?.count ? (
               <>
                 <StatTile
                   title="Recent form · last 20"
-                  stat={`${recent.recentWins}W – ${recent.recentMatches.length - recent.recentWins}L`}
+                  stat={`${recent.wins}W – ${recent.losses}L`}
                   subtitle={`${recentWinRate.toFixed(1)}% win rate · ${deltaLabel}`}
                   icon={Trophy}
                   accent={recentWinRateDelta >= 0 ? "success" : "warning"}
@@ -90,7 +91,7 @@ export default function CounterTiles({ id }: IPlayerParam) {
                 <StatTile
                   title="Average K / D / A"
                   stat={recent.averageKda}
-                  subtitle={`Across ${recent.recentMatches.length} matches`}
+                  subtitle={`Across ${recent.count} matches`}
                   icon={Crosshair}
                 />
                 <StatTile
@@ -151,9 +152,9 @@ export default function CounterTiles({ id }: IPlayerParam) {
                 <div className="min-w-0">
                   <p className="truncate text-xs font-semibold">{match.name}</p>
                   <p
-                    className={`truncate text-[0.65rem] font-medium ${match.result === "Won" ? "text-emerald-600 dark:text-emerald-400" : "text-rose-600 dark:text-rose-400"}`}
+                    className={`truncate text-[0.65rem] font-medium ${match.won ? "text-emerald-600 dark:text-emerald-400" : "text-rose-600 dark:text-rose-400"}`}
                   >
-                    {match.result} · {match.duration}
+                    {match.won ? "Won" : "Lost"} · {formatDuration(match.duration)}
                   </p>
                 </div>
               </div>

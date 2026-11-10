@@ -2,6 +2,7 @@
 
 import { ColumnDef } from "@tanstack/react-table";
 import { DataTableColumnHeader } from "@/components/data-table/column-header";
+import { formatDate, winRate } from "@/lib/dota";
 import { IHero } from "@/models/hero";
 import Image from "next/image";
 
@@ -39,6 +40,31 @@ function RateCell({
   );
 }
 
+type CountKey = "wins" | "winsWith" | "winsAgainst" | "games" | "gamesWith" | "gamesAgainst";
+
+/** Win-rate column: sorts by rate (accessor) and renders the same value (no recompute). */
+function rateColumn(
+  id: string,
+  title: string,
+  wins: CountKey,
+  games: CountKey,
+): ColumnDef<IHero> {
+  return {
+    id,
+    accessorFn: (hero) => winRate(hero[wins], hero[games]),
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title={title} />
+    ),
+    cell: ({ row, getValue }) => (
+      <RateCell
+        rate={getValue<number>()}
+        wins={row.original[wins]}
+        games={row.original[games]}
+      />
+    ),
+  };
+}
+
 export const columns: ColumnDef<IHero>[] = [
   {
     accessorKey: "name",
@@ -72,62 +98,9 @@ export const columns: ColumnDef<IHero>[] = [
       </span>
     ),
   },
-  {
-    id: "winRate",
-    accessorFn: (hero) => (hero.games ? (hero.wins / hero.games) * 100 : 0),
-    header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Win rate" />
-    ),
-    cell: ({ row }) => (
-      <RateCell
-        rate={
-          row.original.games
-            ? (row.original.wins / row.original.games) * 100
-            : 0
-        }
-        wins={row.original.wins}
-        games={row.original.games}
-      />
-    ),
-  },
-  {
-    id: "withRate",
-    accessorFn: (hero) =>
-      hero.gamesWith ? (hero.winsWith / hero.gamesWith) * 100 : 0,
-    header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="With this hero" />
-    ),
-    cell: ({ row }) => (
-      <RateCell
-        rate={
-          row.original.gamesWith
-            ? (row.original.winsWith / row.original.gamesWith) * 100
-            : 0
-        }
-        wins={row.original.winsWith}
-        games={row.original.gamesWith}
-      />
-    ),
-  },
-  {
-    id: "againstRate",
-    accessorFn: (hero) =>
-      hero.gamesAgainst ? (hero.winsAgainst / hero.gamesAgainst) * 100 : 0,
-    header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Against this hero" />
-    ),
-    cell: ({ row }) => (
-      <RateCell
-        rate={
-          row.original.gamesAgainst
-            ? (row.original.winsAgainst / row.original.gamesAgainst) * 100
-            : 0
-        }
-        wins={row.original.winsAgainst}
-        games={row.original.gamesAgainst}
-      />
-    ),
-  },
+  rateColumn("winRate", "Win rate", "wins", "games"),
+  rateColumn("withRate", "With this hero", "winsWith", "gamesWith"),
+  rateColumn("againstRate", "Against this hero", "winsAgainst", "gamesAgainst"),
   {
     accessorKey: "lastPlayed",
     header: ({ column }) => (
@@ -136,12 +109,7 @@ export const columns: ColumnDef<IHero>[] = [
     cell: ({ row }) =>
       row.original.lastPlayed > 0 ? (
         <span className="whitespace-nowrap text-sm text-muted-foreground">
-          {new Date(row.original.lastPlayed * 1000).toLocaleDateString("en", {
-            month: "short",
-            day: "numeric",
-            year: "numeric",
-            timeZone: "UTC",
-          })}
+          {formatDate(row.original.lastPlayed)}
         </span>
       ) : (
         <span className="text-muted-foreground">—</span>

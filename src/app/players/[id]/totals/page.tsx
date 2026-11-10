@@ -11,7 +11,10 @@ import {
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
-import { useTotals } from "@/hooks/usePlayer";
+import { EmptyState } from "@/components/empty-state";
+import { HeaderBadge, PageHeader } from "@/components/page-header";
+import { usePlayerTotals } from "@/hooks/usePlayer";
+import { titleCase } from "@/lib/dota";
 import type { ITotal } from "@/models/totals";
 
 type StatDefinition = {
@@ -86,21 +89,21 @@ const definitions: Record<string, StatDefinition> = {
     label: "Hero damage",
     category: "Match impact",
     icon: Crosshair,
-    format: (value) => compactNumber(value),
+    format: compactNumber,
     unit: "per match",
   },
   tower_damage: {
     label: "Tower damage",
     category: "Match impact",
     icon: Crosshair,
-    format: (value) => compactNumber(value),
+    format: compactNumber,
     unit: "per match",
   },
   hero_healing: {
     label: "Hero healing",
     category: "Match impact",
     icon: HeartPulse,
-    format: (value) => compactNumber(value),
+    format: compactNumber,
     unit: "per match",
   },
   tower_kills: {
@@ -155,28 +158,28 @@ const definitions: Record<string, StatDefinition> = {
     label: "Throw value",
     category: "Match swings",
     icon: Activity,
-    format: (value) => compactNumber(value),
+    format: compactNumber,
     unit: "average gold value",
   },
   comeback: {
     label: "Comeback value",
     category: "Match swings",
     icon: Activity,
-    format: (value) => compactNumber(value),
+    format: compactNumber,
     unit: "average gold value",
   },
   stomp: {
     label: "Stomp value",
     category: "Match swings",
     icon: Activity,
-    format: (value) => compactNumber(value),
+    format: compactNumber,
     unit: "average gold value",
   },
   loss: {
     label: "Loss value",
     category: "Match swings",
     icon: Activity,
-    format: (value) => compactNumber(value),
+    format: compactNumber,
     unit: "average gold value",
   },
 };
@@ -195,13 +198,6 @@ function compactNumber(value: number) {
     notation: "compact",
     maximumFractionDigits: 1,
   }).format(value);
-}
-
-function titleCase(field: string) {
-  return field
-    .split("_")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
 }
 
 function StatCard({ entry }: { entry: ITotal }) {
@@ -250,7 +246,7 @@ function StatCard({ entry }: { entry: ITotal }) {
 
 export default function Page(props: { params: Promise<{ id: string }> }) {
   const { id } = use(props.params);
-  const { data, isLoading, isError } = useTotals(id);
+  const { data, isLoading, isError } = usePlayerTotals(id);
   const entries = (data ?? []).filter((entry) => entry.n > 0);
   const grouped = categoryOrder
     .map((category) => ({
@@ -264,24 +260,20 @@ export default function Page(props: { params: Promise<{ id: string }> }) {
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-wrap items-end justify-between gap-3">
-        <div>
-          <p className="text-xs font-semibold tracking-[0.18em] text-primary uppercase">
-            Lifetime performance
-          </p>
-          <h2 className="mt-1 text-2xl font-bold tracking-tight sm:text-3xl">
-            Player totals
-          </h2>
-          <p className="mt-1 text-sm text-muted-foreground">
-            Per-match averages across the player’s parsed match history.
-          </p>
-        </div>
-        {!isLoading && !isError && entries.length > 0 && (
-          <span className="rounded-full border border-border/70 bg-card/70 px-3 py-1.5 text-xs font-medium text-muted-foreground">
-            Up to {matchCount.toLocaleString()} matches sampled
-          </span>
-        )}
-      </div>
+      <PageHeader
+        eyebrow="Lifetime performance"
+        title="Player totals"
+        description="Per-match averages across the player’s parsed match history."
+        aside={
+          !isLoading &&
+          !isError &&
+          entries.length > 0 && (
+            <HeaderBadge>
+              Up to {matchCount.toLocaleString()} matches sampled
+            </HeaderBadge>
+          )
+        }
+      />
 
       {isLoading ? (
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3">
@@ -300,17 +292,12 @@ export default function Page(props: { params: Promise<{ id: string }> }) {
           ))}
         </div>
       ) : isError ? (
-        <Card>
-          <CardContent className="py-10 text-center text-sm text-muted-foreground">
-            Could not load player totals. Please try again.
-          </CardContent>
-        </Card>
+        <EmptyState
+          tone="error"
+          message="Could not load player totals. Please try again."
+        />
       ) : grouped.length === 0 ? (
-        <Card>
-          <CardContent className="py-10 text-center text-sm text-muted-foreground">
-            No totals are available for this player yet.
-          </CardContent>
-        </Card>
+        <EmptyState message="No totals are available for this player yet." />
       ) : (
         <div className="space-y-5">
           {grouped.map(({ category, entries: categoryEntries }) => (

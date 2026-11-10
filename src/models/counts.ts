@@ -9,7 +9,6 @@ export interface IBaseCount {
   games: number;
 }
 
-export type IPlayerSide = IBaseCount;
 
 export type ICountType = IBaseCount;
 export interface ICounts {

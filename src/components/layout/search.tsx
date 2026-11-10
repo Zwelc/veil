@@ -1,11 +1,14 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import type { FormEvent } from "react";
+import { useState, type FormEvent } from "react";
+import { m } from "framer-motion";
 import { Search as SearchIcon } from "lucide-react";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import { useSearch } from "@/hooks/useSearch";
+import { parsePlayerId } from "@/lib/player-link";
+import { spring } from "@/lib/motion";
 
 export default function Search({
   variant = "compact",
@@ -14,8 +17,15 @@ export default function Search({
 }) {
   const router = useRouter();
   const { search, setSearch } = useSearch();
+  const [focused, setFocused] = useState(false);
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const id = parsePlayerId(search);
+    if (id) {
+      setSearch("");
+      router.push(`/players/${id}`);
+      return;
+    }
     router.push(`/`);
   };
 
@@ -29,10 +39,16 @@ export default function Search({
       >
         Search players by name
       </label>
-      <div
+      <m.div
+        // Hero box springs up slightly while focused (React focus events bubble).
+        onFocus={isHero ? () => setFocused(true) : undefined}
+        onBlur={isHero ? () => setFocused(false) : undefined}
+        animate={isHero ? { scale: focused ? 1.015 : 1 } : undefined}
+        transition={spring}
+        data-focused={isHero ? focused : undefined}
         className={
           isHero
-            ? "flex w-full items-center gap-2 rounded-2xl border border-border/70 bg-background p-2 shadow-lg shadow-primary/5 ring-1 ring-foreground/[0.03] focus-within:border-primary/40 focus-within:ring-4 focus-within:ring-primary/10"
+            ? "flex w-full items-center gap-2 rounded-2xl border border-border/70 bg-background p-2 shadow-lg shadow-primary/5 ring-1 ring-foreground/3 transition-[box-shadow,border-color] focus-within:border-primary/40 focus-within:shadow-xl focus-within:shadow-primary/15 focus-within:ring-4 focus-within:ring-primary/10"
             : "flex w-full max-w-sm items-center gap-2"
         }
       >
@@ -40,7 +56,11 @@ export default function Search({
           id={isHero ? "landing-player-search" : "nav-player-search"}
           value={search}
           onChange={(event) => setSearch(event.target.value)}
-          placeholder={isHero ? "Search a player name…" : "Search players"}
+          placeholder={
+            isHero
+              ? "Player name, account ID or profile link"
+              : "Search players"
+          }
           type="search"
           autoComplete="off"
           className={
@@ -60,7 +80,7 @@ export default function Search({
           <SearchIcon aria-hidden="true" className="size-4" />
           {isHero && <span className="hidden sm:inline">Search</span>}
         </Button>
-      </div>
+      </m.div>
     </form>
   );
 }

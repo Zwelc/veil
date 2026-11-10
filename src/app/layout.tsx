@@ -14,7 +14,6 @@ const fontSans = FontSans({
 export const metadata: Metadata = {
   title: "Veil",
   description: "Dota 2 player statistics and match insights.",
-  icons: { icon: "/icon.png" },
 };
 
 export default function RootLayout({

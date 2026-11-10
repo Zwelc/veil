@@ -4,36 +4,36 @@ import Menu from "@/components/layout/menu";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import usePlayer from "@/hooks/usePlayer";
-import { usePlayerHeroes } from "@/hooks/usePlayer";
-import { countries, hero_lore } from "dotaconstants";
+import { usePlayerHeroes, usePlayerProfile } from "@/hooks/usePlayer";
+import { useViewedPlayers } from "@/hooks/useViewedPlayers";
+import { useEffect } from "react";
 import { MapPin, UserRound } from "lucide-react";
 import Image from "next/image";
 import { IHero } from "@/models/hero";
-
-const heroVoiceLines: Record<string, string> = {
-  pudge: "Fresh meat!",
-};
+import { IMAGE_CDN } from "@/lib/constants";
 
 export default function PlayerNav({ id }: { id: string }) {
-  const { data: player, isLoading } = usePlayer(id);
+  const { data: profile, isLoading } = usePlayerProfile(id);
   const { data: heroStats } = usePlayerHeroes(id);
-  const profile = player?.data?.profile;
-  const countryCode = profile?.loccountrycode;
-  const country = countryCode ? countries[countryCode]?.name.common : undefined;
+  const country = profile?.countryName;
   const mostPlayedHero = heroStats?.reduce<IHero | undefined>(
     (mostPlayed, hero) =>
       !mostPlayed || hero.games > mostPlayed.games ? hero : mostPlayed,
     undefined,
   );
-  const heroSlug = mostPlayedHero?.image.match(/\/([^/?]+)\.png/)?.[1];
-  const heroLore = heroSlug
-    ? (hero_lore as Record<string, string>)[heroSlug]
-    : undefined;
-  const loreExcerpt = heroLore?.split(/(?<=[.!?])\s+/)[0];
-  const voiceLine = heroSlug ? heroVoiceLines[heroSlug] : undefined;
-  const heroQuote = voiceLine ?? loreExcerpt;
-  const quoteIsExcerpt = !voiceLine;
+  const heroSlug = mostPlayedHero?.slug;
+  const heroQuote = mostPlayedHero?.loreExcerpt;
+
+  // Remember the visit for the home page's "Recently viewed" row (localStorage, no request).
+  const { record } = useViewedPlayers();
+  const accountId = profile?.accountId;
+  const name = profile?.personaname;
+  const avatar = profile?.avatar ?? null;
+  useEffect(() => {
+    if (accountId && name) {
+      record({ account_id: accountId, personaname: name, avatarfull: avatar });
+    }
+  }, [accountId, name, avatar, record]);
 
   return (
     <div className="flex w-full flex-col gap-4">
@@ -48,7 +48,7 @@ export default function PlayerNav({ id }: { id: string }) {
               <div className="size-24 shrink-0 animate-pulse rounded-full bg-muted ring-4 ring-background" />
             ) : (
               <Avatar className="size-24 shrink-0 shadow-xl ring-4 ring-background">
-                <AvatarImage src={profile?.avatarfull} />
+                <AvatarImage src={profile?.avatar ?? undefined} />
                 <AvatarFallback>
                   {profile?.personaname?.charAt(0) ?? <UserRound />}
                 </AvatarFallback>
@@ -94,9 +94,7 @@ export default function PlayerNav({ id }: { id: string }) {
                     ”
                   </blockquote>
                   <p className="mt-2 text-xs text-muted-foreground/80">
-                    {quoteIsExcerpt
-                      ? "Hero lore excerpt"
-                      : "In-game voice line"}
+                    Hero lore excerpt
                     {mostPlayedHero.games > 0 &&
                       ` · ${mostPlayedHero.games.toLocaleString()} games`}
                   </p>
@@ -113,7 +111,7 @@ export default function PlayerNav({ id }: { id: string }) {
               <div className="absolute inset-y-0 right-0 w-[44%] opacity-95">
                 <div className="absolute inset-0 z-10 bg-gradient-to-r from-background/70 via-transparent to-transparent" />
                 <Image
-                  src={`https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/${heroSlug}_vert.jpg`}
+                  src={`${IMAGE_CDN}/apps/dota2/images/heroes/${heroSlug}_vert.jpg`}
                   alt={`${mostPlayedHero.name} hero artwork`}
                   fill
                   sizes="(min-width: 1024px) 240px, 50vw"

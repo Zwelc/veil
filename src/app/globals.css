@@ -103,6 +103,9 @@
 */
 
 @theme inline {
+  /* Landing display face (lib/fonts.ts). Inline so the variable resolves where it is set. */
+  --font-display: var(--font-big-shoulders), "Arial Narrow", ui-sans-serif, sans-serif;
+  --color-ember: var(--ember);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -145,6 +148,8 @@
 
 :root {
   --radius: 0.65rem;
+  /* Warm "live" accent (Radiant ancient, recent-activity times). AA on card/background. */
+  --ember: oklch(0.55 0.15 55);
   --background: oklch(0.985 0.004 286);
   --foreground: oklch(0.141 0.005 285.823);
   --card: oklch(0.998 0.002 286);
@@ -179,6 +184,7 @@
 }
 
 .dark {
+  --ember: oklch(0.78 0.13 65);
   --background: oklch(0.15 0.012 286);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.195 0.014 286);
@@ -231,4 +237,17 @@
     );
     background-attachment: fixed;
   }
+}
+
+/*
+  Landing hero "fog of war": fades the lane map toward the copy so text stays legible.
+  Uses the section's own --background (the hero is always .dark).
+*/
+@utility hero-fog {
+  background: radial-gradient(
+    ellipse 60% 80% at 15% 55%,
+    var(--background) 35%,
+    color-mix(in oklab, var(--background) 60%, transparent) 70%,
+    color-mix(in oklab, var(--background) 25%, transparent) 100%
+  );
 }
