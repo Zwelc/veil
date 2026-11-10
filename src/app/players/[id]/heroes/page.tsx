@@ -6,6 +6,9 @@ import { DataTable } from "@/components/data-table";
 import { columns } from "./columns";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
+import { EmptyState } from "@/components/empty-state";
+import { HeaderBadge, PageHeader } from "@/components/page-header";
+import { winRate } from "@/lib/dota";
 import { IHero } from "@/models/hero";
 import Image from "next/image";
 
@@ -16,29 +19,24 @@ export default function Page(props: { params: Promise<{ id: string }> }) {
   const topHeroes = heroes.slice(0, 3);
   const totalPicks = heroes.reduce((sum, hero) => sum + hero.games, 0);
   const totalWins = heroes.reduce((sum, hero) => sum + hero.wins, 0);
-  const overallWinRate = totalPicks ? (totalWins / totalPicks) * 100 : 0;
+  const overallWinRate = winRate(totalWins, totalPicks);
 
   return (
     <div className="w-full space-y-5">
-      <div className="flex flex-wrap items-end justify-between gap-3">
-        <div>
-          <p className="text-xs font-semibold tracking-[0.18em] text-primary uppercase">
-            Hero performance
-          </p>
-          <h2 className="mt-1 text-2xl font-bold tracking-tight sm:text-3xl">
-            Heroes
-          </h2>
-          <p className="mt-1 text-sm text-muted-foreground">
-            Picks, win rates, and head-to-head results from your match history.
-          </p>
-        </div>
-        {!isLoading && !isError && (
-          <span className="rounded-full border border-border/70 bg-card/70 px-3 py-1.5 text-xs font-medium text-muted-foreground">
-            {heroes.length} heroes · {totalPicks.toLocaleString()} picks ·{" "}
-            {overallWinRate.toFixed(1)}% overall win rate
-          </span>
-        )}
-      </div>
+      <PageHeader
+        eyebrow="Hero performance"
+        title="Heroes"
+        description="Picks, win rates, and head-to-head results from your match history."
+        aside={
+          !isLoading &&
+          !isError && (
+            <HeaderBadge>
+              {heroes.length} heroes · {totalPicks.toLocaleString()} picks ·{" "}
+              {overallWinRate.toFixed(1)}% overall win rate
+            </HeaderBadge>
+          )
+        }
+      />
 
       {isLoading ? (
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
@@ -47,17 +45,12 @@ export default function Page(props: { params: Promise<{ id: string }> }) {
           ))}
         </div>
       ) : isError ? (
-        <Card>
-          <CardContent className="py-10 text-center text-sm text-destructive">
-            Could not load hero statistics. Please try again.
-          </CardContent>
-        </Card>
+        <EmptyState
+          tone="error"
+          message="Could not load hero statistics. Please try again."
+        />
       ) : heroes.length === 0 ? (
-        <Card>
-          <CardContent className="py-10 text-center text-sm text-muted-foreground">
-            No hero data is available for this player yet.
-          </CardContent>
-        </Card>
+        <EmptyState message="No hero data is available for this player yet." />
       ) : (
         <>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
@@ -90,7 +83,7 @@ export default function Page(props: { params: Promise<{ id: string }> }) {
 }
 
 function TopHeroCard({ hero, rank }: { hero: IHero; rank: number }) {
-  const winRate = hero.games ? (hero.wins / hero.games) * 100 : 0;
+  const rate = winRate(hero.wins, hero.games);
 
   return (
     <Card className="group/top-hero relative isolate min-h-52 overflow-hidden border-border/70 transition hover:-translate-y-0.5 hover:border-primary/25 hover:shadow-lg hover:shadow-primary/5">
@@ -122,7 +115,7 @@ function TopHeroCard({ hero, rank }: { hero: IHero; rank: number }) {
         </div>
         <div className="text-right">
           <p className="text-xl font-bold tracking-tight tabular-nums">
-            {winRate.toFixed(1)}%
+            {rate.toFixed(1)}%
           </p>
           <p className="text-xs text-muted-foreground">
             {hero.wins.toLocaleString()} wins

@@ -15,6 +15,7 @@ import {
 } from "../ui/select";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export default function OverviewChart({ id }: { id: string }) {
   const { data, isLoading } = usePlayerCounts(id);
@@ -28,7 +29,6 @@ export default function OverviewChart({ id }: { id: string }) {
         ? data.gameMode
         : data.lobbyType
     : [];
-  const skeleton = new Array(1).fill(null);
   return (
     <Block className="col-span-1 w-full md:col-span-4">
       <Card className="h-full w-full">
@@ -58,16 +58,7 @@ export default function OverviewChart({ id }: { id: string }) {
           </div>
         </CardHeader>
         <CardContent className="pl-2">
-          {isLoading &&
-            skeleton.map((item, index) => (
-              <div
-                key={index}
-                className="tile animate-pulse flex flex-col items-center justify-center"
-              >
-                <div className="mb-2.5 h-2 max-w-[48px] animate-pulse rounded-full bg-muted"></div>
-                <div className="h-2 max-w-[16px] animate-pulse bg-muted"></div>
-              </div>
-            ))}
+          {isLoading && <Skeleton className="ml-2 h-[260px] w-full" />}
           {data && <StackedBarComponent data={list} />}
           <Link
             href={`/players/${id}/totals`}

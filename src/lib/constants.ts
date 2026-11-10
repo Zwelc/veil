@@ -1,6 +1,5 @@
-export const BASE_URL = "https://api.opendota.com/api";
-export const PLAYER_URL = BASE_URL + "/players";
-export const API_URL = `${process.env.NEXT_PUBLIC_API_URL}/api`;
-export const CONSTANT_URL = BASE_URL + "/constants";
-export const SEARCH_URL = BASE_URL + "/search?q=";
 export const IMAGE_CDN = "https://cdn.cloudflare.steamstatic.com";
+export const RESULT_LIMIT = 12;
+export const MIN_SEARCH_LENGTH = 3;
+export const SEARCH_DEBOUNCE_MS = 300;
+export const FEATURED_PRO_LIMIT = 96; // 8 pages of RESULT_LIMIT

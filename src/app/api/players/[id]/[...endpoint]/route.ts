@@ -1,99 +1,60 @@
-import { NextRequest } from "next/server";
-import { getPlayerEndpointURL } from "@/lib/opendota";
+import { CACHE_TTL, OpenDota, RAW_PLAYER_ENDPOINTS } from "@/server/opendota";
+import { HttpError, type Query } from "@/server/opendota/http";
+import { withPlayerRoute } from "@/server/route";
 
-const GET_ENDPOINTS = new Set([
-  "wl",
-  "recentMatches",
-  "matches",
-  "heroes",
-  "peers",
-  "pros",
-  "totals",
-  "counts",
-  "wardmap",
-  "wordcloud",
-  "ratings",
-  "rankings",
-]);
+type Handler = (id: string, query: Query) => Promise<unknown>;
 
-type RouteContext = {
-  params: Promise<{ id: string; endpoint: string[] }>;
+/** Every player sub-endpoint the API exposes: one registry instead of one route file each. */
+const GET_ENDPOINTS: Record<string, { get: Handler; ttl: number }> = {
+  heroes: { get: OpenDota.getHeroes, ttl: CACHE_TTL.heroes },
+  matches: { get: OpenDota.getMatches, ttl: CACHE_TTL.matches },
+  recent: { get: (id) => OpenDota.getRecentMatches(id), ttl: CACHE_TTL.matches },
+  counts: { get: OpenDota.getCounts, ttl: CACHE_TTL.counts },
+  peers: { get: OpenDota.getPeers, ttl: CACHE_TTL.insights },
+  pros: { get: OpenDota.getPros, ttl: CACHE_TTL.insights },
+  wordcloud: { get: OpenDota.getWordCloud, ttl: CACHE_TTL.insights },
+  rankings: { get: (id) => OpenDota.getRankings(id), ttl: CACHE_TTL.insights },
+  ...Object.fromEntries(
+    Object.entries(RAW_PLAYER_ENDPOINTS)
+      .filter(([name]) => name !== "histograms")
+      .map(([name, ttl]) => [
+        name,
+        { get: (id: string, query: Query) => OpenDota.getRaw(id, name, query), ttl },
+      ]),
+  ),
 };
 
-function validAccountId(id: string) {
-  const accountId = Number(id);
-  return (
-    /^\d+$/.test(id) &&
-    Number.isSafeInteger(accountId) &&
-    accountId <= 4294967295
-  );
-}
+type Params = { id: string; endpoint: string[] };
 
-function validEndpoint(endpoint: string[], method: "GET" | "POST") {
-  if (
-    method === "GET" &&
-    endpoint.length === 2 &&
-    endpoint[0] === "histograms"
-  ) {
-    return /^[a-zA-Z0-9_]+$/.test(endpoint[1]);
+function resolve(endpoint: string[]) {
+  const [name, field] = endpoint;
+  if (endpoint.length === 2 && name === "histograms" && /^\w+$/.test(field)) {
+    return {
+      get: (id: string, query: Query) =>
+        OpenDota.getRaw(id, `histograms/${field}`, query),
+      ttl: CACHE_TTL.insights,
+    };
   }
-
-  return (
-    endpoint.length === 1 &&
-    (method === "GET"
-      ? GET_ENDPOINTS.has(endpoint[0])
-      : endpoint[0] === "refresh")
-  );
+  return endpoint.length === 1 ? GET_ENDPOINTS[name] : undefined;
 }
 
-async function proxyPlayerEndpoint(
-  request: NextRequest,
-  context: RouteContext,
-  method: "GET" | "POST",
+const notFound = () => {
+  throw new HttpError(404, "Unknown player endpoint.");
+};
+
+export async function GET(
+  request: Request,
+  context: { params: Promise<Params> },
 ) {
-  const { id, endpoint } = await context.params;
-
-  if (!validAccountId(id)) {
-    return Response.json(
-      { error: "Invalid Steam account ID." },
-      { status: 400 },
-    );
-  }
-
-  if (!validEndpoint(endpoint, method)) {
-    return Response.json(
-      { error: "Unknown player endpoint." },
-      { status: 404 },
-    );
-  }
-
-  const path = endpoint.map(encodeURIComponent).join("/");
-
-  try {
-    const upstream = await fetch(getPlayerEndpointURL(id, path, request), {
-      method,
-      cache: "no-store",
-    });
-
-    return new Response(upstream.body, {
-      status: upstream.status,
-      headers: {
-        "content-type":
-          upstream.headers.get("content-type") ?? "application/json",
-      },
-    });
-  } catch {
-    return Response.json(
-      { error: "OpenDota is temporarily unavailable." },
-      { status: 502 },
-    );
-  }
+  const route = resolve((await context.params).endpoint);
+  return withPlayerRoute<Params>(
+    (id, query) => (route ? route.get(id, query) : notFound()),
+    route?.ttl,
+  )(request, context);
 }
 
-export function GET(request: NextRequest, context: RouteContext) {
-  return proxyPlayerEndpoint(request, context, "GET");
-}
-
-export function POST(request: NextRequest, context: RouteContext) {
-  return proxyPlayerEndpoint(request, context, "POST");
-}
+export const POST = withPlayerRoute<Params>((id, _query, { endpoint }) =>
+  endpoint.length === 1 && endpoint[0] === "refresh"
+    ? OpenDota.refresh(id)
+    : notFound(),
+);

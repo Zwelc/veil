@@ -3,20 +3,10 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { ColumnDef } from "@tanstack/react-table";
 import { DataTableColumnHeader } from "@/components/data-table/column-header";
+import { formatDate, formatDuration } from "@/lib/dota";
+import type { IMatch } from "@/models/match";
 
-export type Match = {
-  match_id: number;
-  image: string;
-  name: string;
-  kills: number;
-  deaths: number;
-  assists: number;
-  gameMode: string;
-  lobby: string;
-  duration: string;
-  result: string;
-  start_time: number;
-};
+type Match = IMatch;
 
 export const columns: ColumnDef<Match>[] = [
   {
@@ -64,24 +54,14 @@ export const columns: ColumnDef<Match>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Played" />
     ),
-    cell: ({ row }) => {
-      const date = new Date(row.original.start_time * 1000);
-      return (
-        <div className="min-w-28">
-          <p className="font-medium">
-            {date.toLocaleDateString("en", {
-              month: "short",
-              day: "numeric",
-              year: "numeric",
-              timeZone: "UTC",
-            })}
-          </p>
-          <p className="mt-0.5 text-xs text-muted-foreground">
-            {row.original.lobby}
-          </p>
-        </div>
-      );
-    },
+    cell: ({ row }) => (
+      <div className="min-w-28">
+        <p className="font-medium">{formatDate(row.original.start_time)}</p>
+        <p className="mt-0.5 text-xs text-muted-foreground">
+          {row.original.ranked ? "Ranked" : "Unranked"}
+        </p>
+      </div>
+    ),
   },
   {
     accessorKey: "gameMode",
@@ -95,12 +75,12 @@ export const columns: ColumnDef<Match>[] = [
     ),
   },
   {
-    accessorKey: "result",
+    accessorKey: "won",
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Result" />
     ),
     cell: ({ row }) => {
-      const won = row.original.result === "Won";
+      const won = row.original.won;
       return (
         <span
           className={`inline-flex rounded-full px-2.5 py-1 text-xs font-semibold ${
@@ -120,7 +100,9 @@ export const columns: ColumnDef<Match>[] = [
       <DataTableColumnHeader column={column} title="Duration" />
     ),
     cell: ({ row }) => (
-      <span className="font-medium tabular-nums">{row.original.duration}</span>
+      <span className="font-medium tabular-nums">
+        {formatDuration(row.original.duration)}
+      </span>
     ),
   },
 ];

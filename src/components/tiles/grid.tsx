@@ -1,19 +1,19 @@
-import { motion, MotionProps } from "framer-motion";
-import { twMerge } from "tailwind-merge";
+import { m, type MotionProps } from "framer-motion";
+import { cn } from "@/lib/utils";
+import { stagger } from "@/lib/motion";
 
 type Props = {
   className?: string;
 } & MotionProps;
 
+/** Staggers its Block children in on mount. */
 const Grid = ({ className, ...rest }: Props) => {
   return (
-    <motion.div
+    <m.div
       initial="initial"
       animate="animate"
-      transition={{
-        staggerChildren: 0.05,
-      }}
-      className={twMerge(
+      variants={stagger(0.05)}
+      className={cn(
         "grid grid-cols-2 md:grid-cols-4 gap-4 w-full h-full",
         className
       )}

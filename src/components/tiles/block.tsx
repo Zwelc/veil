@@ -1,24 +1,15 @@
-import { motion, MotionProps } from "framer-motion";
-import { twMerge } from "tailwind-merge";
+import { m, type MotionProps } from "framer-motion";
+import { cn } from "@/lib/utils";
+import { fadeUp } from "@/lib/motion";
+
 type Props = {
   className?: string;
 } & MotionProps;
 
+/** A grid child that rises and fades in with its parent Grid's stagger. */
 const Block = ({ className, ...rest }: Props) => {
   return (
-    <motion.div
-      variants={{
-        initial: { scale: 0.5, y: 50, opacity: 0 },
-        animate: { scale: 1, y: 0, opacity: 1 },
-      }}
-      transition={{
-        ease: "easeInOut",
-        duration: 0.5,
-        delay: 0,
-      }}
-      className={twMerge("w-full h-full", className)}
-      {...rest}
-    />
+    <m.div variants={fadeUp} className={cn("w-full h-full", className)} {...rest} />
   );
 };
 
